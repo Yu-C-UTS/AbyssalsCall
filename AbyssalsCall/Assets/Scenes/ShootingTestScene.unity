@@ -178,7 +178,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestSub
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6269683855716603600, guid: 242dc39ef5605a643822210b50bbeac6, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6269683855716603600, guid: 242dc39ef5605a643822210b50bbeac6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 26637be165b79425eaf92275182af503, type: 3}
+    m_RemovedComponents:
+    - {fileID: 786669141883005821, guid: 242dc39ef5605a643822210b50bbeac6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 242dc39ef5605a643822210b50bbeac6, type: 3}
 --- !u!1 &806149959
 GameObject:
