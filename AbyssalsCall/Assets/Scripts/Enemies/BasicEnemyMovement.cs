@@ -1,17 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Pathfinding;
 
 public class BasicEnemyMovement : MonoBehaviour
 {
-    private Seeker seeker;
-    private Rigidbody2D rb;
     private PathfindingController pfController;
 
     [SerializeField]
     private bool hasTarget = false;
-    [SerializeField]
     private Transform target { get; set; }
 
     private Vector3 spawnPoint;
@@ -36,8 +32,14 @@ public class BasicEnemyMovement : MonoBehaviour
         StartCoroutine(UpdateAIPath());
     }
 
+    private void Update()
+    {
+        UpdateFacingDirection();
+    }
+
     private void FixedUpdate()
     {
+        UpdateSpeed();
         pfController.UpdateMovement();
     }
 
@@ -46,6 +48,29 @@ public class BasicEnemyMovement : MonoBehaviour
         Vector3 point = Random.insideUnitCircle * movingRadius;
         point += spawnPoint;
         return point;
+    }
+
+    private void UpdateSpeed()
+    {
+        if (hasTarget)
+        {
+            pfController.speed = 100f;
+        }else if (!hasTarget)
+        {
+            pfController.speed = 50f;
+        }
+    }
+
+    private void UpdateFacingDirection()
+    {
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb.velocity.x >= 0.01f)
+        {
+            GetComponentInChildren<Transform>().localScale = new Vector3(1f, 1f, 1f);
+        }else if(rb.velocity.x <= -0.01f)
+        {
+            GetComponentInChildren<Transform>().localScale = new Vector3(-1f, 1f, 1f);
+        }
     }
 
     private IEnumerator UpdateAIPath()
