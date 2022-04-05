@@ -5,7 +5,7 @@ using Pathfinding;
 
 public class PathfindingController
 {
-    public Transform target { get; set; }
+    public Vector3 targetPos { get; set; }
     public float speed { get; set; }
     //How far is the enemy need to be close to a waypoint before moving to next one
     private float nextWayWaypointDistance;
@@ -17,34 +17,46 @@ public class PathfindingController
     private bool reachedEnd = false;
     private Path path;
 
+
+    //Taking Tansform as target
     public PathfindingController(Transform self, Transform target)
-    : this(self, target, 100f, 1.5f)
+    : this(self, target.position, 100f, 1.5f)
     { }
 
     public PathfindingController(Transform self, Transform target, float speed)
-    : this(self, target, speed, 1.5f)
+    : this(self, target.position, speed, 1.5f)
     { }
 
-    public PathfindingController(Transform self, Transform target, float speed, float nextWayWaypointDistance)
+    //Taking Vector3 as Input
+    public PathfindingController(Transform self, Vector3 targetPos)
+    : this(self, targetPos, 50f, 1.5f)
+    { }
+
+    public PathfindingController(Transform self, Vector3 targetPos, float speed)
+    : this(self, targetPos, speed, 1.5f)
+    { }
+
+    public PathfindingController(Transform self, Vector3 targetPos, float speed, float nextWayWaypointDistance)
     {
-        this.target = target;
+        this.targetPos = targetPos;
         this.speed = speed;
         this.nextWayWaypointDistance = nextWayWaypointDistance;
-        if(seeker = self.GetComponent<Seeker>())
+        if (seeker = self.GetComponent<Seeker>())
             Debug.Log("Seeker Assigned: " + seeker);
         else
-            throw new System.Exception("Seeker not found in " + target);
+            throw new System.Exception("Seeker not found in " + self);
 
-        if(rb = self.GetComponent<Rigidbody2D>())
+        if (rb = self.GetComponent<Rigidbody2D>())
             Debug.Log("Rigidbody Assigned: " + rb);
         else
-            throw new System.Exception("Rigidbody not found in " + target);
+            throw new System.Exception("Rigidbody not found in " + self);
 
     }
 
+    //Physics Update
     public void UpdateMovement()
     {
-        if(path == null || target == null)
+        if(path == null || targetPos == null)
         {
             return;
         }
@@ -71,12 +83,12 @@ public class PathfindingController
         }
     } 
 
-
+    //Path Update
     public void UpdatePath()
     {
         if (seeker.IsDone())
         {
-            seeker.StartPath(rb.position, target.position, OnPathComplete);
+            seeker.StartPath(rb.position, targetPos, OnPathComplete);
         }
 
     }
