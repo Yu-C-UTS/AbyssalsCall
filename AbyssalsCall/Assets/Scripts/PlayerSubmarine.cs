@@ -7,6 +7,8 @@ using UnityEngine.InputSystem;
 public class PlayerSubmarine : MonoBehaviour
 {
     Rigidbody2D rb2;
+    [SerializeField]
+    Transform TurretPivot;
 
     [SerializeField]
     float baseSpeed = 5f;
