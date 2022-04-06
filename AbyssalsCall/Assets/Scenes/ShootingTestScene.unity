@@ -178,7 +178,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestSub
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6269683855716603600, guid: 242dc39ef5605a643822210b50bbeac6, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6269683855716603600, guid: 242dc39ef5605a643822210b50bbeac6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 26637be165b79425eaf92275182af503, type: 3}
+    m_RemovedComponents:
+    - {fileID: 786669141883005821, guid: 242dc39ef5605a643822210b50bbeac6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 242dc39ef5605a643822210b50bbeac6, type: 3}
 --- !u!1 &806149959
 GameObject:
@@ -278,15 +287,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crosshairs: {fileID: 2121907380}
-  player: {fileID: 1485136184}
+  turret: {fileID: 0}
   bulletPrefab: {fileID: 1483129063369269300, guid: 344478596226a8e48ad80e569eecd60d, type: 3}
   firePoint: {fileID: 1890625025}
   bulletSpeed: 60
---- !u!1 &1485136184 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5209183142113099387, guid: 242dc39ef5605a643822210b50bbeac6, type: 3}
-  m_PrefabInstance: {fileID: 368824988}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1890625025 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5456416730108056125, guid: 242dc39ef5605a643822210b50bbeac6, type: 3}
@@ -329,7 +333,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

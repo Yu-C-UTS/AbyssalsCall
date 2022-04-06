@@ -7,9 +7,9 @@
             "actions": [
                 {
                     "name": "Fire1",
-                    "type": "Value",
+                    "type": "Button",
                     "id": "85273689-a9db-4eb9-a74d-e5c2ae410b50",
-                    "expectedControlType": "",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -22,6 +22,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "CursorPositionChange",
+                    "type": "Value",
+                    "id": "96115e41-9e9c-4f08-b75d-24ea9c25ac42",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -29,9 +38,20 @@
                     "name": "",
                     "id": "9fe55f55-97e3-42b2-a79a-e21d63b500b5",
                     "path": "*/{PrimaryTrigger}",
-                    "interactions": "Hold",
+                    "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard&Mouse;Gamepad",
+                    "groups": "Gamepad",
+                    "action": "Fire1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "75ea6bff-20e6-4d58-9889-d7bc3082f5a6",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
                     "action": "Fire1",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -99,6 +119,28 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "56806aad-13af-484e-92fd-02286c3eefd3",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "CursorPositionChange",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "06ccc30e-9691-47b7-badb-9b069a4c2288",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "CursorPositionChange",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
