@@ -6,7 +6,7 @@ public class PointAndShoot : MonoBehaviour
 {
 
     public GameObject crosshairs;
-    public GameObject player;
+    public GameObject turret;
     public GameObject bulletPrefab;
     public GameObject firePoint;
     public float bulletSpeed = 60.0f;
@@ -26,9 +26,10 @@ public class PointAndShoot : MonoBehaviour
         crosshairs.transform.position = new Vector2(target.x,target.y);
 
         //Rotate the sub-marine towards crosshair
-        Vector3 difference = target - player.transform.position;
-        float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-        player.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ);
+        Vector3 difference = target - turret.transform.position;
+        float rotationZ = Mathf.Atan2(difference.y,  transform.lossyScale.x * difference.x) * Mathf.Rad2Deg;
+        rotationZ *= transform.lossyScale.x;
+        turret.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ);
 
         if(Input.GetMouseButtonDown(0))
         {
