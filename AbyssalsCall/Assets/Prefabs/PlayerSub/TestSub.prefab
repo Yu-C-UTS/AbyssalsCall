@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 141599190148850880}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2859820334480538933}
@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 786669141883005821}
   m_Layer: 0
   m_Name: TestSub
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -279,6 +279,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 96115e41-9e9c-4f08-b75d-24ea9c25ac42
     m_ActionName: Combat/CursorPositionChange[/Mouse/delta]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8a972c3f-b82e-4faf-8f71-d55d8501f855
+    m_ActionName: MapControl/Scroll[/Mouse/scroll/y,/DualShock4GamepadHID/leftStick/y]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Combat
