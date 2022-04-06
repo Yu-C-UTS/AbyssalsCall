@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class SampleMapScript : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class SampleMapScript : MonoBehaviour
     MapNodeObj MapNodePrefab;
     [SerializeField]
     GameObject MapPlainPrefab;
+
+    const float ScrollSensitivity = 0.005f;
 
     private void Start() 
     {
@@ -23,5 +26,10 @@ public class SampleMapScript : MonoBehaviour
                 NewNode.nodeData = newNodeData;
             }            
         }
+    }
+
+    public void OnScroll(InputAction.CallbackContext value)
+    {
+        transform.Translate(0, -value.ReadValue<float>() * ScrollSensitivity, 0);
     }
 }

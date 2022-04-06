@@ -21,5 +21,13 @@ public class MapNodeObj : MonoBehaviour
         }
     }
 
+    private void OnMouseOver() 
+    {
+        //Debug.Log("Over Node");
+    }
 
+    private void OnMouseUp() 
+    {
+        Debug.Log("Node Click"); 
+    }
 }

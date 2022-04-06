@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 15967266}
   - component: {fileID: 15967267}
+  - component: {fileID: 15967268}
   m_Layer: 0
   m_Name: Map
   m_TagString: Untagged
@@ -169,6 +170,64 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MapNodePrefab: {fileID: 2143225929659943702, guid: 6827480b076dc14488fcca2d1b553106, type: 3}
   MapPlainPrefab: {fileID: 8501336159711570083, guid: 324d64e7a8859e5449894996c3a21148, type: 3}
+--- !u!114 &15967268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15967265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 9b11c211392027c4e86757ed761d8a74, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 85273689-a9db-4eb9-a74d-e5c2ae410b50
+    m_ActionName: Combat/Fire1[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2becf28a-aad4-4735-8c96-e1cbe2e0704f
+    m_ActionName: Combat/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 96115e41-9e9c-4f08-b75d-24ea9c25ac42
+    m_ActionName: Combat/CursorPositionChange[/Mouse/delta]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 15967267}
+        m_TargetAssemblyTypeName: SampleMapScript, Assembly-CSharp
+        m_MethodName: OnScroll
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8a972c3f-b82e-4faf-8f71-d55d8501f855
+    m_ActionName: MapControl/Scroll[/Mouse/scroll/y]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: Keyboard&Mouse
+  m_DefaultActionMap: MapControl
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &630009215
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,7 +416,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 710540574}
   m_LocalRotation: {x: 0.12059043, y: 0.37940952, z: -0.04995019, w: 0.9159757}
-  m_LocalPosition: {x: -5, y: 1, z: -5}
+  m_LocalPosition: {x: -5, y: 2, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
