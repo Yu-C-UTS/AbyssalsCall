@@ -8,11 +8,11 @@ public abstract class MovementSystemBase : SystemBehaviorBase
 
     public override void RegisterSystem()
     {
-        registeredSubmarine.onMove.AddListener(MoveBehavior);
+        registeredSubmarine.onMove += MoveBehavior;
     }
 
     public override void UnRegisterSystem()
     {
-        registeredSubmarine.onMove.RemoveListener(MoveBehavior);
+        registeredSubmarine.onMove -= MoveBehavior;
     }
 }

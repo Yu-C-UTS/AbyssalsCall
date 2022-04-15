@@ -123,6 +123,53 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &55999793
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 55999795}
+  - component: {fileID: 55999794}
+  m_Layer: 0
+  m_Name: CameraManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &55999794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55999793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137df7c382a114948a39d7500f570b5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentCameraMode: 1
+  MainFocusTransform: {fileID: 0}
+  SecondaryFocusTransform: {fileID: 0}
+--- !u!4 &55999795
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55999793}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &145993923 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4596782352236853767, guid: 1fd6e6dae3eff034881219502fb04042, type: 3}
@@ -165,7 +212,6 @@ GameObject:
   - component: {fileID: 806149962}
   - component: {fileID: 806149961}
   - component: {fileID: 806149960}
-  - component: {fileID: 806149963}
   - component: {fileID: 806149964}
   m_Layer: 0
   m_Name: Main Camera
@@ -240,23 +286,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &806149963
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 806149959}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e7bdef99c2b22446ad8ece88cf12f67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  crosshairs: {fileID: 0}
-  turret: {fileID: 0}
-  bulletPrefab: {fileID: 1483129063369269300, guid: 344478596226a8e48ad80e569eecd60d, type: 3}
-  firePoint: {fileID: 0}
-  bulletSpeed: 60
 --- !u!114 &806149964
 MonoBehaviour:
   m_ObjectHideFlags: 0

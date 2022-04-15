@@ -20,5 +20,7 @@ public class subgentest : MonoBehaviour
             instantiatedSystem.InitilizeSystem(instantiatedSub);
             instantiatedSystem.RegisterSystem();
         }    
+
+        CameraManager.Instance.MainFocusTransform = instantiatedSub.transform;
     }
 }

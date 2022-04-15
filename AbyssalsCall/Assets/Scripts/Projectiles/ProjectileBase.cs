@@ -7,7 +7,7 @@ using UnityEngine;
 public abstract class ProjectileBase : MonoBehaviour
 {
     protected Collider2D col2d;
-    protected Rigidbody2D rb2d;
+    public Rigidbody2D rb2d;
 
     [SerializeField]
     protected float projectileLifetime = 3f;
@@ -39,6 +39,7 @@ public abstract class ProjectileBase : MonoBehaviour
         if(other.TryGetComponent<IDamagable>(out IDamagable otherDamagable))
         {
             triggerPayload(otherDamagable, other.gameObject);
+            Destroy(gameObject);
         }
     }
 

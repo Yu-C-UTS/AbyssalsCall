@@ -7,25 +7,36 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerSubmarine : MonoBehaviour
 {
+    public delegate void UpdateNotify();
+    public delegate void VectorChange(Vector2 V2Value);
+    public delegate void TriggerChange(float TriggerValue);
+
     public Rigidbody2D rigidBody2d{ get; private set;}
     public Transform systemContainerTransform{ get; private set; }
-    [SerializeField]
-    Transform turretPivot;
+    [field: SerializeField]
+    public Transform turretPivot{ get; private set;}
+    [field: SerializeField]
+    public Transform submarineVisualTransform{ get; private set;}
 
     bool facingRight = true;
 
-    public UnityEvent onSubUpdate;
-    public UnityEvent onSubFixedUpdate;
-    public UnityEvent<Vector2> onMouseMove;
-    public UnityEvent<Vector2> onMove;
-    public UnityEvent<float, GameObject> onTriggerPrim;
-    public UnityEvent<float, GameObject> onTriggerSec;
+    public event UpdateNotify onSubUpdate;
+    public event UpdateNotify onSubFixedUpdate;
+    public event VectorChange onMouseMove;
+    public event VectorChange onMove;
+    public event TriggerChange onTriggerPrim;
+    public event TriggerChange onTriggerSec;
 
     private void Awake() 
     {
         rigidBody2d = GetComponent<Rigidbody2D>();
         systemContainerTransform = new GameObject("systems").transform;
         systemContainerTransform.SetParent(transform);
+
+        if(turretPivot == null)
+        {
+            Debug.LogError("ERROR: Turret pivot not assigned for submarine.");
+        }
     }
 
     private void Update() 
@@ -49,12 +60,12 @@ public class PlayerSubmarine : MonoBehaviour
 
     public void OnTriggerPrimInput(InputAction.CallbackContext value)
     {
-        onTriggerPrim?.Invoke(value.ReadValue<float>(), gameObject);
+        onTriggerPrim?.Invoke(value.ReadValue<float>());
     }
 
     public void OnTriggerSecInput(InputAction.CallbackContext value)
     {
-        onTriggerSec?.Invoke(value.ReadValue<float>(), gameObject);
+        onTriggerSec?.Invoke(value.ReadValue<float>());
     }
 
     public void OnCursorMoveInput(InputAction.CallbackContext value)
@@ -89,6 +100,6 @@ public class PlayerSubmarine : MonoBehaviour
             facingRight = XMovementSpeed > 0;
         }
 
-        transform.localScale = new Vector3((facingRight ? 1 : -1), 1, 1);
+        submarineVisualTransform.localScale = new Vector3((facingRight ? 1 : -1), 1, 1);
     }
 }

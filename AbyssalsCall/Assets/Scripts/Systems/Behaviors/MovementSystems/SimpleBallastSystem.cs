@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "NewSimpleBallastSystem", menuName = "ScriptableObjects/SubmarineSystems/MovementSystem/SimpleBallastSystem")]
 public class SimpleBallastSystem : MovementSystemBase
 {
     [SerializeField]
@@ -21,13 +22,13 @@ public class SimpleBallastSystem : MovementSystemBase
     public override void RegisterSystem()
     {
         base.RegisterSystem();
-        registeredSubmarine.onSubFixedUpdate.AddListener(SystemFixedUpdate);
+        registeredSubmarine.onSubFixedUpdate += SystemFixedUpdate;
     }
 
     public override void UnRegisterSystem()
     {
         base.UnRegisterSystem();
-        registeredSubmarine.onSubFixedUpdate.RemoveListener(SystemFixedUpdate);
+        registeredSubmarine.onSubFixedUpdate -= SystemFixedUpdate;
     }
 
 }

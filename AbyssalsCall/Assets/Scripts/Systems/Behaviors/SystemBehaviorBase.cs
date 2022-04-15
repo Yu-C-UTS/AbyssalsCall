@@ -2,14 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class SystemBehaviorBase : MonoBehaviour
+public abstract class SystemBehaviorBase : ScriptableObject
 {
-    protected PlayerSubmarine registeredSubmarine;
+    public PlayerSubmarine registeredSubmarine{ get; protected set;}
+
+    [field: SerializeField]
+    public string SystemName { get; protected set;} = "New System";
 
     public virtual void InitilizeSystem(PlayerSubmarine parentSubmarine)
     {
         registeredSubmarine = parentSubmarine;
-        transform.SetParent(registeredSubmarine.systemContainerTransform);
+        //transform.SetParent(registeredSubmarine.systemContainerTransform);
     }
 
     public abstract void RegisterSystem();

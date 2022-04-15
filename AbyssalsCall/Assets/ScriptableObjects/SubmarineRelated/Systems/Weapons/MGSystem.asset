@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81606fb2614ace74492a136bea51d86c, type: 3}
+  m_Name: MGSystem
+  m_EditorClassIdentifier: 
+  <SystemName>k__BackingField: Simple MG
+  weaponObjectPrefab: {fileID: 3329042455036463520, guid: af98d9b9b12877d44b711f94530a34fd, type: 3}
+  aimBehavior: {fileID: 11400000, guid: 84da9f39b0d58864795aa361497d03f5, type: 2}
+  triggerBehavior: {fileID: 0}

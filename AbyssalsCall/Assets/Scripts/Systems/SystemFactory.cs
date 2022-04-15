@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class SystemFactory : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public static SystemFactory Instance{ get; private set; }
 
-    // Update is called once per frame
-    void Update()
+    private void Awake() 
     {
-        
+        if(Instance != null)
+        {
+            Destroy(this);
+        }    
+        Instance = this;
     }
 }

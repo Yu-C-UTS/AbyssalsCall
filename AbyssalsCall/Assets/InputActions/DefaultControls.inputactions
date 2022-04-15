@@ -127,7 +127,7 @@
                     "id": "56806aad-13af-484e-92fd-02286c3eefd3",
                     "path": "<Mouse>/delta",
                     "interactions": "",
-                    "processors": "",
+                    "processors": "ScaleVector2(x=0.01,y=0.01)",
                     "groups": "Keyboard&Mouse",
                     "action": "CursorPositionChange",
                     "isComposite": false,
