@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewSimplePropulsionSystem", menuName = "ScriptableObjects/SubmarineSystems/MovementSystem/SimplePropulsionSystem")]
 public class SimplePropulsionSystem : MovementSystemBase
 {
     [SerializeField]

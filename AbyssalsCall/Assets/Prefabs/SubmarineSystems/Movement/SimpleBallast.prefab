@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7013412237291656153
+--- !u!1 &2238154257882498150
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7013412237291656155}
-  - component: {fileID: 7013412237291656154}
+  - component: {fileID: 1365869936759148179}
+  - component: {fileID: 3604815621542158155}
   m_Layer: 0
-  m_Name: SubmarineSpawner
+  m_Name: SimpleBallast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7013412237291656155
+--- !u!4 &1365869936759148179
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7013412237291656153}
+  m_GameObject: {fileID: 2238154257882498150}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,20 +32,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7013412237291656154
+--- !u!114 &3604815621542158155
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7013412237291656153}
+  m_GameObject: {fileID: 2238154257882498150}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10b713c4b760ef342a92657b5d436353, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ed13258efead2e40984137fab4f2af7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSubmarinePrefab: {fileID: 6479458855308839219, guid: 242dc39ef5605a643822210b50bbeac6, type: 3}
-  requiredSystems:
-  - {fileID: 4572655284797286809, guid: 4a6ae41c2fbc050459643a57fc361504, type: 3}
-  - {fileID: 3604815621542158155, guid: a9f5aa797b6245f499fb961f85ee9fee, type: 3}
-  - {fileID: 3569800497550525070, guid: af98d9b9b12877d44b711f94530a34fd, type: 3}
+  <SystemName>k__BackingField: Simple Ballast System
+  isUnique: 0
+  isRemovable: 0
+  ballastForce: 5

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class WeaponSystemBase : SystemBehaviorBase
+public abstract class WeaponSystemBase : SystemBase
 {
     protected const float triggerThreshold = 0.7f;
     public abstract void TriggerBehavior(float triggerValue);

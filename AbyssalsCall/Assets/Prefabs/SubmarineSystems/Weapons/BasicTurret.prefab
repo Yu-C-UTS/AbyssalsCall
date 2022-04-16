@@ -126,6 +126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3422682965368659285}
   - component: {fileID: 3329042455036463520}
+  - component: {fileID: 3569800497550525070}
   m_Layer: 0
   m_Name: BasicTurret
   m_TagString: Untagged
@@ -162,3 +163,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FirePoint: {fileID: 934417442953769424}
+--- !u!114 &3569800497550525070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7279990159955429925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81606fb2614ace74492a136bea51d86c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <SystemName>k__BackingField: Basic MG
+  isUnique: 0
+  isRemovable: 1
+  weaponObject: {fileID: 3329042455036463520}
+  aimBehavior: {fileID: 11400000, guid: 84da9f39b0d58864795aa361497d03f5, type: 2}
+  triggerBehavior: {fileID: 11400000, guid: 03a3f0814469a844d95aa200db952902, type: 2}
+  fireBehavior: {fileID: 11400000, guid: 2f6e7b48e00eb2840a8c75d885c40e25, type: 2}

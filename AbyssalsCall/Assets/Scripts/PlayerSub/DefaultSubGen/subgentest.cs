@@ -8,15 +8,15 @@ public class subgentest : MonoBehaviour
     PlayerSubmarine baseSubmarinePrefab;
     
     [SerializeField]
-    SystemBehaviorBase[] requiredSystems;
+    SystemBase[] requiredSystems;
 
     private void Start() 
     {
         PlayerSubmarine instantiatedSub = Instantiate(baseSubmarinePrefab);
 
-        foreach (SystemBehaviorBase system in requiredSystems)
+        foreach (SystemBase system in requiredSystems)
         {
-            SystemBehaviorBase instantiatedSystem = Instantiate(system);
+            SystemBase instantiatedSystem = Instantiate(system);
             instantiatedSystem.InitilizeSystem(instantiatedSub);
             instantiatedSystem.RegisterSystem();
         }    

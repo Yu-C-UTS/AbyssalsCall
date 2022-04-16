@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class MovementSystemBase : SystemBehaviorBase
+public abstract class MovementSystemBase : SystemBase
 {
     public abstract void MoveBehavior(Vector2 moveDirection);
 
