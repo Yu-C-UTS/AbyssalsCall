@@ -7,7 +7,7 @@ using UnityEngine;
 public abstract class ProjectileBase : MonoBehaviour
 {
     protected Collider2D col2d;
-    public Rigidbody2D rb2d;
+    public Rigidbody2D rb2d{ get; protected set;}
 
     [SerializeField]
     protected float projectileLifetime = 3f;

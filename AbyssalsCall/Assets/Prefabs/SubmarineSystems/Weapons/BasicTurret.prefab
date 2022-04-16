@@ -163,6 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FirePoint: {fileID: 934417442953769424}
+  PreferedAnchorPoint: 0
 --- !u!114 &3569800497550525070
 MonoBehaviour:
   m_ObjectHideFlags: 0

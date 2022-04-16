@@ -28,7 +28,7 @@ public class TurretAimBehavior : WeaponAimBehaviorBase
     {
         base.InitilizeBehavior(WeaponTransform, parentWeaponSystem);
 
-        parentWeaponSystem.onWeaponUpdate += AimUpdate;
+        //parentWeaponSystem.onWeaponUpdate += AimUpdate;
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;

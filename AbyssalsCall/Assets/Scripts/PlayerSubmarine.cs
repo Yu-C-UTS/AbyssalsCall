@@ -14,7 +14,16 @@ public class PlayerSubmarine : MonoBehaviour
     public Rigidbody2D rigidBody2d{ get; private set;}
     public Transform systemContainerTransform{ get; private set; }
     [field: SerializeField]
-    public Transform turretPivot{ get; private set;}
+    public Transform turretPivotAnchor{ get; private set;}
+    [field: SerializeField]
+    public Transform topMountAnchor{ get; private set;}    
+    [field: SerializeField]
+    public Transform bottomMountAnchor{ get; private set;}    
+    [field: SerializeField]
+    public Transform frontMountAnchor{ get; private set;}    
+    [field: SerializeField]
+    public Transform rearMountAnchor{ get; private set;}
+
     [field: SerializeField]
     public Transform submarineVisualTransform{ get; private set;}
 
@@ -33,7 +42,7 @@ public class PlayerSubmarine : MonoBehaviour
         systemContainerTransform = new GameObject("systems").transform;
         systemContainerTransform.SetParent(transform);
 
-        if(turretPivot == null)
+        if(turretPivotAnchor == null)
         {
             Debug.LogError("ERROR: Turret pivot not assigned for submarine.");
         }
@@ -92,6 +101,31 @@ public class PlayerSubmarine : MonoBehaviour
         transform.localScale = new Vector3(Mathf.Clamp(transform.localScale.x + ( facingRight ? 1 : -1 ) * Time.deltaTime * spriteFlipSpeed, -1, 1), 1, 1);
     }
     */
+
+    public Transform GetWeaponAnchorPoint(WeaponObject.AnchorPoint anchorPoint)
+    {
+        switch (anchorPoint)
+        {
+            case WeaponObject.AnchorPoint.turret:
+            return turretPivotAnchor;
+
+            case WeaponObject.AnchorPoint.bottom:
+            return bottomMountAnchor;
+            
+            case WeaponObject.AnchorPoint.top:
+            return topMountAnchor;
+
+            case WeaponObject.AnchorPoint.front:
+            return frontMountAnchor;
+            
+            case WeaponObject.AnchorPoint.back:
+            return rearMountAnchor;
+
+            default:
+            Debug.LogWarning("Unknown Anchor Point Type, returning bottom mount.");
+            return bottomMountAnchor;
+        }
+    }
 
     private void UpdateSubmarineFacing(float XMovementSpeed)
     {

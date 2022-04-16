@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83131df52ad6363498ba1b50ca087593, type: 3}
-  m_Name: SingleShellFireBehavior
+  m_Name: SingleTorpedoFire
   m_EditorClassIdentifier: 
-  ProjectilePrefab: {fileID: 5513232442569640560, guid: e58264188c069f342933465586077a8a, type: 3}
-  ProjectileLaunchForce: 10
+  ProjectilePrefab: {fileID: 8293499593302840828, guid: f9183f27259c5194a852f7b915e619d5, type: 3}
+  ProjectileLaunchForce: 5

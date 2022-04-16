@@ -330,6 +330,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SubmarineSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 7013412237291656154, guid: 4f1939b36732d3a4397cd274a2a0a074, type: 3}
+      propertyPath: requiredSystems.Array.data[2]
+      value: 
+      objectReference: {fileID: -6631021656632569833, guid: 5c63e3e65a08eda47b63ae0d20e8ef89, type: 3}
     - target: {fileID: 7013412237291656155, guid: 4f1939b36732d3a4397cd274a2a0a074, type: 3}
       propertyPath: m_RootOrder
       value: 2
