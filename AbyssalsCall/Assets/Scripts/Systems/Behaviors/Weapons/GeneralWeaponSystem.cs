@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //[CreateAssetMenu(fileName = "NewGeneralWeaponSystem", menuName = "ScriptableObjects/SubmarineSystems/WeaponSystem/GeneralWeaponSystem")]
+[RequireComponent(typeof(WeaponObject))]
 public class GeneralWeaponSystem : WeaponSystemBase
 {
     public delegate void UpdateNotify();
@@ -10,15 +11,9 @@ public class GeneralWeaponSystem : WeaponSystemBase
 
     [SerializeField]
     private WeaponObject weaponObject;
-    [SerializeField]
-    private WeaponAimBehaviorBase aimBehavior;
-    protected WeaponAimBehaviorBase aimBehaviorInstance;
-    [SerializeField]
-    private WeaponTriggerBehaviorBase triggerBehavior;
-    protected WeaponTriggerBehaviorBase triggerBehaviorInstance;    
-    [SerializeField]
-    private WeaponFireBehaviorBase fireBehavior;
-    protected WeaponFireBehaviorBase fireBehaviorInstance;
+    protected WeaponAimBehaviorBase aimBehavior;
+    protected WeaponTriggerBehaviorBase triggerBehavior;    
+    protected WeaponFireBehaviorBase fireBehavior;
 
     public Transform systemTransform{ get; protected set;}
     public Transform weaponTransform{ get; protected set;}
@@ -39,35 +34,45 @@ public class GeneralWeaponSystem : WeaponSystemBase
         weaponTransform = weaponObject.transform;
         weaponTransform.SetParent(weaponAnchorPoint);
 
-        aimBehaviorInstance = Instantiate(aimBehavior);
-        aimBehaviorInstance.InitilizeBehavior(systemTransform, this);
-        triggerBehaviorInstance = Instantiate(triggerBehavior);
-        triggerBehaviorInstance.InitilizeBehavior(systemTransform, this);        
-        fireBehaviorInstance = Instantiate(fireBehavior);
-        fireBehaviorInstance.InitilizeBehavior(systemTransform, this);
+        aimBehavior = GetComponent<WeaponAimBehaviorBase>();
+        aimBehavior.InitilizeBehavior(systemTransform, this);
+        triggerBehavior = GetComponent<WeaponTriggerBehaviorBase>();
+        triggerBehavior.InitilizeBehavior(systemTransform, this);   
+        fireBehavior = GetComponent<WeaponFireBehaviorBase>();     
+        fireBehavior.InitilizeBehavior(systemTransform, this);
     }
 
     public override void TriggerBehavior(float triggerValue)
     {
-        triggerBehaviorInstance.triggerBehavior(triggerValue);
+        triggerBehavior.triggerBehavior(triggerValue);
     }
 
     public void Fire()
     {
-        fireBehaviorInstance.Fire(firePoint, aimBehaviorInstance.GetFireDirection());
+        fireBehavior.Fire();
     }
 
     public virtual void WeaponUpdate()
     {
-        aimBehaviorInstance.AimUpdate();
+        aimBehavior.AimUpdate();
         onWeaponUpdate?.Invoke();
+    }
+
+    public override Vector3 GetTargetLocation()
+    {
+        return aimBehavior.GetTargetPosition();
+    }
+
+    public override Vector3 GetAimDirection()
+    {
+        return aimBehavior.GetAimDirection();
     }
 
     public override void RegisterSystem()
     {
         base.RegisterSystem();
 
-        registeredSubmarine.onMouseMove += aimBehaviorInstance.moveCrosshair;
+        registeredSubmarine.onMouseMove += aimBehavior.moveCrosshair;
         registeredSubmarine.onSubUpdate += WeaponUpdate;
     }
 
@@ -75,7 +80,7 @@ public class GeneralWeaponSystem : WeaponSystemBase
     {
         base.UnRegisterSystem();
 
-        registeredSubmarine.onMouseMove -= aimBehaviorInstance.moveCrosshair;
+        registeredSubmarine.onMouseMove -= aimBehavior.moveCrosshair;
         registeredSubmarine.onSubUpdate -= WeaponUpdate;
     }
 }

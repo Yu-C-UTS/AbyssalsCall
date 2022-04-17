@@ -7,7 +7,7 @@ public abstract class WeaponAimBehaviorBase : WeaponBehaviorBase
     public Sprite CrosshairSprite;
     protected Transform crosshairTransform;
 
-    public abstract Vector2 GetFireDirection();
+    public abstract Vector2 GetAimDirection();
 
     public abstract void moveCrosshair(Vector2 moveDelta);
     public abstract void AimUpdate();
@@ -20,5 +20,10 @@ public abstract class WeaponAimBehaviorBase : WeaponBehaviorBase
         crosshairTransform.SetParent(WeaponTransform);
         SpriteRenderer crosshairSpriteRenderer = crosshairTransform.gameObject.AddComponent<SpriteRenderer>();    
         crosshairSpriteRenderer.sprite = CrosshairSprite;
+    }
+
+    public virtual Vector3 GetTargetPosition()
+    {
+        return crosshairTransform.position;
     }
 }

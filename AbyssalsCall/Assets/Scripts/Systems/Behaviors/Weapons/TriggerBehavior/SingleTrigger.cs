@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewSingleTriggerBehavior", menuName = "ScriptableObjects/WeaponBehavior/TriggerBehavior/SingleTriggerBehavior")]
+//[CreateAssetMenu(fileName = "NewSingleTriggerBehavior", menuName = "ScriptableObjects/WeaponBehavior/TriggerBehavior/SingleTriggerBehavior")]
 public class SingleTrigger : WeaponTriggerBehaviorBase
 {
     public float TriggerCooldown = 2f;

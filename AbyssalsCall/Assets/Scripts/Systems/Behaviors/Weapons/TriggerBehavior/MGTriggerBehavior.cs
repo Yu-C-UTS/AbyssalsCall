@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewMGTriggerBehavior", menuName = "ScriptableObjects/WeaponBehavior/TriggerBehavior/MGTriggerBehavior")]
+//[CreateAssetMenu(fileName = "NewMGTriggerBehavior", menuName = "ScriptableObjects/WeaponBehavior/TriggerBehavior/MGTriggerBehavior")]
 public class MGTriggerBehavior : WeaponTriggerBehaviorBase
 {
     [SerializeField]

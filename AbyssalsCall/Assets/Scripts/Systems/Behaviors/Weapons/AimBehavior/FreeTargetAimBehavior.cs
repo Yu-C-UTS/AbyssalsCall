@@ -2,15 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//[CreateAssetMenu(fileName = "NewTurretAimBehavior", menuName = "ScriptableObjects/WeaponBehavior/AimBehavior/TurretAimBehavior")]
-public class TurretAimBehavior : WeaponAimBehaviorBase
+public class FreeTargetAimBehavior : WeaponAimBehaviorBase
 {
     public override void AimUpdate()
     {
-        Vector3 difference = crosshairTransform.position - parentWeaponSystem.weaponTransform.position;
-        float rotationZ = Mathf.Atan2(difference.y,  parentWeaponSystem.weaponTransform.lossyScale.x * difference.x) * Mathf.Rad2Deg;
-        rotationZ *= parentWeaponSystem.weaponTransform.lossyScale.x;
-        parentWeaponSystem.weaponTransform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ);
+        return;
     }
 
     public override Vector2 GetAimDirection()

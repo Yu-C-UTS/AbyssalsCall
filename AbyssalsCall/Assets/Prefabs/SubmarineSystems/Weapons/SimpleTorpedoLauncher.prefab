@@ -42,6 +42,9 @@ GameObject:
   - component: {fileID: 8962152566268842180}
   - component: {fileID: -6631021656632569833}
   - component: {fileID: -6622790927542700518}
+  - component: {fileID: 1867013967889115253}
+  - component: {fileID: 2332935011709437319}
+  - component: {fileID: 6670794392029500731}
   m_Layer: 0
   m_Name: SimpleTorpedoLauncher
   m_TagString: Untagged
@@ -81,9 +84,6 @@ MonoBehaviour:
   isUnique: 0
   isRemovable: 1
   weaponObject: {fileID: -6622790927542700518}
-  aimBehavior: {fileID: 11400000, guid: 8a8fe3cc7d03f174b85c20fa970d74ed, type: 2}
-  triggerBehavior: {fileID: 11400000, guid: 752faa9ded83c51469bfa166e7bc8335, type: 2}
-  fireBehavior: {fileID: 11400000, guid: 8ecdb5cb15870d9489780000d9aca360, type: 2}
 --- !u!114 &-6622790927542700518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,3 +98,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FirePoint: {fileID: 6268194236832481486}
   PreferedAnchorPoint: 2
+--- !u!114 &1867013967889115253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4099355704205769537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83131df52ad6363498ba1b50ca087593, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ProjectilePrefab: {fileID: 8293499593302840828, guid: f9183f27259c5194a852f7b915e619d5, type: 3}
+  ProjectileLaunchForce: 8
+--- !u!114 &2332935011709437319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4099355704205769537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c245bd91d67da3345a488c8a200a564f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CrosshairSprite: {fileID: 21300000, guid: 86f061ca900cc05459acc760a839ced7, type: 3}
+  WeaponFireDirection: 0
+  AimReticleRange: 5
+--- !u!114 &6670794392029500731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4099355704205769537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e243a51740d7e34abe0aa5c2fa94477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TriggerCooldown: 2

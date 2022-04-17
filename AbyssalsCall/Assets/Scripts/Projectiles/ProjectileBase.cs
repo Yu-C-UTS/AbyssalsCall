@@ -21,11 +21,11 @@ public abstract class ProjectileBase : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
     }
 
-    public virtual void InitiateProjectile(GameObject projectileSource)
+    public virtual void InitiateProjectile(WeaponSystemBase projectileWeaponSource)
     {
         Destroy(gameObject, projectileLifetime);
 
-        Collider2D sourceCollider = projectileSource.GetComponent<Collider2D>();
+        Collider2D sourceCollider = projectileWeaponSource.registeredSubmarine.GetComponent<Collider2D>();
         if(sourceCollider != null)
         {
             Physics2D.IgnoreCollision(col2d, sourceCollider, true);
@@ -58,8 +58,17 @@ public abstract class ProjectileBase : MonoBehaviour
         Debug.Log("Collider Reset");
     }
 
-    protected virtual void OnValidate() 
+    protected virtual void LateUpdate() 
     {
-        
+        FaceForwardUpdate();
+    }
+
+    protected void FaceForwardUpdate()
+    {
+        if (rb2d.velocity != Vector2.zero) 
+        {
+            var q = Quaternion.FromToRotation(transform.right, rb2d.velocity.normalized);
+            transform.rotation = q * transform.rotation;
+        }
     }
 }

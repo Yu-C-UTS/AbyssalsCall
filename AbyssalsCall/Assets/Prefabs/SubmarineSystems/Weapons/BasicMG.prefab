@@ -127,8 +127,11 @@ GameObject:
   - component: {fileID: 3422682965368659285}
   - component: {fileID: 3329042455036463520}
   - component: {fileID: 3569800497550525070}
+  - component: {fileID: 5039283430849798007}
+  - component: {fileID: 3623989419082130865}
+  - component: {fileID: 2423300994299300331}
   m_Layer: 0
-  m_Name: BasicTurret
+  m_Name: BasicMG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -180,6 +183,47 @@ MonoBehaviour:
   isUnique: 0
   isRemovable: 1
   weaponObject: {fileID: 3329042455036463520}
-  aimBehavior: {fileID: 11400000, guid: 84da9f39b0d58864795aa361497d03f5, type: 2}
-  triggerBehavior: {fileID: 11400000, guid: 03a3f0814469a844d95aa200db952902, type: 2}
-  fireBehavior: {fileID: 11400000, guid: 2f6e7b48e00eb2840a8c75d885c40e25, type: 2}
+--- !u!114 &5039283430849798007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7279990159955429925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 601ac57fd84cd474a8d1d079c8045621, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CrosshairSprite: {fileID: 21300000, guid: 86f061ca900cc05459acc760a839ced7, type: 3}
+--- !u!114 &3623989419082130865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7279990159955429925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e25ffdc5ba42b9d4eb2513c9ba31abde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponFireRate: 3
+  weaponMaxHeat: 100
+  weaponHeatPerShot: 12
+  weaponCoolingRate: 10
+--- !u!114 &2423300994299300331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7279990159955429925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83131df52ad6363498ba1b50ca087593, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WeaponFireDirection: 4
+  ProjectilePrefab: {fileID: 5513232442569640560, guid: e58264188c069f342933465586077a8a, type: 3}
+  ProjectileLaunchForce: 12
