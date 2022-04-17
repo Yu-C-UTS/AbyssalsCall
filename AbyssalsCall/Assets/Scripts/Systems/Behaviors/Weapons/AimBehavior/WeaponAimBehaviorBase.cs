@@ -22,8 +22,8 @@ public abstract class WeaponAimBehaviorBase : WeaponBehaviorBase
         crosshairSpriteRenderer.sprite = CrosshairSprite;
     }
 
-    public virtual Vector3 GetTargetPosition()
+    public virtual Transform GetTargetTransform()
     {
-        return crosshairTransform.position;
+        return crosshairTransform;
     }
 }

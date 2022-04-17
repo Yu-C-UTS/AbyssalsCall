@@ -149,6 +149,7 @@ MonoBehaviour:
   projectileLifetime: 3
   payloads:
   - {fileID: 11400000, guid: dd1277208f2b5fe40897934d7ab53645, type: 2}
+  KeepTrackingTarget: 0
   HomingDelayMinMax: {x: 0.5, y: 1}
-  HomingRandomRadius: 0.1
+  TargetInaccuracyRadius: 0.1
   HomingRotationRate: 5

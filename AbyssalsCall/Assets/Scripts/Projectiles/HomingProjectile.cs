@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class HomingProjectile : ProjectileBase
 {
+    public bool KeepTrackingTarget = false;
     public Vector2 HomingDelayMinMax = new Vector2(0.5f, 1f);
-    public float HomingRandomRadius = 0.1f;
+    public float TargetInaccuracyRadius = 0.1f;
     public float HomingRotationRate = 5;
 
     private float projectileInstTime;
 
     private float homingDelay;
-    private Vector3 homingTarget;
+    private Transform homingTarget;
+    private Vector3 homingPosition;
     private bool isHoming = false;
 
     public override void InitiateProjectile(WeaponSystemBase projectileWeaponSource)
@@ -20,7 +22,8 @@ public class HomingProjectile : ProjectileBase
 
         projectileInstTime = Time.time;
         homingDelay = Random.Range(Mathf.Min(HomingDelayMinMax.x, HomingDelayMinMax.y), Mathf.Max(HomingDelayMinMax.x, HomingDelayMinMax.y));
-        homingTarget = projectileWeaponSource.GetTargetLocation() + (Vector3)(Random.insideUnitCircle * HomingRandomRadius);
+        homingTarget = projectileWeaponSource.GetTargetTransform();
+        homingPosition = homingTarget.position + (Vector3)(Random.insideUnitCircle * TargetInaccuracyRadius);
     }
 
     protected void Update()
@@ -40,7 +43,12 @@ public class HomingProjectile : ProjectileBase
 
     protected void homingBehaviorUpdate()
     {
-        Vector3 r = Vector3.RotateTowards(rb2d.velocity.normalized, (Vector3)(homingTarget - transform.position).normalized, HomingRotationRate * Time.deltaTime, 0);
+        if(KeepTrackingTarget)
+        {
+            homingPosition = homingTarget.position + (Vector3)(Random.insideUnitCircle * TargetInaccuracyRadius);
+        }
+
+        Vector3 r = Vector3.RotateTowards(rb2d.velocity.normalized, (Vector3)(homingPosition - transform.position).normalized, HomingRotationRate * Time.deltaTime, 0);
         rb2d.velocity = rb2d.velocity.magnitude * r;
     }
 }
