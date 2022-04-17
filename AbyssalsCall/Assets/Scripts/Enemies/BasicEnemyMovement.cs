@@ -15,20 +15,23 @@ public class BasicEnemyMovement : MonoBehaviour
 
     private void Awake()
     {
-        if (hasTarget)
+/*        if (hasTarget)
         {
             pfController = new PathfindingController(transform, target);
         }
         else
-        {
+        {*/
             pfController = new PathfindingController(transform, PickRandomPoint());
-        }
+        //}
     }
 
     private void Start()
     {
         spawnPoint = transform.position;
-        target = GameObject.FindGameObjectWithTag("Player").transform;
+/*        if (hasTarget)
+        {
+            target = GameObject.FindGameObjectWithTag("Player").transform;
+        }*/
         StartCoroutine(UpdateAIPath());
     }
 
@@ -85,6 +88,7 @@ public class BasicEnemyMovement : MonoBehaviour
             else
             {
                 yield return new WaitForSeconds(0.5f);
+                target = GameObject.FindGameObjectWithTag("Player").transform;
                 pfController.targetPos = target.position;
             }
             pfController.UpdatePath();

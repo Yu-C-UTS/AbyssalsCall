@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 [RequireComponent(typeof(Renderer))]
@@ -28,6 +29,7 @@ public class MapNodeObj : MonoBehaviour
 
     private void OnMouseUp() 
     {
-        Debug.Log("Node Click"); 
+        Debug.Log("Loading Game Scene");
+        SceneManager.LoadScene("GameDemoScene");
     }
 }
