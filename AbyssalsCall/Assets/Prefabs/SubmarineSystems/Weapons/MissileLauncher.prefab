@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 1332918840022712864}
   - component: {fileID: 7385630301678117806}
   - component: {fileID: 6054040943716347206}
-  - component: {fileID: 4216233450526512982}
   - component: {fileID: 6460544874850596316}
   - component: {fileID: 3781390150468372104}
+  - component: {fileID: 1448262022517825815}
   m_Layer: 0
   m_Name: MissileLauncher
   m_TagString: Untagged
@@ -67,21 +67,6 @@ MonoBehaviour:
   isUnique: 0
   isRemovable: 1
   weaponObject: {fileID: 7385630301678117806}
---- !u!114 &4216233450526512982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4286070012773020010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83131df52ad6363498ba1b50ca087593, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WeaponFireDirection: 2
-  ProjectilePrefab: {fileID: 7484925770448962582, guid: 201bd7934c5f21c4eb1875f22ecb8b72, type: 3}
-  ProjectileLaunchForce: 4
 --- !u!114 &6460544874850596316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,6 +93,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CrosshairSprite: {fileID: 21300000, guid: 86f061ca900cc05459acc760a839ced7, type: 3}
+--- !u!114 &1448262022517825815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4286070012773020010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55f460751b4aa7d41bc79747992b1c79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WeaponFireDirection: 2
+  ProjectilePrefab: {fileID: 7484925770448962582, guid: 201bd7934c5f21c4eb1875f22ecb8b72, type: 3}
+  ProjectileLaunchForce: 4
+  BarrageCount: 5
+  FireInterval: 0.2
+  LaunchPointRandomRadius: 0.5
 --- !u!1 &5540710814928350475
 GameObject:
   m_ObjectHideFlags: 0
