@@ -123,6 +123,84 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &55999793
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 55999795}
+  - component: {fileID: 55999794}
+  m_Layer: 0
+  m_Name: CameraManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &55999794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55999793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137df7c382a114948a39d7500f570b5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentCameraMode: 1
+  MainFocusTransform: {fileID: 0}
+  SecondaryFocusTransform: {fileID: 0}
+--- !u!4 &55999795
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55999793}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &145993923 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4596782352236853767, guid: 1fd6e6dae3eff034881219502fb04042, type: 3}
+  m_PrefabInstance: {fileID: 4596782351226476171}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &145993929
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145993923}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &806149959
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,6 +330,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: SubmarineSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 7013412237291656154, guid: 4f1939b36732d3a4397cd274a2a0a074, type: 3}
+      propertyPath: requiredSystems.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7013412237291656154, guid: 4f1939b36732d3a4397cd274a2a0a074, type: 3}
+      propertyPath: requiredSystems.Array.data[2]
+      value: 
+      objectReference: {fileID: 6054040943716347206, guid: d8852875d64988a4d9f8b484fb2d999f, type: 3}
+    - target: {fileID: 7013412237291656154, guid: 4f1939b36732d3a4397cd274a2a0a074, type: 3}
+      propertyPath: requiredSystems.Array.data[3]
+      value: 
+      objectReference: {fileID: 3569800497550525070, guid: af98d9b9b12877d44b711f94530a34fd, type: 3}
     - target: {fileID: 7013412237291656155, guid: 4f1939b36732d3a4397cd274a2a0a074, type: 3}
       propertyPath: m_RootOrder
       value: 2

@@ -7,33 +7,52 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerSubmarine : MonoBehaviour
 {
+    public delegate void UpdateNotify();
+    public delegate void VectorChange(Vector2 V2Value);
+    public delegate void TriggerChange(float TriggerValue);
+
     public Rigidbody2D rigidBody2d{ get; private set;}
     public Transform systemContainerTransform{ get; private set; }
-    [SerializeField]
-    Transform turretPivot;
+    [field: SerializeField]
+    public Transform turretPivotAnchor{ get; private set;}
+    [field: SerializeField]
+    public Transform topMountAnchor{ get; private set;}    
+    [field: SerializeField]
+    public Transform bottomMountAnchor{ get; private set;}    
+    [field: SerializeField]
+    public Transform frontMountAnchor{ get; private set;}    
+    [field: SerializeField]
+    public Transform rearMountAnchor{ get; private set;}
+
+    [field: SerializeField]
+    public Transform submarineVisualTransform{ get; private set;}
 
     bool facingRight = true;
-    const float spriteFlipSpeed = 8;
 
-    public UnityEvent onSubUpdate;
-    public UnityEvent onSubFixedUpdate;
-    public UnityEvent<Vector2> onMouseMove;
-    public UnityEvent<Vector2> onMove;
-    public UnityEvent<float> onTriggerPrim;
-    public UnityEvent<float> onTriggerSec;
+    public event UpdateNotify onSubUpdate;
+    public event UpdateNotify onSubFixedUpdate;
+    public event VectorChange onMouseMove;
+    public event VectorChange onMove;
+    public event TriggerChange onTriggerPrim;
+    public event TriggerChange onTriggerSec;
 
     private void Awake() 
     {
         rigidBody2d = GetComponent<Rigidbody2D>();
         systemContainerTransform = new GameObject("systems").transform;
         systemContainerTransform.SetParent(transform);
+
+        if(turretPivotAnchor == null)
+        {
+            Debug.LogError("ERROR: Turret pivot not assigned for submarine.");
+        }
     }
 
     private void Update() 
     {
         onSubUpdate?.Invoke();
 
-        UpdateSubmarineFacing();
+        //UpdateSubmarineFacing();
     }
 
     private void FixedUpdate() 
@@ -44,6 +63,8 @@ public class PlayerSubmarine : MonoBehaviour
     public void OnMoveInput(InputAction.CallbackContext value)
     {
         onMove?.Invoke(value.ReadValue<Vector2>());
+
+        UpdateSubmarineFacing(value.ReadValue<Vector2>().x);
     }
 
     public void OnTriggerPrimInput(InputAction.CallbackContext value)
@@ -61,7 +82,10 @@ public class PlayerSubmarine : MonoBehaviour
         onMouseMove?.Invoke(value.ReadValue<Vector2>());
     }
 
+    /*
+    const float spriteFlipSpeed = 8;
 
+    [System.Obsolete("Flip turn animation, this one uses current velocity to determine direction.")]
     private void UpdateSubmarineFacing()
     {
         if(!Mathf.Approximately(rigidBody2d.velocity.x, 0))
@@ -75,5 +99,41 @@ public class PlayerSubmarine : MonoBehaviour
         }
 
         transform.localScale = new Vector3(Mathf.Clamp(transform.localScale.x + ( facingRight ? 1 : -1 ) * Time.deltaTime * spriteFlipSpeed, -1, 1), 1, 1);
+    }
+    */
+
+    public Transform GetWeaponAnchorPoint(WeaponObject.AnchorPoint anchorPoint)
+    {
+        switch (anchorPoint)
+        {
+            case WeaponObject.AnchorPoint.turret:
+            return turretPivotAnchor;
+
+            case WeaponObject.AnchorPoint.bottom:
+            return bottomMountAnchor;
+            
+            case WeaponObject.AnchorPoint.top:
+            return topMountAnchor;
+
+            case WeaponObject.AnchorPoint.front:
+            return frontMountAnchor;
+            
+            case WeaponObject.AnchorPoint.back:
+            return rearMountAnchor;
+
+            default:
+            Debug.LogWarning("Unknown Anchor Point Type, returning bottom mount.");
+            return bottomMountAnchor;
+        }
+    }
+
+    private void UpdateSubmarineFacing(float XMovementSpeed)
+    {
+        if(!Mathf.Approximately(XMovementSpeed, 0))
+        {
+            facingRight = XMovementSpeed > 0;
+        }
+
+        submarineVisualTransform.localScale = new Vector3((facingRight ? 1 : -1), 1, 1);
     }
 }
