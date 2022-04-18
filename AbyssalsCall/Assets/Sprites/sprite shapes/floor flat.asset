@@ -10,43 +10,43 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af7181f404f1447c0a7a17b3070b952b, type: 3}
-  m_Name: floor02
+  m_Name: floor flat
   m_EditorClassIdentifier: 
   m_Angles:
   - m_Start: -45
     m_End: 45
     m_Order: 0
     m_Sprites:
-    - {fileID: 21300000, guid: 091573273f233b6408528d3dab316c21, type: 3}
+    - {fileID: 21300000, guid: 0a44856d2ab74d242b5c533409d4b7e8, type: 3}
   - m_Start: 45
     m_End: 135
     m_Order: 0
     m_Sprites:
-    - {fileID: 21300000, guid: 091573273f233b6408528d3dab316c21, type: 3}
+    - {fileID: 21300000, guid: 0a44856d2ab74d242b5c533409d4b7e8, type: 3}
   - m_Start: -225
     m_End: -135
     m_Order: 0
     m_Sprites:
-    - {fileID: 21300000, guid: 091573273f233b6408528d3dab316c21, type: 3}
+    - {fileID: 21300000, guid: 0a44856d2ab74d242b5c533409d4b7e8, type: 3}
   - m_Start: -135
     m_End: -45
     m_Order: 0
     m_Sprites:
-    - {fileID: 21300000, guid: 091573273f233b6408528d3dab316c21, type: 3}
-  m_FillTexture: {fileID: 2800000, guid: 6483cb584964fa84eaecfdd614e88a7c, type: 3}
+    - {fileID: 21300000, guid: 0a44856d2ab74d242b5c533409d4b7e8, type: 3}
+  m_FillTexture: {fileID: 2800000, guid: 9459bc3d8b2e16f44959f2fc3acba3b4, type: 3}
   m_CornerSprites:
   - m_CornerType: 0
     m_Sprites:
-    - {fileID: 21300000, guid: ba857254bda3ac645896601f1913ca58, type: 3}
+    - {fileID: 21300000, guid: bb818dde52e246241b7c623bd31355a5, type: 3}
   - m_CornerType: 1
     m_Sprites:
-    - {fileID: 21300000, guid: 6625fcff6adef864abfb91c639427a05, type: 3}
+    - {fileID: 21300000, guid: e75b5962f9d865a419466cb21bc8dfc2, type: 3}
   - m_CornerType: 2
     m_Sprites:
-    - {fileID: 21300000, guid: dc614ef31dfa7fa459a68c7a399f264f, type: 3}
+    - {fileID: 21300000, guid: c1c91d08e2a2ad04d838d4c495a7f960, type: 3}
   - m_CornerType: 3
     m_Sprites:
-    - {fileID: 21300000, guid: 04143096ccbf94947abecc820c703113, type: 3}
+    - {fileID: 21300000, guid: 4c8507e4535f34c418b711ef1b5b82c4, type: 3}
   - m_CornerType: 4
     m_Sprites:
     - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
