@@ -5,7 +5,10 @@ using UnityEngine;
 public class HomingProjectile : ProjectileBase
 {
     public bool KeepTrackingTarget = false;
-    public Vector2 HomingDelayMinMax = new Vector2(0.5f, 1f);
+    [Header("Homing Start Delay")]
+    public float HomingDelayMin = 0.5f;
+    public float HomingDelayMax = 1f;
+    [Space(20)]
     public float TargetInaccuracyRadius = 0.1f;
     public float HomingRotationRate = 5;
 
@@ -21,7 +24,7 @@ public class HomingProjectile : ProjectileBase
         base.InitiateProjectile(projectileWeaponSource);
 
         projectileInstTime = Time.time;
-        homingDelay = Random.Range(Mathf.Min(HomingDelayMinMax.x, HomingDelayMinMax.y), Mathf.Max(HomingDelayMinMax.x, HomingDelayMinMax.y));
+        homingDelay = Random.Range(HomingDelayMin, HomingDelayMax);
         homingTarget = projectileWeaponSource.GetTargetTransform();
         homingPosition = homingTarget.position + (Vector3)(Random.insideUnitCircle * TargetInaccuracyRadius);
     }
@@ -50,5 +53,13 @@ public class HomingProjectile : ProjectileBase
 
         Vector3 r = Vector3.RotateTowards(rb2d.velocity.normalized, (Vector3)(homingPosition - transform.position).normalized, HomingRotationRate * Time.deltaTime, 0);
         rb2d.velocity = rb2d.velocity.magnitude * r;
+    }
+
+    private void OnValidate() 
+    {
+        if(HomingDelayMin > HomingDelayMax)
+        {
+            Debug.LogWarning("Homing Delay Max is lower than Min on: " + name);
+        }    
     }
 }
