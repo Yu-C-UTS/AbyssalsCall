@@ -126,6 +126,11 @@ public class fishUnit : MonoBehaviour
         applyForce(currentForce);
     }
 
+    private void OnDestroy()
+    {
+        shoalManager.units.Remove(this.gameObject);
+    }
+
     void Update()
     {
         flock();
