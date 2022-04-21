@@ -170,6 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MapNodePrefab: {fileID: 2143225929659943702, guid: 6827480b076dc14488fcca2d1b553106, type: 3}
   MapPlainPrefab: {fileID: 8501336159711570083, guid: 324d64e7a8859e5449894996c3a21148, type: 3}
+  seed: TestNo2
 --- !u!114 &15967268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,6 +229,51 @@ MonoBehaviour:
   m_DefaultActionMap: MapControl
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!1 &95930092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 95930094}
+  - component: {fileID: 95930093}
+  m_Layer: 0
+  m_Name: RunManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &95930093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95930092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48de1720e3deaab46be51786cdc5e6ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runGenerationData: {fileID: 11400000, guid: 49833c06f597e724a930050288bf3648, type: 2}
+--- !u!4 &95930094
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95930092}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &630009215
 GameObject:
   m_ObjectHideFlags: 0
