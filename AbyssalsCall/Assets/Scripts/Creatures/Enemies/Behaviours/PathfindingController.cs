@@ -83,6 +83,11 @@ public class PathfindingController
         }
     } 
 
+    public void StayStill()
+    {
+        rb.velocity = Vector2.zero;
+    }
+
     //Path Update
     public void UpdatePath()
     {
