@@ -19,7 +19,7 @@ public class fishShoal : MonoBehaviour
     [Range(0,100)]
     private float changingRate;
 
-    public GameObject[] units;
+    public List<GameObject> units;
 
     public float neighbourDistance = 1f;
     public float maxForce = 0.5f;
@@ -33,13 +33,13 @@ public class fishShoal : MonoBehaviour
     {
         shoalSpawnPoint = transform.position;
         GoalPos = shoalSpawnPoint;
-        units = new GameObject[numUnits];
+        units = new List<GameObject>();
         for(int i = 0; i < numUnits; i++)
         {
             Vector3 unitSpawnPos = new Vector3(Random.Range(-range.x, range.x),
                                                Random.Range(-range.y, range.y),
                                                0);
-            units[i] = Instantiate(unitPrefab, this.transform.position + unitSpawnPos, Quaternion.identity) as GameObject;
+            units.Add(Instantiate(unitPrefab, this.transform.position + unitSpawnPos, Quaternion.identity) as GameObject);
             units[i].GetComponent<fishUnit>().manager = this.gameObject;
         }
 
