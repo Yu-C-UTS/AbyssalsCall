@@ -15,7 +15,7 @@ public class layer
 
         for (int i = 0; i < nodeCount; i++)
         {
-            layerNodes[i] = new node(layerNodeData[i]);
+            layerNodes[i] = new node(layerNodeData[i], i);
         }
 
         Random.state = holdState;

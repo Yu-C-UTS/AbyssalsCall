@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45d1c933c1bcdcb45881cfff398fe991, type: 3}
   m_Name: TestEventNode
   m_EditorClassIdentifier: 
+  eventSo: {fileID: 11400000, guid: 2d5016aa733c9464db26e0e75ee27ba9, type: 2}

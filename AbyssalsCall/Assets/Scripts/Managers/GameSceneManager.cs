@@ -14,6 +14,8 @@ public class GameSceneManager : MonoBehaviour
         }
     }
 
+    private Scene latestActiveScene;
+
     private void Awake() 
     {
         if(_instance != null)
@@ -25,10 +27,25 @@ public class GameSceneManager : MonoBehaviour
         //DontDestroyOnLoad(this);
     }
 
+    private void Start() 
+    {
+        SceneManager.sceneLoaded += ChangeActiveScene;
+    }
+
     public void LoadScene(string SceneName)
     {
         Debug.Log("Loading Scene: " + SceneName);
-        SceneManager.LoadSceneAsync(SceneName, LoadSceneMode.Additive);
+        AsyncOperation asyncLoadScene = SceneManager.LoadSceneAsync(SceneName, LoadSceneMode.Additive);
     }
 
+    public void ChangeActiveScene(Scene newActiveScene, LoadSceneMode loadSceneMode)
+    {
+        Debug.Log("Scene load detected");
+        if(latestActiveScene.name != null)
+        {
+            SceneManager.UnloadSceneAsync(latestActiveScene);
+        }
+
+        latestActiveScene = newActiveScene;
+    }
 }

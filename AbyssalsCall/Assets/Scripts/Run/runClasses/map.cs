@@ -14,6 +14,14 @@ public class map
 
     private zone[] runZones;
 
+    public int ZoneCount
+    {
+        get
+        {
+            return runZones.Length;
+        }
+    }
+
     public void InitilizeMap(RunGenerationData runGenerationData)
     {
         System.Random runRandomizer = new System.Random(seed);

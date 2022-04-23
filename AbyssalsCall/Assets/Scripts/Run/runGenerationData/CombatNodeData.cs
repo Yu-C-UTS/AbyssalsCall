@@ -12,4 +12,12 @@ public class CombatNodeData : NodeDataBase
             return ENodeType.Enemy;
         }
     }
+
+    public override string LoadSceneName
+    {
+        get
+        {
+            return "CombatScene";
+        }
+    }
 }

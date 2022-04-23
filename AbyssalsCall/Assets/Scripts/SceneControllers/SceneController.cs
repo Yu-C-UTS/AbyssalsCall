@@ -7,12 +7,11 @@ public abstract class SceneController : MonoBehaviour
 {
     protected virtual void Start() 
     {
-        OnPreSceneLoad?.Invoke();
-        OnPostSceneLoad?.Invoke();
+        SetupScene();
     }
 
-    public UnityEvent OnPreSceneLoad;
-    public UnityEvent OnPostSceneLoad;
+    //public UnityEvent OnPreSceneLoad;
+    //public UnityEvent OnPostSceneLoad;
 
-    public abstract void LoadScene();
+    public abstract void SetupScene();
 }

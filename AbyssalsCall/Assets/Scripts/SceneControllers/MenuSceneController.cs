@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class MenuSceneController : SceneController
 {
-    public override void LoadScene()
+    public void StartRun()
     {
-        throw new System.NotImplementedException();
+        //RunManager.Instance.NewRun("Randomer");
+        GameSceneManager.Instance.LoadScene("FullRunMapTestScene");
+    }
+
+    public override void SetupScene()
+    {
+        Debug.Log("Nothing implimented");
     }
 }

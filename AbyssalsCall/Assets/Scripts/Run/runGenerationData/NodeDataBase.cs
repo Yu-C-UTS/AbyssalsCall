@@ -7,11 +7,13 @@ public abstract class NodeDataBase : ScriptableObject
     public enum ENodeType
     {Origin, Enemy, Event, Boss}
 
-    public virtual ENodeType NodeType
+    public abstract ENodeType NodeType
     {
-        get
-        {
-            return ENodeType.Origin;
-        }
+        get;
+    }
+
+    public abstract string LoadSceneName
+    {
+        get;
     }
 }

@@ -51,7 +51,9 @@ public class MapNodeObj : MonoBehaviour
 
     private void OnMouseUp() 
     {
-        Debug.Log("Loading Game Scene");
-        SceneManager.LoadScene("GameDemoScene");
+        RunManager.Instance.StepRun(nodeInfo.nodeNum);
+
+        Debug.Log("Loading Scene: " + nodeInfo.nodeDetailData.LoadSceneName);
+        GameSceneManager.Instance.LoadScene(nodeInfo.nodeDetailData.LoadSceneName);
     }
 }

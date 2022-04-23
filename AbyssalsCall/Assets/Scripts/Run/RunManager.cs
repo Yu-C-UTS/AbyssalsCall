@@ -29,24 +29,24 @@ public class RunManager : MonoBehaviour
         activeRun.InitilizeRun(runGenerationData);
     }
 
-    public void StepRun(int node)
+    public void StepRun(int nodeInt)
     {
-
+        activeRun.StepRun(nodeInt);
     }
 
     public zone GetCurrentZone()
     {
-        return activeRun.GetZone(0);
+        return activeRun.GetCurrentZone();
     }
 
     public layer GetCurrentLayer()
     {
-        return null;
+        return activeRun.GetCurrentLayer();
     }
 
     public node GetLatestActiveNode()
     {
-        return null;
+        return activeRun.GetLatestActiveNode();
     }
 
     public void SaveRun()
