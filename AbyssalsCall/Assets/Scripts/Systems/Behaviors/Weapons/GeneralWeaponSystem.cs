@@ -58,9 +58,9 @@ public class GeneralWeaponSystem : WeaponSystemBase
         onWeaponUpdate?.Invoke();
     }
 
-    public override Vector3 GetTargetLocation()
+    public override Transform GetTargetTransform()
     {
-        return aimBehavior.GetTargetPosition();
+        return aimBehavior.GetTargetTransform();
     }
 
     public override Vector3 GetAimDirection()

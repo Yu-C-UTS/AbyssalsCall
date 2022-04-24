@@ -6,20 +6,42 @@ using UnityEngine;
 [RequireComponent(typeof(Renderer))]
 public class MapNodeObj : MonoBehaviour
 {
-    private MapNodeData _nodeData;
-    public MapNodeData nodeData
+    private node _nodeInfo;
+    public node nodeInfo
     {
         get
         {
-            return _nodeData;
+            return _nodeInfo;
         }
         
         set
         {
-            _nodeData = value;
-            transform.position = transform.TransformPoint(_nodeData.NodePosition/transform.lossyScale.x);
-            GetComponent<Renderer>().material.SetColor("_NodeColor", nodeData.GetColor());
+            _nodeInfo = value;
+            //transform.position = transform.TransformPoint(_nodeInfo.NodePosition/transform.lossyScale.x);
+            GetComponent<Renderer>().material.SetColor("_NodeColor", NodeObjColor(nodeInfo.nodeDetailData.NodeType));
         }
+    }
+
+    private static Color NodeObjColor(NodeDataBase.ENodeType nodeType)
+    {
+        switch(nodeType)
+        {
+            case NodeDataBase.ENodeType.Origin:
+            return Color.white;
+
+            case NodeDataBase.ENodeType.Enemy:
+            return Color.red;
+
+            case NodeDataBase.ENodeType.Event:
+            return Color.yellow;
+
+            case NodeDataBase.ENodeType.Boss:
+            return Color.gray;
+
+            default:
+            return Color.white;
+        }
+
     }
 
     private void OnMouseOver() 
@@ -29,7 +51,9 @@ public class MapNodeObj : MonoBehaviour
 
     private void OnMouseUp() 
     {
-        Debug.Log("Loading Game Scene");
-        SceneManager.LoadScene("GameDemoScene");
+        RunManager.Instance.StepRun(nodeInfo.nodeNum);
+
+        Debug.Log("Loading Scene: " + nodeInfo.nodeDetailData.LoadSceneName);
+        GameSceneManager.Instance.LoadScene(nodeInfo.nodeDetailData.LoadSceneName);
     }
 }

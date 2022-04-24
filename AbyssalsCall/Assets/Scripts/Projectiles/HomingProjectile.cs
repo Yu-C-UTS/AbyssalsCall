@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class HomingProjectile : ProjectileBase
 {
-    public Vector2 HomingDelayMinMax = new Vector2(0.5f, 1f);
-    public float HomingRandomRadius = 0.1f;
+    public bool KeepTrackingTarget = false;
+    [Header("Homing Start Delay")]
+    public float HomingDelayMin = 0.5f;
+    public float HomingDelayMax = 1f;
+    [Space(20)]
+    public float TargetInaccuracyRadius = 0.1f;
     public float HomingRotationRate = 5;
 
     private float projectileInstTime;
 
     private float homingDelay;
-    private Vector3 homingTarget;
+    private Transform homingTarget;
+    private Vector3 homingPosition;
     private bool isHoming = false;
 
     public override void InitiateProjectile(WeaponSystemBase projectileWeaponSource)
@@ -19,8 +24,9 @@ public class HomingProjectile : ProjectileBase
         base.InitiateProjectile(projectileWeaponSource);
 
         projectileInstTime = Time.time;
-        homingDelay = Random.Range(Mathf.Min(HomingDelayMinMax.x, HomingDelayMinMax.y), Mathf.Max(HomingDelayMinMax.x, HomingDelayMinMax.y));
-        homingTarget = projectileWeaponSource.GetTargetLocation() + (Vector3)(Random.insideUnitCircle * HomingRandomRadius);
+        homingDelay = Random.Range(HomingDelayMin, HomingDelayMax);
+        homingTarget = projectileWeaponSource.GetTargetTransform();
+        homingPosition = homingTarget.position + (Vector3)(Random.insideUnitCircle * TargetInaccuracyRadius);
     }
 
     protected void Update()
@@ -40,7 +46,20 @@ public class HomingProjectile : ProjectileBase
 
     protected void homingBehaviorUpdate()
     {
-        Vector3 r = Vector3.RotateTowards(rb2d.velocity.normalized, (Vector3)(homingTarget - transform.position).normalized, HomingRotationRate * Time.deltaTime, 0);
+        if(KeepTrackingTarget)
+        {
+            homingPosition = homingTarget.position + (Vector3)(Random.insideUnitCircle * TargetInaccuracyRadius);
+        }
+
+        Vector3 r = Vector3.RotateTowards(rb2d.velocity.normalized, (Vector3)(homingPosition - transform.position).normalized, HomingRotationRate * Time.deltaTime, 0);
         rb2d.velocity = rb2d.velocity.magnitude * r;
+    }
+
+    private void OnValidate() 
+    {
+        if(HomingDelayMin > HomingDelayMax)
+        {
+            Debug.LogWarning("Homing Delay Max is lower than Min on: " + name);
+        }    
     }
 }
