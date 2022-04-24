@@ -25,7 +25,7 @@ public class CrabBoss : MonoBehaviour
 
         // inital animation is idle
         //skeletonAnimation.state.AddAnimation(0,shootWarmUp,false,0);
-        AddAnimation(idle, false);
+        AddAnimation(idle, true);
 
         // listen for Spine events
         animationState.Event += OnEvent;
@@ -55,7 +55,7 @@ public class CrabBoss : MonoBehaviour
     }
 
     private void OnMouseDown() {
-        AddAnimation(shootWarmUp, false);
+        AddAnimation(hit, false);
     }
 
     /// Supporting method to mix between Spine animations
@@ -63,10 +63,12 @@ public class CrabBoss : MonoBehaviour
     {
        
         int trackNum = 0;
-        if (ani == hit) trackNum = 1;
+        // mix the hit animation over the others by placing it on track 1
+        if (ani.Animation.Name == "hit") trackNum = 1;
+
         Spine.TrackEntry animationEntry = skeletonAnimation.state.AddAnimation(trackNum, ani, loop, 0);
-        // add any following animations
-        Debug.Log("name "+ani.Animation.Name);
+        // add any chained animations
+        Debug.Log("name: "+ani.Animation.Name+" track: "+trackNum);
         switch (ani.Animation.Name)
         {
             case "shoot warmup":

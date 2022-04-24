@@ -606,21 +606,7 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events:
-  - time: 0.7333
-    functionName: loop
-    data: loop
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 1
-  - time: 2.4
-    functionName: loop
-    data: end
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 1
+  m_Events: []
 --- !u!74 &-1821834318711874958
 AnimationClip:
   m_ObjectHideFlags: 0
@@ -728,7 +714,7 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -999,14 +985,7 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events:
-  - time: 1
-    functionName: loop
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 1
+  m_Events: []
 --- !u!1107 &3484894695184860259
 AnimatorStateMachine:
   serializedVersion: 6
@@ -1117,14 +1096,7 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events:
-  - time: 2
-    functionName: loop
-    data: end
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 1
+  m_Events: []
 --- !u!74 &4852727526280520104
 AnimationClip:
   m_ObjectHideFlags: 0
@@ -1248,7 +1220,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 1.3333
+        time: 1.9
         value: 0
         inSlope: 0
         outSlope: 0
@@ -1284,7 +1256,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.3333
+    m_StopTime: 1.9
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -1303,21 +1275,7 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events:
-  - time: 0.7333
-    functionName: loop
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 1
-  - time: 1.3333
-    functionName: loop
-    data: end
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 1
+  m_Events: []
 --- !u!74 &6431769979514128433
 AnimationClip:
   m_ObjectHideFlags: 0
@@ -1348,7 +1306,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.2667
+        time: 0.1333
         value: 0
         inSlope: 0
         outSlope: 0
@@ -1384,7 +1342,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.2667
+    m_StopTime: 0.1333
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
