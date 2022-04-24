@@ -50,7 +50,7 @@ public class zone
                 layerNodesDataSet.nodeData[j] = zoneData.AvalibleEventNodesForZone.GetRandomNode(Random.Range(0, int.MaxValue));
                 continue;
             }
-            zoneLayers[i] = new layer(layerNodesDataSet.nodeData, int.MaxValue);
+            zoneLayers[i] = new layer(layerNodesDataSet.nodeData, Random.Range(0, int.MaxValue));
         }
     }
 

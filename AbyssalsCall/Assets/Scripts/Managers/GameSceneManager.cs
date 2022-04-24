@@ -47,5 +47,6 @@ public class GameSceneManager : MonoBehaviour
         }
 
         latestActiveScene = newActiveScene;
+        SceneManager.SetActiveScene(newActiveScene);
     }
 }

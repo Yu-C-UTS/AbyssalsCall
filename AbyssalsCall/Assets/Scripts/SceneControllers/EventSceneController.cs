@@ -12,7 +12,7 @@ public class EventSceneController : SceneController
 
     public override void SetupScene()
     {
-        activeEventNodeData = RunManager.Instance.GetLatestActiveNode().nodeDetailData as EventNodeData;
+        activeEventNodeData = RunManager.Instance.activeRun.GetLatestActiveNode().nodeDetailData as EventNodeData;
 
         if(activeEventNodeData == null)
         {

@@ -9,7 +9,7 @@ public class RunManager : MonoBehaviour
     [SerializeField]
     private RunGenerationData runGenerationData;
 
-    private run activeRun;
+    public run activeRun{ get; private set;}
 
     private void Awake() 
     {
@@ -32,21 +32,6 @@ public class RunManager : MonoBehaviour
     public void StepRun(int nodeInt)
     {
         activeRun.StepRun(nodeInt);
-    }
-
-    public zone GetCurrentZone()
-    {
-        return activeRun.GetCurrentZone();
-    }
-
-    public layer GetCurrentLayer()
-    {
-        return activeRun.GetCurrentLayer();
-    }
-
-    public node GetLatestActiveNode()
-    {
-        return activeRun.GetLatestActiveNode();
     }
 
     public void SaveRun()

@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class MenuSceneController : SceneController
 {
+    public string SeedString = "HelloWorld";
+
     public void StartRun()
     {
-        //RunManager.Instance.NewRun("Randomer");
-        GameSceneManager.Instance.LoadScene("FullRunMapTestScene");
+        RunManager.Instance.NewRun(SeedString);
+        GameSceneManager.Instance.LoadScene("MapDisplayScene");
     }
 
     public override void SetupScene()

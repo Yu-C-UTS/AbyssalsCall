@@ -13,5 +13,10 @@ public abstract class SceneController : MonoBehaviour
     //public UnityEvent OnPreSceneLoad;
     //public UnityEvent OnPostSceneLoad;
 
+    public virtual void ReturnToMapDisplay()
+    {
+        GameSceneManager.Instance.LoadScene("MapDisplayScene");
+    }
+
     public abstract void SetupScene();
 }
