@@ -82,8 +82,6 @@ public class MapNodeObj : MonoBehaviour
         }
 
         RunManager.Instance.StepRun(nodeInfo.nodeNum);
-
-        Debug.Log("Loading Scene: " + nodeInfo.nodeDetailData.LoadSceneName);
         GameSceneManager.Instance.LoadScene(nodeInfo.nodeDetailData.LoadSceneName);
     }
 }

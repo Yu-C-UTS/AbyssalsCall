@@ -58,10 +58,10 @@ public class run
 
     public node GetLatestActiveNode()
     {
-        progress curPro = GetCurrentProgress();
+        int curProInt = GetCurrentProgressInt();
 
         layer latestLayer = GetCurrentLayer();
-        return latestLayer.GetNode(nodeChoices[nodeChoices.Count - 1]);
+        return latestLayer.GetNode(nodeChoices[curProInt - 1]);
     }
 
 
@@ -100,7 +100,7 @@ public class run
 
     public progress GetCurrentProgress()
     {
-        return IntToProgress(nodeChoices.Count);
+        return IntToProgress(nodeChoices.Count - 1);
     }
 
     public int GetCurrentProgressInt()
