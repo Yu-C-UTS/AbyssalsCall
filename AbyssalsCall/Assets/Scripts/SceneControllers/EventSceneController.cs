@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class EventSceneController : SceneController
 {
-    public Text TitleTextBox;
-    public Text DescriptionTextBox;
+    public TMP_Text TitleTextBox;
+    public TMP_Text DescriptionTextBox;
 
     EventNodeData activeEventNodeData;
 
