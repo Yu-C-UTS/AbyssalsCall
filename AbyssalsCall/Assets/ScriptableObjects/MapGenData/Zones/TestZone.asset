@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TestZone
   m_EditorClassIdentifier: 
   ZoneName: The Test Zone
-  ZoneLayerCount: 15
+  ZoneLayerCount: 4
   MinRandomLayerNodeCount: 2
   MaxRandomLayerNodeCount: 4
   CombatNodeWeight: 0.5
@@ -47,10 +47,15 @@ MonoBehaviour:
       elementIcon: {fileID: 0}
     reqReferences: {fileID: 0}
     isExpanded: 1
-    _keyValues: 000000000e000000
-    _keys: 000000000e000000
+    _keyValues: 00000000010000000200000003000000
+    _keys: 00000000010000000200000003000000
     _values:
     - nodeData:
       - {fileID: 11400000, guid: 18a11943f69a6c04497624742d71c3dd, type: 2}
     - nodeData:
+      - {fileID: 11400000, guid: b323b6f6599e39144a3d13ecc8c1c228, type: 2}
+    - nodeData:
       - {fileID: 11400000, guid: d5d7f48548bce814f899f6cbfb9125d7, type: 2}
+      - {fileID: 11400000, guid: d5d7f48548bce814f899f6cbfb9125d7, type: 2}
+    - nodeData:
+      - {fileID: 11400000, guid: 38efd1ef89ee18d42be34323a432d164, type: 2}

@@ -12,6 +12,17 @@ public class MapDisplayObject : MonoBehaviour
 
     const float ScrollSensitivity = 0.005f;
 
+    private void Update() {
+        if(Input.GetKeyUp(KeyCode.UpArrow))
+        {
+            MoveLayer(-1);
+        }
+        if(Input.GetKeyUp(KeyCode.DownArrow))
+        {
+            MoveLayer(1);
+        }
+    }
+
     public void UpdateMap()
     {
         run.progress runProgress = RunManager.Instance.activeRun.IntToProgress(RunManager.Instance.activeRun.GetCurrentProgressInt() + 1);
@@ -61,6 +72,16 @@ public class MapDisplayObject : MonoBehaviour
     public void OnScroll(InputAction.CallbackContext value)
     {
         transform.Translate(0, -value.ReadValue<float>() * ScrollSensitivity, 0);
+    }
+
+    public void Scroll(float value)
+    {
+        transform.Translate(0, -value * ScrollSensitivity, 0);
+    }
+
+    public void MoveLayer(int deltaLayer)
+    {
+        transform.Translate(0,deltaLayer * 3,0);
     }
 
 }

@@ -8,6 +8,9 @@ public class EventSceneController : SceneController
     public TMP_Text TitleTextBox;
     public TMP_Text DescriptionTextBox;
 
+    public Transform ChoiceButtonContainer;
+    public OutcomeButton ChoiceButtonPrefab;
+
     EventNodeData activeEventNodeData;
 
     public override void SetupScene()
@@ -26,6 +29,17 @@ public class EventSceneController : SceneController
     {
         TitleTextBox.text = eventSO.EventName;
         DescriptionTextBox.text = eventSO.EveentDescription;
+
+        foreach(EventSO.OutcomeBase outcomeChoice in eventSO.OutcomeChoices)
+        {
+            AddOutcomeButton(outcomeChoice);
+        }
+    }
+
+    private void AddOutcomeButton(EventSO.OutcomeBase outcomeBase)
+    {
+        OutcomeButton ocb = Instantiate<OutcomeButton>(ChoiceButtonPrefab, Vector3.zero, Quaternion.identity, ChoiceButtonContainer);
+        ocb.SetButtonText(outcomeBase.ButtonText);
     }
 
     protected void OnValidate() 

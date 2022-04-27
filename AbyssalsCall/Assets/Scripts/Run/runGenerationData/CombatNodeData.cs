@@ -17,7 +17,7 @@ public class CombatNodeData : NodeDataBase
     {
         get
         {
-            return "CombatScene";
+            return "EnemyTestScene";
         }
     }
 }

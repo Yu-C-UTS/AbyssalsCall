@@ -9,7 +9,13 @@ public class MenuSceneController : SceneController
     public void StartRun()
     {
         RunManager.Instance.NewRun(SeedString);
+        //GameSceneManager.Instance.LoadScene("EnemyTestScene");
         GameSceneManager.Instance.LoadScene("MapDisplayScene");
+    }
+
+    public void SetNewSeedString(string newSeedString)
+    {
+        SeedString = newSeedString;
     }
 
     public override void SetupScene()
