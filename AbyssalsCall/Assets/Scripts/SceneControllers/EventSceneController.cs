@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class EventSceneController : SceneController
 {
-    public Text TitleTextBox;
-    public Text DescriptionTextBox;
+    public TMP_Text TitleTextBox;
+    public TMP_Text DescriptionTextBox;
 
     EventNodeData activeEventNodeData;
 
     public override void SetupScene()
     {
-        activeEventNodeData = RunManager.Instance.GetLatestActiveNode().nodeDetailData as EventNodeData;
+        activeEventNodeData = RunManager.Instance.activeRun.GetLatestActiveNode().nodeDetailData as EventNodeData;
 
         if(activeEventNodeData == null)
         {

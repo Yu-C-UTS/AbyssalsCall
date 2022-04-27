@@ -20,7 +20,7 @@ public class SampleMapScript : MonoBehaviour
     {
         RunManager.Instance.NewRun(seed);
 
-        activeZone = RunManager.Instance.GetCurrentZone();
+        activeZone = RunManager.Instance.activeRun.GetCurrentZone();
 
         for(int layerNum = 0; layerNum < activeZone.LayerCount; layerNum++ )
         {
@@ -31,7 +31,7 @@ public class SampleMapScript : MonoBehaviour
             for(int nodeNum = 0; nodeNum < curLay.nodeCount; nodeNum++)
             {
                 MapNodeObj NewNode = Instantiate<MapNodeObj>(MapNodePrefab);
-                NewNode.nodeInfo = curLay.GetNode(nodeNum);
+                NewNode.SetNodeInfo(curLay.GetNode(nodeNum));
                 NewNode.transform.SetParent(layerPlain);
                 NewNode.transform.SetPositionAndRotation(new Vector3(Random.Range(-3f, 3f), (-3 * layerNum) + Random.Range(-0.2f, 0.2f), Random.Range(-3f, 3f)), Quaternion.identity);
             }
