@@ -1044,6 +1044,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TitleTextBox: {fileID: 2006705614}
   DescriptionTextBox: {fileID: 1083985523}
+  LayoutTop: {fileID: 125089215}
   ChoiceButtonContainer: {fileID: 408442701}
   ChoiceButtonPrefab: {fileID: 867894350666177253, guid: e0a07f736a49fe74bbd412b831d0b995, type: 3}
 --- !u!1 &1920989339

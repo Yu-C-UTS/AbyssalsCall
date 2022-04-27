@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class EventSceneController : SceneController
@@ -8,6 +9,7 @@ public class EventSceneController : SceneController
     public TMP_Text TitleTextBox;
     public TMP_Text DescriptionTextBox;
 
+    public RectTransform LayoutTop;
     public Transform ChoiceButtonContainer;
     public OutcomeButton ChoiceButtonPrefab;
 
@@ -34,6 +36,9 @@ public class EventSceneController : SceneController
         {
             AddOutcomeButton(outcomeChoice);
         }
+
+        UnityEngine.UI.ContentSizeFitter csf = ChoiceButtonContainer.GetComponent<UnityEngine.UI.ContentSizeFitter>();
+        LayoutRebuilder.ForceRebuildLayoutImmediate(LayoutTop);
     }
 
     private void AddOutcomeButton(EventSO.OutcomeBase outcomeBase)
