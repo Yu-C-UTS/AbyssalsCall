@@ -48,6 +48,22 @@ public class PlayerSubmarine : MonoBehaviour
         }
     }
 
+    private void Start() 
+    {
+        StartCoroutine(ActivateUserInputCoroutine());
+    }
+
+    private IEnumerator ActivateUserInputCoroutine()
+    {
+        for(int waitFrame = 0; waitFrame < 3; waitFrame++)
+        {
+            yield return null; 
+        }
+        GetComponent<PlayerInput>().enabled = true;
+        GetComponent<PlayerInput>().ActivateInput();    
+        yield break;
+    }
+
     private void Update() 
     {
         onSubUpdate?.Invoke();
