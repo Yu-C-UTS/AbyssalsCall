@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DashingEnemy : BasicEnemyMovement
+public class DashingEnemy : BasicEnemyController
 {
     [SerializeField]
     private float DashDistance = 3f;
@@ -17,6 +17,7 @@ public class DashingEnemy : BasicEnemyMovement
 
     protected override void Awake()
     {
+        Health = 20;
         pfController = new PathfindingController(transform, PickRandomPoint());
         dashCoolTimer = 0;
     }

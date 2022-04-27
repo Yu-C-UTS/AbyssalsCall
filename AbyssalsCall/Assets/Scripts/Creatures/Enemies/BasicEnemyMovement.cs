@@ -101,7 +101,7 @@ public class BasicEnemyMovement : MonoBehaviour
             if (collider.gameObject.CompareTag(targetTag))
             {
                 hasTarget = true;
-                target = collider.gameObject.transform;
+                target = collider.gameObject.transform.GetChild(0).transform;
                 Debug.Log("detected");
             }
         }
