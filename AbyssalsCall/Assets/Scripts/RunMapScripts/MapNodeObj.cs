@@ -30,6 +30,9 @@ public class MapNodeObj : MonoBehaviour
             case NodeDataBase.ENodeType.Event:
             return Color.yellow;
 
+            case NodeDataBase.ENodeType.Maintenance:
+            return Color.cyan;
+
             case NodeDataBase.ENodeType.Boss:
             return Color.gray;
 
