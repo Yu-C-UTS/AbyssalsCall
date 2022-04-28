@@ -8,9 +8,19 @@ public class MapDisplaySceneController : SceneController
 
     MapDisplayObject mapDisplay;
 
+    public RectTransform NodeChoiceUIContainer;
+    public NodeChoiceInfo NodeChoiceUIPrefab;
+
     public override void SetupScene()
     {
         mapDisplay = Instantiate(MapDisplayObjectPrefab, Vector3.zero, Quaternion.identity);
-        mapDisplay.UpdateMap();
+        mapDisplay.UpdateMap(this);
+    }
+
+    public NodeChoiceInfo AddNewChoiceNodeInfoUI(MapNodeObj NodeObj)
+    {
+        NodeChoiceInfo newChoiceInfoUI = Instantiate<NodeChoiceInfo>(NodeChoiceUIPrefab, Vector3.zero, Quaternion.identity, NodeChoiceUIContainer);
+        newChoiceInfoUI.InitializeInfo(NodeObj);
+        return newChoiceInfoUI;
     }
 }

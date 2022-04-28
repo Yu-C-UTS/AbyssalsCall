@@ -23,4 +23,8 @@ public class EventNodeData : NodeDataBase
         }
     }
 
+    public override string GetNodeDetailText()
+    {
+        return "Unknown Signal Detected";    
+    }
 }

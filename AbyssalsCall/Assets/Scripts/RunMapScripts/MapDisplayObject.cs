@@ -9,6 +9,7 @@ public class MapDisplayObject : MonoBehaviour
     MapNodeObj MapNodePrefab;
     [SerializeField]
     GameObject MapPlainPrefab;
+    MapDisplaySceneController SceneController;
 
     const float ScrollSensitivity = 0.005f;
 
@@ -23,8 +24,9 @@ public class MapDisplayObject : MonoBehaviour
         }
     }
 
-    public void UpdateMap()
+    public void UpdateMap(MapDisplaySceneController mdsc)
     {
+        SceneController = mdsc;
         run.progress runProgress = RunManager.Instance.activeRun.IntToProgress(RunManager.Instance.activeRun.GetCurrentProgressInt() + 1);
         UpdateMap(runProgress.ZoneNum, runProgress.LayerNum);
     }
@@ -57,6 +59,9 @@ public class MapDisplayObject : MonoBehaviour
             {
                 NewNode.SetNodeGlowState(MapNodeObj.GlowState.blink);
                 NewNode.Selectable = true;
+                NodeChoiceInfo nci = SceneController.AddNewChoiceNodeInfoUI(NewNode);
+                NewNode.OnHoverEnter += nci.HoverEnter;
+                NewNode.OnHoverExit += nci.HoverExit;
             }
             else if(nodeChoice == nodeNum)
             {

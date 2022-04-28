@@ -20,4 +20,9 @@ public class CombatNodeData : NodeDataBase
             return "EnemyTestScene";
         }
     }
+
+    public override string GetNodeDetailText()
+    {       
+        return "Enemy Detected";
+    }
 }
