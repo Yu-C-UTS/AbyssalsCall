@@ -10,6 +10,10 @@ public class MapNodeObj : MonoBehaviour
 
     public node nodeInfo{ get; private set;}
 
+    public delegate void ZeroParaDele();
+    public event ZeroParaDele OnHoverEnter;
+    public event ZeroParaDele OnHoverExit;
+
     public enum GlowState
     { blink, bright, dim}
 
@@ -69,12 +73,22 @@ public class MapNodeObj : MonoBehaviour
         }
     }
 
-    private void OnMouseOver() 
+    private void OnMouseEnter() 
     {
-        //Debug.Log("Over Node");
+        OnHoverEnter?.Invoke();
+    }
+
+    private void OnMouseExit()
+    {
+        OnHoverExit?.Invoke();
     }
 
     private void OnMouseUp() 
+    {
+        TriggerSelection();
+    }
+
+    public void TriggerSelection()
     {
         if(!Selectable)
         {
@@ -82,6 +96,6 @@ public class MapNodeObj : MonoBehaviour
         }
 
         RunManager.Instance.StepRun(nodeInfo.nodeNum);
-        GameSceneManager.Instance.LoadScene(nodeInfo.nodeDetailData.LoadSceneName);
+        GameSceneManager.Instance.LoadScene(nodeInfo.nodeDetailData.LoadSceneName);    
     }
 }

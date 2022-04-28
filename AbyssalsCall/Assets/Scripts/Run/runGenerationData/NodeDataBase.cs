@@ -16,4 +16,6 @@ public abstract class NodeDataBase : ScriptableObject
     {
         get;
     }
+
+    public abstract string GetNodeDetailText();
 }

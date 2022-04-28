@@ -7,6 +7,8 @@ public class UniqueNodeData : NodeDataBase
 {
     public ENodeType nodeType = ENodeType.Origin;
     public string SceneName = "CombatScene";
+    [TextArea(2,5)]
+    public string NodeInfoDetailText;
 
     public override ENodeType NodeType
     {
@@ -22,5 +24,10 @@ public class UniqueNodeData : NodeDataBase
         {
             return SceneName;
         }
+    }
+
+    public override string GetNodeDetailText()
+    {
+        return NodeInfoDetailText;
     }
 }
