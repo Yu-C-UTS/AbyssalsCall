@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 using UnityEngine;
 
 public class StartMenuPanelManager : MonoBehaviour
 {
+    public MenuSceneController menuController;
     public GameObject OptionsPanel;
     public GameObject PlayBtn;
     public GameObject QuitBtn;
@@ -24,5 +26,28 @@ public class StartMenuPanelManager : MonoBehaviour
             OptionsBtn.SetActive(!optionBtnIsActive);
             QuitBtn.SetActive(!quitIsActive);
         }
+    }
+
+    public void IntroLoadNextScene()
+    {
+        menuController.SetupRun();
+        GameSceneManager.Instance.LoadScene("ControlSchemeScene");
+    }
+
+    public void StartMenuToIntro()
+    {
+        menuController.SetupRun();
+        GameSceneManager.Instance.LoadScene("IntroductionScene");
+    }
+
+    public void ControlToLevelSelect()
+    {
+        menuController.SetupRun();
+        GameSceneManager.Instance.LoadScene("MapDisplayScene");
+    }
+    public void QuitGame()
+    {
+        Debug.Log("Quit Game!");
+        Application.Quit();
     }
 }

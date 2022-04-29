@@ -8,7 +8,7 @@ public class MenuSceneController : SceneController
 
     public void StartRun()
     {
-        RunManager.Instance.NewRun(SeedString);
+        SetupRun();
         //GameSceneManager.Instance.LoadScene("EnemyTestScene");
         GameSceneManager.Instance.LoadScene("MapDisplayScene");
     }
@@ -21,5 +21,10 @@ public class MenuSceneController : SceneController
     public override void SetupScene()
     {
         Debug.Log("Nothing implimented");
+    }
+
+    public void SetupRun()
+    {
+        RunManager.Instance.NewRun(SeedString);
     }
 }
