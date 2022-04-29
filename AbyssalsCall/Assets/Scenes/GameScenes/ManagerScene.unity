@@ -280,6 +280,91 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 039ef9b83568b5844ba9aa05da35357a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &559678414
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 559678416}
+  - component: {fileID: 559678415}
+  m_Layer: 0
+  m_Name: DataConverter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &559678415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559678414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bbd6d5facba4594590204cd59c1adda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StringSystemDict:
+    reorderableList:
+      canAdd: 1
+      canRemove: 1
+      draggable: 1
+      expandable: 1
+      multipleSelection: 1
+      isExpanded: 1
+      label:
+        m_Text: Keys
+        m_Image: {fileID: 0}
+        m_Tooltip: 
+      headerHeight: 18
+      footerHeight: 13
+      slideEasing: 0.15
+      verticalSpacing: 2
+      showDefaultBackground: 1
+      elementDisplayType: 0
+      elementNameProperty: 
+      elementNameOverride: 
+      elementIcon: {fileID: 0}
+    reqReferences: {fileID: 0}
+    isExpanded: 1
+    _keyValues:
+    - SimpleBallast
+    - SimplePropulsion
+    - BasicMG
+    - MissileLauncher
+    - SimpleTorpedoLauncher
+    _keys:
+    - SimpleBallast
+    - SimplePropulsion
+    - BasicMG
+    - MissileLauncher
+    - SimpleTorpedoLauncher
+    _values:
+    - {fileID: 3604815621542158155, guid: a9f5aa797b6245f499fb961f85ee9fee, type: 3}
+    - {fileID: 4572655284797286809, guid: 4a6ae41c2fbc050459643a57fc361504, type: 3}
+    - {fileID: 3569800497550525070, guid: af98d9b9b12877d44b711f94530a34fd, type: 3}
+    - {fileID: 6054040943716347206, guid: d8852875d64988a4d9f8b484fb2d999f, type: 3}
+    - {fileID: -6631021656632569833, guid: 5c63e3e65a08eda47b63ae0d20e8ef89, type: 3}
+--- !u!4 &559678416
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559678414}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1227684936
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,6 +439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runGenerationData: {fileID: 11400000, guid: 49833c06f597e724a930050288bf3648, type: 2}
+  <ActivePlayerSubmarineStateData>k__BackingField: {fileID: 11400000, guid: aa22ab26cde070444b67fff589b3c6ee, type: 2}
 --- !u!4 &1292082277
 Transform:
   m_ObjectHideFlags: 0
@@ -415,4 +501,49 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2037847115
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2037847117}
+  - component: {fileID: 2037847116}
+  m_Layer: 0
+  m_Name: SubmarineSpawnManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2037847116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037847115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c665ba0fe4aea141bd4f5f0844173a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basicSubmarinePrefab: {fileID: 6479458855308839219, guid: 242dc39ef5605a643822210b50bbeac6, type: 3}
+--- !u!4 &2037847117
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037847115}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
