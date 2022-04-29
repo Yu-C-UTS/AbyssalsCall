@@ -7,7 +7,7 @@ public class MaintenanceSceneController : SceneController
     [SerializeField]
     RectTransform SystemListUIContainer;
     [SerializeField]
-    GameObject SystemItemUIPrefab;
+    SystemItemUI SystemItemUIPrefab;
 
     [Space(20)]
 
@@ -32,6 +32,11 @@ public class MaintenanceSceneController : SceneController
 
     public override void SetupScene()
     {
-        throw new System.NotImplementedException();
+        SubmarineStateData playerSSD = RunManager.Instance.ActivePlayerSubmarineStateData;
+        foreach (KeyValuePair<string, SystemStateData> systemItem in playerSSD.SystemStatesDict)
+        {
+            SystemItemUI newSystemUIElement = Instantiate<SystemItemUI>(SystemItemUIPrefab, Vector3.zero, Quaternion.identity, SystemListUIContainer);
+            newSystemUIElement.InitilizeUI(systemItem.Key, systemItem.Value);
+        }
     }
 }

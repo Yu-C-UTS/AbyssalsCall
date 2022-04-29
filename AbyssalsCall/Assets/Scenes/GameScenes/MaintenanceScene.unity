@@ -583,7 +583,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -1126,6 +1126,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 554998790}
+  - component: {fileID: 554998791}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -1150,9 +1151,35 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.0003332456}
+  m_AnchoredPosition: {x: 0, y: 0.00002192443}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &554998791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554998789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &561619082
 GameObject:
   m_ObjectHideFlags: 0
@@ -3516,7 +3543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SystemListUIContainer: {fileID: 554998790}
-  SystemItemUIPrefab: {fileID: 0}
+  SystemItemUIPrefab: {fileID: 3045662253368215438, guid: ffff81375a164894eb3da0cd6ad54a3f, type: 3}
   SystemUpgradeListUIContainer: {fileID: 1680108984}
   SystemUpgradeItemUIPrefab: {fileID: 0}
   UpgradeChoiceUIContainer: {fileID: 1753215291}
