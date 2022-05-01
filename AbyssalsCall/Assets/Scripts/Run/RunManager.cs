@@ -9,7 +9,12 @@ public class RunManager : MonoBehaviour
     [SerializeField]
     private RunGenerationData runGenerationData;
 
+    //[Space(20)]
+
     public run activeRun{ get; private set;}
+
+    [field: SerializeField]
+    public SubmarineStateData ActivePlayerSubmarineStateData{ get; private set;}
 
     private void Awake() 
     {

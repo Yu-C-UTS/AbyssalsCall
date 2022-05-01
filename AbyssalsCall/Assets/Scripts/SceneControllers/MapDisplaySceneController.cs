@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class MapDisplaySceneController : SceneController
 {
-    public MapDisplayObject MapDisplayObjectPrefab;
+    [SerializeField]
+    MapDisplayObject MapDisplayObjectPrefab;
 
     MapDisplayObject mapDisplay;
 
-    public RectTransform NodeChoiceUIContainer;
-    public NodeChoiceInfo NodeChoiceUIPrefab;
+    [SerializeField]
+    RectTransform NodeChoiceUIContainer;
+    [SerializeField]
+    NodeChoiceInfo NodeChoiceUIPrefab;
 
     public override void SetupScene()
     {

@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class NodeDataBase : ScriptableObject
 {
     public enum ENodeType
-    {Origin, Enemy, Event, Boss}
+    {Origin, Enemy, Event, Maintenance, Boss}
 
     public abstract ENodeType NodeType
     {
