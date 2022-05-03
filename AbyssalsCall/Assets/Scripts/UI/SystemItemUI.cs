@@ -5,6 +5,7 @@ using TMPro;
 
 public class SystemItemUI : MonoBehaviour
 {
+    private string refSystemKey;
     private SystemStateData refSystemStateData;
 
     [SerializeField]
@@ -12,7 +13,18 @@ public class SystemItemUI : MonoBehaviour
 
     public void InitilizeUI(string SystemStringKey, SystemStateData RefSystemStateData)
     {
+        refSystemKey = SystemStringKey;
         refSystemStateData = RefSystemStateData;
         systemNameText.text = StringSystemConverter.Instance.StringToSystem(SystemStringKey).SystemName;
+    }
+
+    public void OnClick()
+    {
+        MaintenanceSceneController msc = FindObjectOfType<MaintenanceSceneController>();
+        if(msc == null)
+        {
+            return;
+        }
+        msc.DisplaySystemInfo(StringSystemConverter.Instance.StringToSystem(refSystemKey));
     }
 }

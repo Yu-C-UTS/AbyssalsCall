@@ -30,4 +30,9 @@ public class SimpleBallastSystem : MovementSystemBase
         registeredSubmarine.onSubFixedUpdate -= SystemFixedUpdate;
     }
 
+    public override List<string> GetStats()
+    {
+        string onlyStat = "Output Force: " + ballastForce;
+        return new List<string>(){ onlyStat};
+    }
 }
