@@ -16,10 +16,28 @@ MonoBehaviour:
   EveentDescription: Yeah this is supposed to be some event that can either hurt
     you or give you new stuff and upgrades, but uhh.... not done yet so uh.... hi....
     how's your day?....
-  OutcomeChoices:
-  - OutcomeClass: 0
-    ButtonText: Good
-  - OutcomeClass: 0
-    ButtonText: Bad
-  - OutcomeClass: 0
-    ButtonText: I don't know, too long, didn't read.
+  Choices:
+  - ChoiceText: Good
+    ChoiceOutcomes:
+    - rid: 7532883999654412326
+  - ChoiceText: Bad
+    ChoiceOutcomes:
+    - rid: 7532883999654412328
+  - ChoiceText: Why are you asking me this?
+    ChoiceOutcomes:
+    - rid: 7532883999654412329
+  references:
+    version: 2
+    RefIds:
+    - rid: 7532883999654412326
+      type: {class: ChoiceOutcome/OutcomeBase, ns: , asm: Assembly-CSharp}
+      data:
+        OutcomeType: 0
+    - rid: 7532883999654412328
+      type: {class: ChoiceOutcome/OutcomeBase, ns: , asm: Assembly-CSharp}
+      data:
+        OutcomeType: 0
+    - rid: 7532883999654412329
+      type: {class: ChoiceOutcome/OutcomeBase, ns: , asm: Assembly-CSharp}
+      data:
+        OutcomeType: 0
