@@ -10,13 +10,35 @@ public abstract class WeaponSystemBase : SystemBase
     public abstract Transform GetTargetTransform();
     public abstract Vector3 GetAimDirection();
 
+    protected bool IsPrimaryWeapon = true;
+
     public override void RegisterSystem()
     {
-        registeredSubmarine.onTriggerPrim += TriggerBehavior;
+        RegisterSystem(true);
+    }
+
+    public virtual void RegisterSystem(bool PrimaryWeapon)
+    {
+        IsPrimaryWeapon = PrimaryWeapon;
+        if(IsPrimaryWeapon)
+        {
+            registeredSubmarine.onTriggerPrim += TriggerBehavior;
+        }
+        else
+        {
+            registeredSubmarine.onTriggerSec += TriggerBehavior;
+        }
     }
 
     public override void UnRegisterSystem()
     {
-        registeredSubmarine.onTriggerPrim -= TriggerBehavior;
+        if(IsPrimaryWeapon)
+        {
+            registeredSubmarine.onTriggerPrim -= TriggerBehavior;
+        }
+        else
+        {
+            registeredSubmarine.onTriggerSec -= TriggerBehavior;
+        }
     }
 }

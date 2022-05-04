@@ -83,6 +83,14 @@ public class GeneralWeaponSystem : WeaponSystemBase
         registeredSubmarine.onSubUpdate += WeaponUpdate;
     }
 
+    public override void RegisterSystem(bool PrimaryWeapon)
+    {
+        base.RegisterSystem(PrimaryWeapon);
+
+        registeredSubmarine.onMouseMove += aimBehavior.moveCrosshair;
+        registeredSubmarine.onSubUpdate += WeaponUpdate;
+    }
+
     public override void UnRegisterSystem()
     {
         base.UnRegisterSystem();
