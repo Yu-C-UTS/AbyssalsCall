@@ -67,7 +67,6 @@ public class PlayerSubmarine : MonoBehaviour, IDamagable
     private void Update() 
     {
         onSubUpdate?.Invoke();
-
         //UpdateSubmarineFacing();
     }
 
