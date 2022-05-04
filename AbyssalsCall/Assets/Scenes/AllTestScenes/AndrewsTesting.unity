@@ -643,12 +643,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08597b93e604eb943993bdbd62a07430, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteShapeController: {fileID: 885256300}
-  index: 11
-  useNormals: 0
-  runtimeUpdate: 0
-  yOffset: 0.85
-  localOffset: 0
 --- !u!212 &73683747
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -814,7 +808,7 @@ PrefabInstance:
       objectReference: {fileID: -6631021656632569833, guid: 5c63e3e65a08eda47b63ae0d20e8ef89, type: 3}
     - target: {fileID: 7013412237291656155, guid: 4f1939b36732d3a4397cd274a2a0a074, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7013412237291656155, guid: 4f1939b36732d3a4397cd274a2a0a074, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1035,12 +1029,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08597b93e604eb943993bdbd62a07430, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteShapeController: {fileID: 885256300}
-  index: 4
-  useNormals: 0
-  runtimeUpdate: 0
-  yOffset: 0.77
-  localOffset: 0
 --- !u!212 &270654240
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1138,12 +1126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08597b93e604eb943993bdbd62a07430, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteShapeController: {fileID: 885256300}
-  index: 12
-  useNormals: 0
-  runtimeUpdate: 0
-  yOffset: 0.72
-  localOffset: 0
 --- !u!212 &292836193
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1241,12 +1223,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08597b93e604eb943993bdbd62a07430, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteShapeController: {fileID: 1346413388}
-  index: 5
-  useNormals: 0
-  runtimeUpdate: 0
-  yOffset: 0.95
-  localOffset: 0
 --- !u!212 &311469904
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1770,6 +1746,9 @@ GameObject:
   - component: {fileID: 838863409}
   - component: {fileID: 838863410}
   - component: {fileID: 838863408}
+  - component: {fileID: 838863412}
+  - component: {fileID: 838863413}
+  - component: {fileID: 838863411}
   m_Layer: 0
   m_Name: Crab boss
   m_TagString: Enemy
@@ -1810,8 +1789,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2065755344}
+  - {fileID: 1939405021}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &838863410
 MonoBehaviour:
@@ -1825,7 +1805,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd5f4cbc0a51cc24b86e5f70151bc0c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonAnimation: {fileID: 2065755341}
+--- !u!50 &838863411
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838863407}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 3
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &838863412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838863407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 303310ae5292c174f8acf474f84597bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 2065755340}
+  myCenter: {fileID: 1939405021}
+--- !u!114 &838863413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838863407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfb259eec63d0f9428a44bffa03d3cb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  anim: {fileID: 2065755340}
+  myCenter: {fileID: 1939405021}
 --- !u!1 &851818283
 GameObject:
   m_ObjectHideFlags: 0
@@ -1871,12 +1900,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08597b93e604eb943993bdbd62a07430, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteShapeController: {fileID: 1346413388}
-  index: 4
-  useNormals: 0
-  runtimeUpdate: 0
-  yOffset: 0.99
-  localOffset: 0
 --- !u!212 &851818286
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2855,12 +2878,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08597b93e604eb943993bdbd62a07430, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteShapeController: {fileID: 1346413388}
-  index: 6
-  useNormals: 0
-  runtimeUpdate: 0
-  yOffset: 1.03
-  localOffset: 0
 --- !u!212 &1175331030
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2958,12 +2975,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08597b93e604eb943993bdbd62a07430, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteShapeController: {fileID: 1346413388}
-  index: 3
-  useNormals: 0
-  runtimeUpdate: 0
-  yOffset: 1.03
-  localOffset: 0
 --- !u!212 &1175636212
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3568,12 +3579,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08597b93e604eb943993bdbd62a07430, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteShapeController: {fileID: 1346413388}
-  index: 2
-  useNormals: 0
-  runtimeUpdate: 0
-  yOffset: 1.12
-  localOffset: 0
 --- !u!212 &1399775281
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4205,12 +4210,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08597b93e604eb943993bdbd62a07430, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteShapeController: {fileID: 1346413388}
-  index: 1
-  useNormals: 0
-  runtimeUpdate: 0
-  yOffset: 1.35
-  localOffset: 0
 --- !u!212 &1589459197
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4634,6 +4633,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1939405020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1939405021}
+  m_Layer: 0
+  m_Name: CenterPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1939405021
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939405020}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.33, y: 3.18, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 838863409}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1972356260
 GameObject:
   m_ObjectHideFlags: 0
@@ -4818,12 +4848,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08597b93e604eb943993bdbd62a07430, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteShapeController: {fileID: 885256300}
-  index: 6
-  useNormals: 0
-  runtimeUpdate: 0
-  yOffset: 1.37
-  localOffset: 0
 --- !u!212 &2026786286
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5043,12 +5067,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08597b93e604eb943993bdbd62a07430, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteShapeController: {fileID: 885256300}
-  index: 2
-  useNormals: 0
-  runtimeUpdate: 0
-  yOffset: 1.2
-  localOffset: 0
 --- !u!212 &2062651503
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5348,12 +5366,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08597b93e604eb943993bdbd62a07430, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteShapeController: {fileID: 1346413388}
-  index: 7
-  useNormals: 0
-  runtimeUpdate: 0
-  yOffset: 1.03
-  localOffset: 0
 --- !u!212 &2073632546
 SpriteRenderer:
   m_ObjectHideFlags: 0
