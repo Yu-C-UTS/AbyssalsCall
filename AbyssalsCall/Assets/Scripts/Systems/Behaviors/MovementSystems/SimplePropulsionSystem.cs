@@ -30,4 +30,9 @@ public class SimplePropulsionSystem : MovementSystemBase
         registeredSubmarine.onSubFixedUpdate -= SystemFixedUpdate;
     }
 
+    public override List<string> GetStats()
+    {
+        string onlyStat = "Output Force: " + propulsionForce;
+        return new List<string>(){ onlyStat};
+    }
 }

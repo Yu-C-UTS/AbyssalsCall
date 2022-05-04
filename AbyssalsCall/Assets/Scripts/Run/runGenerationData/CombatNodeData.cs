@@ -5,6 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewCombatNodeData", menuName = "ScriptableObjects/MapGenData/NodeData/CombatNode")]
 public class CombatNodeData : NodeDataBase
 {
+    [SerializeField]
+    private string SceneNameToLoad = "EnemyTestScene";
+
     public override ENodeType NodeType
     {
         get
@@ -17,7 +20,7 @@ public class CombatNodeData : NodeDataBase
     {
         get
         {
-            return "EnemyTestScene";
+            return SceneNameToLoad;
         }
     }
 

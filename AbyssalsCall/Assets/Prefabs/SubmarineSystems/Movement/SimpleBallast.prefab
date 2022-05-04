@@ -47,4 +47,26 @@ MonoBehaviour:
   <SystemName>k__BackingField: Simple Ballast System
   isUnique: 0
   isRemovable: 0
+  AvailableUpgrades:
+  - rid: 7532883974377701376
+  - rid: 7532883974377701377
+  - rid: 7532883974377701378
   ballastForce: 5
+  references:
+    version: 2
+    RefIds:
+    - rid: 7532883974377701376
+      type: {class: SystemUpgrade, ns: , asm: Assembly-CSharp}
+      data:
+        <UpgradeType>k__BackingField: 0
+        <UpgradeName>k__BackingField: 
+    - rid: 7532883974377701377
+      type: {class: SystemUpgrade, ns: , asm: Assembly-CSharp}
+      data:
+        <UpgradeType>k__BackingField: 0
+        <UpgradeName>k__BackingField: 
+    - rid: 7532883974377701378
+      type: {class: SystemUpgrade, ns: , asm: Assembly-CSharp}
+      data:
+        <UpgradeType>k__BackingField: 0
+        <UpgradeName>k__BackingField: 

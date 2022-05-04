@@ -9,4 +9,9 @@ public abstract class WeaponBehaviorBase : MonoBehaviour
     {
         this.parentWeaponSystem = parentWeaponSystem;
     }
+
+    public virtual string[] GetStats()
+    {
+        return new string[0];
+    }
 }
