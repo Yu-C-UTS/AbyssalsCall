@@ -14,8 +14,15 @@ public abstract class SystemBase : MonoBehaviour
     [SerializeField]
     private bool isRemovable = true;
 
+    [SerializeReference]
+    protected List<SystemUpgrade> AvailableUpgrades;
+
     public virtual void InitilizeSystem(PlayerSubmarine parentSubmarine)
     {
+        if(parentSubmarine == null)
+        {
+            return;
+        }
         registeredSubmarine = parentSubmarine;
         transform.SetParent(registeredSubmarine.systemContainerTransform);
     }
@@ -23,6 +30,8 @@ public abstract class SystemBase : MonoBehaviour
     public abstract void RegisterSystem();
 
     public abstract void UnRegisterSystem();
+
+    public abstract List<string> GetStats();
 
     protected virtual void OnEnable() 
     {
@@ -37,6 +46,18 @@ public abstract class SystemBase : MonoBehaviour
         if(registeredSubmarine)
         {
             UnRegisterSystem();
+        }
+    }
+
+    protected void OnValidate() 
+    {
+        for (int i = AvailableUpgrades.Count - 1; i >= 0 ; i--)
+        {
+            if(AvailableUpgrades[i] != null)
+            {
+                continue;
+            }
+            AvailableUpgrades[i] = new SystemUpgrade();
         }
     }
 }

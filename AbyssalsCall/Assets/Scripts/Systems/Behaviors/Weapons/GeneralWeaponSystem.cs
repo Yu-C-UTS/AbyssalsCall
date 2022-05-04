@@ -23,16 +23,7 @@ public class GeneralWeaponSystem : WeaponSystemBase
     {
         base.InitilizeSystem(parentSubmarine);
 
-        Transform weaponAnchorPoint = registeredSubmarine.GetWeaponAnchorPoint(weaponObject.PreferedAnchorPoint);
-
         Transform systemTransform = new GameObject(SystemName).transform;
-        systemTransform.SetPositionAndRotation(weaponAnchorPoint.position, Quaternion.identity);
-        systemTransform.SetParent(registeredSubmarine.transform);
-
-        weaponObject.transform.SetPositionAndRotation(weaponAnchorPoint.position, Quaternion.identity);
-        firePoint = weaponObject.FirePoint;
-        weaponTransform = weaponObject.transform;
-        weaponTransform.SetParent(weaponAnchorPoint);
 
         aimBehavior = GetComponent<WeaponAimBehaviorBase>();
         aimBehavior.InitilizeBehavior(systemTransform, this);
@@ -40,6 +31,22 @@ public class GeneralWeaponSystem : WeaponSystemBase
         triggerBehavior.InitilizeBehavior(systemTransform, this);   
         fireBehavior = GetComponent<WeaponFireBehaviorBase>();     
         fireBehavior.InitilizeBehavior(systemTransform, this);
+
+        if(registeredSubmarine == null)
+        {   
+            Destroy(systemTransform.gameObject);
+            return;
+        }
+
+        Transform weaponAnchorPoint = registeredSubmarine.GetWeaponAnchorPoint(weaponObject.PreferedAnchorPoint);
+
+        systemTransform.SetPositionAndRotation(weaponAnchorPoint.position, Quaternion.identity);
+        systemTransform.SetParent(registeredSubmarine.transform);
+
+        weaponObject.transform.SetPositionAndRotation(weaponAnchorPoint.position, Quaternion.identity);
+        firePoint = weaponObject.FirePoint;
+        weaponTransform = weaponObject.transform;
+        weaponTransform.SetParent(weaponAnchorPoint);
     }
 
     public override void TriggerBehavior(float triggerValue)
@@ -76,11 +83,28 @@ public class GeneralWeaponSystem : WeaponSystemBase
         registeredSubmarine.onSubUpdate += WeaponUpdate;
     }
 
+    public override void RegisterSystem(bool PrimaryWeapon)
+    {
+        base.RegisterSystem(PrimaryWeapon);
+
+        registeredSubmarine.onMouseMove += aimBehavior.moveCrosshair;
+        registeredSubmarine.onSubUpdate += WeaponUpdate;
+    }
+
     public override void UnRegisterSystem()
     {
         base.UnRegisterSystem();
 
         registeredSubmarine.onMouseMove -= aimBehavior.moveCrosshair;
         registeredSubmarine.onSubUpdate -= WeaponUpdate;
+    }
+
+    public override List<string> GetStats()
+    {
+        List<string> returnStatList = new List<string>();
+        returnStatList.AddRange(fireBehavior.GetStats());
+        returnStatList.AddRange(triggerBehavior.GetStats());
+        returnStatList.AddRange(aimBehavior.GetStats());
+        return returnStatList;
     }
 }

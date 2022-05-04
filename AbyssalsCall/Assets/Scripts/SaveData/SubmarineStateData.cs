@@ -10,5 +10,10 @@ public class SubmarineStateData : ScriptableObject
     public class SystemStatusDictionary : SerializableDictionaryBase<string, SystemStateData> {}
 
 
+    public float MaxHealth = 100;
+    public float CurrentHealth = 100;
+
+    public string PrimWeapon = "BasicMG";
+    public string SecWeapon;
     public SystemStatusDictionary SystemStatesDict;
 }

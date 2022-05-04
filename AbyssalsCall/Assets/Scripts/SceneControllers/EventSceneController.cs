@@ -32,7 +32,7 @@ public class EventSceneController : SceneController
         TitleTextBox.text = eventSO.EventName;
         DescriptionTextBox.text = eventSO.EveentDescription;
 
-        foreach(EventSO.OutcomeBase outcomeChoice in eventSO.OutcomeChoices)
+        foreach(EventSO.Choice outcomeChoice in eventSO.Choices)
         {
             AddOutcomeButton(outcomeChoice);
         }
@@ -41,10 +41,10 @@ public class EventSceneController : SceneController
         LayoutRebuilder.ForceRebuildLayoutImmediate(LayoutTop);
     }
 
-    private void AddOutcomeButton(EventSO.OutcomeBase outcomeBase)
+    private void AddOutcomeButton(EventSO.Choice outcomeBase)
     {
         OutcomeButton ocb = Instantiate<OutcomeButton>(ChoiceButtonPrefab, Vector3.zero, Quaternion.identity, ChoiceButtonContainer);
-        ocb.SetButtonText(outcomeBase.ButtonText);
+        ocb.SetButtonText(outcomeBase.ChoiceText);
     }
 
     protected void OnValidate() 

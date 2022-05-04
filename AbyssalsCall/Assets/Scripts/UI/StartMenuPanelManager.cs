@@ -45,6 +45,11 @@ public class StartMenuPanelManager : MonoBehaviour
         menuController.SetupRun();
         GameSceneManager.Instance.LoadScene("MapDisplayScene");
     }
+
+    public void PauseToMainMenu()
+    {
+        GameSceneManager.Instance.LoadScene("MenuScene");
+    }
     public void QuitGame()
     {
         Debug.Log("Quit Game!");

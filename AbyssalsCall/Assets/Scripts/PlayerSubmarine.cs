@@ -5,7 +5,7 @@ using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class PlayerSubmarine : MonoBehaviour
+public class PlayerSubmarine : MonoBehaviour, IDamagable
 {
     public delegate void UpdateNotify();
     public delegate void VectorChange(Vector2 V2Value);
@@ -67,7 +67,6 @@ public class PlayerSubmarine : MonoBehaviour
     private void Update() 
     {
         onSubUpdate?.Invoke();
-
         //UpdateSubmarineFacing();
     }
 
@@ -151,5 +150,10 @@ public class PlayerSubmarine : MonoBehaviour
         }
 
         submarineVisualTransform.localScale = new Vector3((facingRight ? 1 : -1), 1, 1);
+    }
+
+    public void TakeDamage(Damage damage)
+    {
+        RunManager.Instance.ActivePlayerSubmarineStateData.CurrentHealth -= damage.baseDamageValue;
     }
 }

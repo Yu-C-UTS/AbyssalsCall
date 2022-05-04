@@ -20,6 +20,7 @@ public abstract class WeaponAimBehaviorBase : WeaponBehaviorBase
         crosshairTransform.SetParent(WeaponTransform);
         SpriteRenderer crosshairSpriteRenderer = crosshairTransform.gameObject.AddComponent<SpriteRenderer>();    
         crosshairSpriteRenderer.sprite = CrosshairSprite;
+        crosshairSpriteRenderer.sortingLayerName = "UI";
     }
 
     public virtual Transform GetTargetTransform()

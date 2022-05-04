@@ -34,6 +34,16 @@ public abstract class ProjectileBase : MonoBehaviour
         }
     }
 
+    public virtual string[] GetProjectileStats()
+    {
+        List<string> returnList = new List<string>();
+        foreach(Payload payload in payloads)
+        {
+            returnList.AddRange(payload.GetStat());
+        }
+        return returnList.ToArray();
+    }
+
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {
         if(other.TryGetComponent<IDamagable>(out IDamagable otherDamagable))

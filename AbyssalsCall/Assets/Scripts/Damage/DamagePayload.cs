@@ -11,4 +11,9 @@ public class DamagePayload : Payload
     {
         targetDamagable.TakeDamage(PayloadDamage);
     }
+
+    public override List<string> GetStat()
+    {
+        return new List<string>(){ "Damage: " + PayloadDamage.baseDamageValue};
+    }
 }
