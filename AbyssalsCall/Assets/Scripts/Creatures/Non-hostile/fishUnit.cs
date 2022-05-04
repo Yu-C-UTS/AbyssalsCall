@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class fishUnit : MonoBehaviour
+public class fishUnit : MonoBehaviour, IDamagable
 {
     public GameObject manager { get; set; }
     public Vector2 location { get; set; }
@@ -13,6 +13,13 @@ public class fishUnit : MonoBehaviour
 
     private Vector2 goalPos = Vector2.zero;
     private Vector2 currentForce;
+
+    public float Health = 10f;
+
+    void Awake()
+    {
+        Health = 10f;
+    }
 
     void Start()
     {
@@ -144,5 +151,15 @@ public class fishUnit : MonoBehaviour
         {
             transform.localScale = new Vector3(-1, 1, 1);
         }
+
+        if (Health <= 0)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
+    public void TakeDamage(Damage damage)
+    {
+        Health -= damage.baseDamageValue;
     }
 }

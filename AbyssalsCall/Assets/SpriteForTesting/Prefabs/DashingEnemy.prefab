@@ -117,8 +117,8 @@ GameObject:
   - component: {fileID: 8767098970692605574}
   - component: {fileID: 7512122296009644545}
   - component: {fileID: 5514220350758025793}
-  - component: {fileID: 8023570286136467218}
   - component: {fileID: 6981689004405519367}
+  - component: {fileID: 6888330359327968552}
   m_Layer: 0
   m_Name: DashingEnemy
   m_TagString: Enemy
@@ -155,9 +155,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.08700466, y: -0.11073375}
+  m_Offset: {x: -0.043465674, y: -0.023203135}
   serializedVersion: 2
-  m_Radius: 0.5711856
+  m_Radius: 0.3036387
 --- !u!50 &7512122296009644545
 Rigidbody2D:
   serializedVersion: 4
@@ -207,20 +207,6 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
---- !u!114 &8023570286136467218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7353594230737487190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7c04655c73e6da4e95386032ff87f35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxHealth: 200
-  currentHealth: 0
 --- !u!114 &6981689004405519367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,6 +224,23 @@ MonoBehaviour:
   giveUpDistance: 10
   normalSpeed: 100
   chaseSpeed: 170
+  Health: 40
   DashDistance: 3
   DashForce: 550
   DashWait: 1
+--- !u!58 &6888330359327968552
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7353594230737487190}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0545004, y: -0.019818336}
+  serializedVersion: 2
+  m_Radius: 0.3464084

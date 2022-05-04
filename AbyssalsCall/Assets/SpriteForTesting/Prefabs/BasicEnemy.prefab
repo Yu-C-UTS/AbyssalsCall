@@ -117,8 +117,8 @@ GameObject:
   - component: {fileID: 6455636135482192827}
   - component: {fileID: 6455636135482192826}
   - component: {fileID: 6455636135482192825}
-  - component: {fileID: 6455636135482192824}
-  - component: {fileID: 6455636135482192831}
+  - component: {fileID: 6567446025838096984}
+  - component: {fileID: 8029562367377053970}
   m_Layer: 0
   m_Name: BasicEnemy
   m_TagString: Enemy
@@ -155,9 +155,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.08700466, y: -0.11073375}
+  m_Offset: {x: 0.08908963, y: -0.11490321}
   serializedVersion: 2
-  m_Radius: 0.5711856
+  m_Radius: 0.5691011
 --- !u!50 &6455636135482192826
 Rigidbody2D:
   serializedVersion: 4
@@ -207,7 +207,23 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
---- !u!114 &6455636135482192824
+--- !u!58 &6567446025838096984
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6455636135482192830}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.095900536, y: -0.11674881}
+  serializedVersion: 2
+  m_Radius: 0.604239
+--- !u!114 &8029562367377053970
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -216,7 +232,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6455636135482192830}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 785ccc047226e7449b8ea68c0eec0bfb, type: 3}
+  m_Script: {fileID: 11500000, guid: ea09d1bdf4043df4bac09acdc7af04e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hasTarget: 0
@@ -224,17 +240,4 @@ MonoBehaviour:
   giveUpDistance: 10
   normalSpeed: 100
   chaseSpeed: 170
---- !u!114 &6455636135482192831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6455636135482192830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7c04655c73e6da4e95386032ff87f35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxHealth: 50
-  currentHealth: 0
+  Health: 40

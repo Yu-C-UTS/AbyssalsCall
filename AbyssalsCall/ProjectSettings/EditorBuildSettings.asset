@@ -9,13 +9,34 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/MenuScene.unity
+    path: Assets/Scenes/GameScenes/ManagerScene.unity
+    guid: fbb8cb0f0c863044f9e0616f3a6dec68
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/MenuScene.unity
     guid: 255a1c407dc6965439f51c41c7689d83
   - enabled: 1
-    path: Assets/Scenes/FullRunMapTestScene.unity
+    path: Assets/Scenes/GameScenes/MapDisplayScene.unity
     guid: 4f7cccc34e8e8e247981c6e6713c0b95
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/EventScene.unity
+    guid: a26f80bda1d19f841a9e2f2ff6fb295e
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/MaintenanceScene.unity
+    guid: 691ae6e04fb69574b8aa40a540b2a30d
   - enabled: 1
     path: Assets/Scenes/GameDemo/GameDemoScene.unity
     guid: 3ae84ca066a1d76409b9b01e8b3476d4
+  - enabled: 1
+    path: Assets/Scenes/AllTestScenes/AndrewsTesting.unity
+    guid: 45f7a6669183f4c39aa73db9e5ab8fbc
+  - enabled: 1
+    path: Assets/Scenes/EnemyTestScene.unity
+    guid: f162d56420e2e5a44aa86f977d960905
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/IntroductionScene.unity
+    guid: 1d56b6b5164ddd54bb678b98cfbda14e
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/ControlSchemeScene.unity
+    guid: e961858fa83f5e146827b73b0bd9d011
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 2f97783565722b040abee9f20bc9ab47, type: 2}

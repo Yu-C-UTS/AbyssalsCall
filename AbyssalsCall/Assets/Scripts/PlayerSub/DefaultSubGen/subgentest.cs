@@ -3,22 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class subgentest : MonoBehaviour
-{
-    [SerializeField]
-    PlayerSubmarine baseSubmarinePrefab;
-    
-    [SerializeField]
-    SystemBehaviorBase[] requiredSystems;
-
-    private void Start() 
+{   private void Start() 
     {
-        PlayerSubmarine instantiatedSub = Instantiate(baseSubmarinePrefab);
+        Debug.LogWarning("subgentest class can be removed, use 'PlayerSubmarineSpawner.Instance.SpawnNewSubmarine()' instead to spawn new player submarine into scene.");
+        PlayerSubmarine instantiatedSub = PlayerSubmarineSpawner.Instance.SpawnNewSubmarine();
 
-        foreach (SystemBehaviorBase system in requiredSystems)
-        {
-            SystemBehaviorBase instantiatedSystem = Instantiate(system);
-            instantiatedSystem.InitilizeSystem(instantiatedSub);
-            instantiatedSystem.RegisterSystem();
-        }    
+        CameraManager.Instance.MainFocusTransform = instantiatedSub.transform;
+        CameraManager.Instance.CurrentCameraMode =  CameraManager.CameraMode.focusSingle;
     }
 }
