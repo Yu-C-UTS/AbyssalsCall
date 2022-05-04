@@ -13,4 +13,6 @@ public class SystemUpgrade
 
     [field: SerializeField]
     public string UpgradeName{ get; protected set;}
+
+    
 }

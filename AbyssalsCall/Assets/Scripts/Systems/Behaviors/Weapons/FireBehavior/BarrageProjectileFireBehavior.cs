@@ -40,4 +40,13 @@ public class BarrageProjectileFireBehavior : WeaponFireBehaviorBase
             yield return null;
         }
     }
+
+    public override string[] GetStats()
+    {
+        List<string> returnStatList = new List<string>();
+        returnStatList.AddRange(ProjectilePrefab.GetProjectileStats());
+        returnStatList.Add("Projectile Launch Force: "+ ProjectileLaunchForce);
+        returnStatList.Add("Launch Barrage Size: "+ BarrageCount);
+        return returnStatList.ToArray();
+    }
 }
