@@ -9,5 +9,6 @@ public class subgentest : MonoBehaviour
         PlayerSubmarine instantiatedSub = PlayerSubmarineSpawner.Instance.SpawnNewSubmarine();
 
         CameraManager.Instance.MainFocusTransform = instantiatedSub.transform;
+        CameraManager.Instance.CurrentCameraMode =  CameraManager.CameraMode.focusSingle;
     }
 }
