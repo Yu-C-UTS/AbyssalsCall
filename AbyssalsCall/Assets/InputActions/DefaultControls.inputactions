@@ -15,6 +15,15 @@
                     "initialStateCheck": true
                 },
                 {
+                    "name": "Fire2",
+                    "type": "Button",
+                    "id": "034efd9e-0af5-4246-8307-41ba09966d9f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Move",
                     "type": "Value",
                     "id": "2becf28a-aad4-4735-8c96-e1cbe2e0704f",
@@ -28,6 +37,15 @@
                     "type": "Value",
                     "id": "96115e41-9e9c-4f08-b75d-24ea9c25ac42",
                     "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Scroll",
+                    "type": "Value",
+                    "id": "fb3cef0f-1d28-4064-93e1-796be293bcc7",
+                    "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -127,7 +145,7 @@
                     "id": "56806aad-13af-484e-92fd-02286c3eefd3",
                     "path": "<Mouse>/delta",
                     "interactions": "",
-                    "processors": "",
+                    "processors": "ScaleVector2(x=0.01,y=0.01)",
                     "groups": "Keyboard&Mouse",
                     "action": "CursorPositionChange",
                     "isComposite": false,
@@ -141,6 +159,39 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "CursorPositionChange",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "621a385f-0d2a-46a0-b886-176a7cadd641",
+                    "path": "<Mouse>/scroll/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Scroll",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8efdf805-3c87-4c4e-b968-648a553087f0",
+                    "path": "*/{SecondaryTrigger}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Fire2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "70109155-97f9-48c0-8584-6c1fb0293cad",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Fire2",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

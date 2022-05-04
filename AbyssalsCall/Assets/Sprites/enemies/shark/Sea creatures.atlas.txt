@@ -1,0 +1,30 @@
+Sea creatures.png
+size:944,203
+filter:Linear,Linear
+pma:true
+back mini fin 1
+bounds:886,53,50,32
+offsets:1,1,52,34
+back mini fin 2
+bounds:779,4,35,22
+offsets:1,1,37,24
+back mini fin top
+bounds:736,2,41,24
+offsets:1,1,43,26
+behind fin
+bounds:838,25,60,46
+offsets:1,1,62,48
+rotate:90
+body
+bounds:2,3,732,198
+eye
+bounds:816,9,17,15
+offsets:1,1,19,17
+rotate:90
+front fin
+bounds:736,28,173,100
+rotate:90
+top fin
+bounds:838,87,114,104
+offsets:1,1,116,106
+rotate:90

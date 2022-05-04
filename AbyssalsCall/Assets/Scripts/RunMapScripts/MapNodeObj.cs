@@ -6,30 +6,99 @@ using UnityEngine;
 [RequireComponent(typeof(Renderer))]
 public class MapNodeObj : MonoBehaviour
 {
-    private MapNodeData _nodeData;
-    public MapNodeData nodeData
+    public bool Selectable = false;
+
+    public node nodeInfo{ get; private set;}
+
+    public delegate void ZeroParaDele();
+    public event ZeroParaDele OnHoverEnter;
+    public event ZeroParaDele OnHoverExit;
+
+    public enum GlowState
+    { blink, bright, dim}
+
+    private static Color NodeObjColor(NodeDataBase.ENodeType nodeType)
     {
-        get
+        switch(nodeType)
         {
-            return _nodeData;
+            case NodeDataBase.ENodeType.Origin:
+            return Color.white;
+
+            case NodeDataBase.ENodeType.Enemy:
+            return Color.red;
+
+            case NodeDataBase.ENodeType.Event:
+            return Color.yellow;
+
+            case NodeDataBase.ENodeType.Maintenance:
+            return Color.cyan;
+
+            case NodeDataBase.ENodeType.Boss:
+            return Color.gray;
+
+            default:
+            return Color.white;
         }
-        
-        set
+
+    }
+
+    public void SetNodeInfo(node nodeInfo)
+    {
+        this.nodeInfo = nodeInfo;
+        Renderer rend = GetComponent<Renderer>();
+        rend.material.SetColor("_NodeColor", NodeObjColor(nodeInfo.nodeDetailData.NodeType));
+    }
+
+    public void SetNodeGlowState(GlowState glowState)
+    {
+        Renderer rend = GetComponent<Renderer>();
+        switch(glowState)
         {
-            _nodeData = value;
-            transform.position = transform.TransformPoint(_nodeData.NodePosition/transform.lossyScale.x);
-            GetComponent<Renderer>().material.SetColor("_NodeColor", nodeData.GetColor());
+            case GlowState.blink:
+            rend.material.SetFloat("_DoBlink", 1);
+            break;
+
+            case GlowState.bright:
+            rend.material.SetFloat("_DoBlink", 0);
+            rend.material.SetFloat("_IsBright", 1);
+            break;
+
+            case GlowState.dim:
+            rend.material.SetFloat("_DoBlink", 0);
+            rend.material.SetFloat("_IsBright", 0);
+            break;
+
+            default:
+            Debug.LogError("Unknown State, Setting self to dim.");
+            rend.material.SetFloat("_DoBlink", 0);
+            rend.material.SetFloat("_IsBright", 0);
+            break;
         }
     }
 
-    private void OnMouseOver() 
+    private void OnMouseEnter() 
     {
-        //Debug.Log("Over Node");
+        OnHoverEnter?.Invoke();
+    }
+
+    private void OnMouseExit()
+    {
+        OnHoverExit?.Invoke();
     }
 
     private void OnMouseUp() 
     {
-        Debug.Log("Loading Game Scene");
-        SceneManager.LoadScene("GameDemoScene");
+        TriggerSelection();
+    }
+
+    public void TriggerSelection()
+    {
+        if(!Selectable)
+        {
+            return;
+        }
+
+        RunManager.Instance.StepRun(nodeInfo.nodeNum);
+        GameSceneManager.Instance.LoadScene(nodeInfo.nodeDetailData.LoadSceneName);    
     }
 }

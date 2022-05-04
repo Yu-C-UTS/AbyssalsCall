@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8441140740864033383}
   - component: {fileID: 489390555}
   - component: {fileID: 7873999097229392156}
-  - component: {fileID: 411786567681624183}
+  - component: {fileID: 8463837989093955638}
   m_Layer: 0
   m_Name: fishUnit
   m_TagString: Enemy
@@ -69,6 +69,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06c31adc5fe5a6f46a5740b338d7e025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Health: 10
 --- !u!60 &7873999097229392156
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -112,20 +113,22 @@ PolygonCollider2D:
       - {x: 0.46890008, y: -0.04706955}
       - {x: 0.5223768, y: 0.017078996}
       - {x: 0.37824512, y: 0.044226944}
---- !u!114 &411786567681624183
-MonoBehaviour:
+--- !u!58 &8463837989093955638
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3752260067141428949}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7c04655c73e6da4e95386032ff87f35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxHealth: 10
-  currentHealth: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.008985788, y: 0.038190067}
+  serializedVersion: 2
+  m_Radius: 0.3292682
 --- !u!1 &3752260068619945407
 GameObject:
   m_ObjectHideFlags: 0
