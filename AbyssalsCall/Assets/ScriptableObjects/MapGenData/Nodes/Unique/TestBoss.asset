@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: TestBoss
   m_EditorClassIdentifier: 
   nodeType: 3
-  SceneName: AndrewsTesting
+  SceneName: CrabBossScene
+  NodeInfoDetailText: 
