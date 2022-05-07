@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13daecaaa2248b64280d293bdf7185da, type: 3}
   m_Name: BasicSubmarineState
   m_EditorClassIdentifier: 
+  MaxHealth: 100
+  CurrentHealth: 100
+  PrimWeapon: BasicMG
+  SecWeapon: MissileLauncher
   SystemStatesDict:
     reorderableList:
       canAdd: 1
@@ -38,12 +42,9 @@ MonoBehaviour:
     _keyValues:
     - SimpleBallast
     - SimplePropulsion
-    - BasicMG
     _keys:
     - SimpleBallast
     - SimplePropulsion
-    - BasicMG
     _values:
-    - UpgradeStates: 
     - UpgradeStates: 
     - UpgradeStates: 

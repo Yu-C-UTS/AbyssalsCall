@@ -12,5 +12,8 @@ public class SubmarineStateData : ScriptableObject
 
     public float MaxHealth = 100;
     public float CurrentHealth = 100;
+
+    public string PrimWeapon = "BasicMG";
+    public string SecWeapon;
     public SystemStatusDictionary SystemStatesDict;
 }

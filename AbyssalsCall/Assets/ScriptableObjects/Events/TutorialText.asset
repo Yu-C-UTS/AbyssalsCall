@@ -21,6 +21,9 @@ MonoBehaviour:
 
     Also we got 2 new weapons on the sub, for now just imagine you will
     be able to switch between them in the future.'
-  OutcomeChoices:
-  - OutcomeClass: 0
-    ButtonText: Continue
+  Choices:
+  - ChoiceText: Continue
+    ChoiceOutcomes: []
+  references:
+    version: 2
+    RefIds: []

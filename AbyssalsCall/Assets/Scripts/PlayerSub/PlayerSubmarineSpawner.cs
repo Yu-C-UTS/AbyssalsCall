@@ -31,6 +31,34 @@ public class PlayerSubmarineSpawner : MonoBehaviour
             instantiatedSystem.RegisterSystem();
         }
 
+        if(subData.PrimWeapon != "")
+        {
+            WeaponSystemBase instantiatedPrimWeapon = Instantiate(StringSystemConverter.Instance.StringToSystem(subData.PrimWeapon)) as WeaponSystemBase;
+            if(instantiatedPrimWeapon == null)
+            {
+                Debug.LogError("Primary weapon instantiated but casting to weapon failed, might not be a weapon, aborting.");
+            }
+            else
+            {
+                instantiatedPrimWeapon.InitilizeSystem(subInst);
+                instantiatedPrimWeapon.RegisterSystem(true);
+            }
+        }
+
+        if(subData.SecWeapon != "")
+        {
+            WeaponSystemBase instantiatedSecWeapon = Instantiate(StringSystemConverter.Instance.StringToSystem(subData.SecWeapon)) as WeaponSystemBase;
+            if(instantiatedSecWeapon == null)
+            {
+                Debug.LogError("Secondary weapon instantiated but casting to weapon failed, might not be a weapon, aborting.");
+            }
+            else
+            {
+                instantiatedSecWeapon.InitilizeSystem(subInst);
+                instantiatedSecWeapon.RegisterSystem(false);
+            }
+        }
+
         return subInst;
     }
 

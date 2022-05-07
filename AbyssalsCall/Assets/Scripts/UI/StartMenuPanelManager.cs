@@ -48,8 +48,7 @@ public class StartMenuPanelManager : MonoBehaviour
 
     public void PauseToMainMenu()
     {
-        menuController.SetupRun();
-        GameSceneManager.Instance.LoadScene("MapDisplayScene");
+        GameSceneManager.Instance.LoadScene("MenuScene");
     }
     public void QuitGame()
     {
