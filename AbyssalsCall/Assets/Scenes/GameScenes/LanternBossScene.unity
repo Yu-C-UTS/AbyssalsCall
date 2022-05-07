@@ -266,6 +266,7 @@ MonoBehaviour:
   staionaryIdle: {fileID: 11400000, guid: 444cbc40dc6b03944a26ff52b12f598c, type: 2}
   swimIdle: {fileID: 11400000, guid: c5a9faa922821ab448c8530ae17fbc99, type: 2}
   swimSlow: {fileID: 11400000, guid: 6e2dc034e2fdc9244949d8806897c8d2, type: 2}
+  hit: {fileID: 11400000, guid: 44a58bf4dd81d4e38aef9393ec35d14f, type: 2}
   swimFast: {fileID: 11400000, guid: cc8f416a6ba564a4aaff50ab8717e56c, type: 2}
   heavyAttack: {fileID: 11400000, guid: d3f712436e641334e9f96cf4455342e8, type: 2}
   lightAttack: {fileID: 11400000, guid: 060b7dd9b4dd8814baf4c35d4230827b, type: 2}
@@ -1758,8 +1759,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 821891459}
-  m_LocalRotation: {x: 0, y: 0, z: -0.71194, w: 0.70224035}
-  m_LocalPosition: {x: -2.8986945, y: 2.014042, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.715242, w: 0.69887686}
+  m_LocalPosition: {x: -2.9043398, y: 2.0149863, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4987,11 +4988,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5315409256257446626, guid: 7d67902de77744703807cedd75468119, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.25
+      value: 5.22
       objectReference: {fileID: 0}
     - target: {fileID: 5315409256257446626, guid: 7d67902de77744703807cedd75468119, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.63
+      value: 9.56
       objectReference: {fileID: 0}
     - target: {fileID: 5315409256257446626, guid: 7d67902de77744703807cedd75468119, type: 3}
       propertyPath: m_LocalPosition.z

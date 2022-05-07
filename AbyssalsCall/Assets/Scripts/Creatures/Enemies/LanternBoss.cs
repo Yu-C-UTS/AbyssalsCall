@@ -7,7 +7,7 @@ using Spine.Unity;
 public class LanternBoss : MonoBehaviour
 {
     public SkeletonAnimation skeletonAnimation;
-	public AnimationReferenceAsset staionaryIdle, swimIdle, swimSlow, swimFast, heavyAttack, lightAttack, specialAttack;
+	public AnimationReferenceAsset staionaryIdle, swimIdle, swimSlow, hit, swimFast, heavyAttack, lightAttack, specialAttack;
 
     private Spine.AnimationState animationState;
     private Skeleton skeleton;
@@ -40,7 +40,7 @@ public class LanternBoss : MonoBehaviour
     }
 
    private void OnMouseDown() {
-        AddAnimation(specialAttack, false);
+        AddAnimation(hit, false);
     }
 
     /// Supporting method to mix between Spine animations
@@ -48,11 +48,11 @@ public class LanternBoss : MonoBehaviour
     {
         int trackNum = 0;
         // mix the attack animaitons ver the swim
-        if (ani.Animation.Name == "heavy attack" || ani.Animation.Name == "light attack" || ani.Animation.Name == "special attack") {
+        if (ani.Animation.Name == "heavy attack" || ani.Animation.Name == "light attack" || ani.Animation.Name == "special attack" || ani.Animation.Name == "hit") {
             trackNum = 1;
         }
 
-        Spine.TrackEntry animationEntry = skeletonAnimation.state.AddAnimation(trackNum, ani, loop, 0);
+        Spine.TrackEntry animationEntry = skeletonAnimation.state.SetAnimation(trackNum, ani, loop);
       /* if (ani.Animation.Name == "heavy attack" || ani.Animation.Name == "light attack" || ani.Animation.Name == "special attack") {
             animationEntry.Complete += attack_Complete;
         }*/
