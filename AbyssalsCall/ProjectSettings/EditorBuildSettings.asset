@@ -27,9 +27,6 @@ EditorBuildSettings:
     path: Assets/Scenes/GameDemo/GameDemoScene.unity
     guid: 3ae84ca066a1d76409b9b01e8b3476d4
   - enabled: 1
-    path: Assets/Scenes/AllTestScenes/AndrewsTesting.unity
-    guid: 45f7a6669183f4c39aa73db9e5ab8fbc
-  - enabled: 1
     path: Assets/Scenes/EnemyTestScene.unity
     guid: f162d56420e2e5a44aa86f977d960905
   - enabled: 1
@@ -38,5 +35,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScenes/ControlSchemeScene.unity
     guid: e961858fa83f5e146827b73b0bd9d011
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/CrabBossScene.unity
+    guid: e16474f3dec4a9c4982d31e17f555233
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 2f97783565722b040abee9f20bc9ab47, type: 2}
