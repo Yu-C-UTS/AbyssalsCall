@@ -5,8 +5,12 @@ using TMPro;
 
 public class OutcomeButton : MonoBehaviour
 {
+    public delegate void ButtonClickEvent();
+
     [SerializeField]
     private TMP_Text ButtonText;
+
+    public event ButtonClickEvent OnButtonClicked;
 
     public void SetButtonText(string textToSet)
     {
@@ -15,6 +19,6 @@ public class OutcomeButton : MonoBehaviour
 
     public void OnClicked()
     {
-        GameObject.FindObjectOfType<SceneController>().ReturnToMapDisplay();
+        OnButtonClicked?.Invoke();
     }
 }

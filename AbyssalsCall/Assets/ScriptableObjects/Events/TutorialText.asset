@@ -23,7 +23,14 @@ MonoBehaviour:
     be able to switch between them in the future.'
   Choices:
   - ChoiceText: Continue
-    ChoiceOutcomes: []
+    ChoiceOutcomes:
+    - rid: 7532884141127499777
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 7532884141127499777
+      type: {class: ChoiceOutcome/SystemReward, ns: , asm: Assembly-CSharp}
+      data:
+        OutcomeType: 2
+        RewardSystemName: SimpleTorpedoLauncher
+        IsWeaponSystem: 1

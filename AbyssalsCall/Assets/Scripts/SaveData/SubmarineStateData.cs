@@ -16,4 +16,24 @@ public class SubmarineStateData : ScriptableObject
     public string PrimWeapon = "BasicMG";
     public string SecWeapon;
     public SystemStatusDictionary SystemStatesDict;
+
+    public bool ReplacePrimWeapon(string NewPrimWeaponKey)
+    {
+        if(StringSystemConverter.Instance.StringToSystem(NewPrimWeaponKey) != null)
+        {
+            PrimWeapon = NewPrimWeaponKey;
+            return true;
+        }
+        return false;
+    }
+
+    public bool ReplaceSecWeapon(string NewSecWeaponKey)
+    {
+        if(StringSystemConverter.Instance.StringToSystem(NewSecWeaponKey) != null)
+        {
+            SecWeapon = NewSecWeaponKey;
+            return true;
+        }
+        return false;
+    }
 }
