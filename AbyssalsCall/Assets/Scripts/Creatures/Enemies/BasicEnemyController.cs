@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class BasicEnemyController : BasicEnemyMovement, IDamagable
 {
-    public float Health = 40;
+    [SerializeField]
+    protected float maxHealth = 40;
+    protected float Health;
 
     protected override void Awake()
     {
-        Health = 40;
+        Health = maxHealth;
         pfController = new PathfindingController(transform, PickRandomPoint());
     }
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7136078807025655632}
   - component: {fileID: 3909105708881520896}
   - component: {fileID: 8067002111773713055}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 1055647453164428353}
   - component: {fileID: 3625850392165327624}
   - component: {fileID: 2660547167907770885}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -560,7 +560,7 @@ GameObject:
   - component: {fileID: 1874611552305631820}
   - component: {fileID: 4273768985339955000}
   - component: {fileID: 3056112718496390752}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -637,7 +637,7 @@ GameObject:
   - component: {fileID: 6892477830947701512}
   - component: {fileID: 7038389319081102900}
   - component: {fileID: 1584053182472684174}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -738,7 +738,7 @@ GameObject:
   - component: {fileID: 8662661374964109275}
   m_Layer: 8
   m_Name: SubmarineVisual
-  m_TagString: Player
+  m_TagString: PlayerVisual
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1000,7 +1000,7 @@ GameObject:
   - component: {fileID: 8464941100798463029}
   - component: {fileID: 6012019578422656772}
   - component: {fileID: 2442014065804017443}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}

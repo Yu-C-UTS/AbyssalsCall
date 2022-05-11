@@ -17,7 +17,8 @@ public class DashingEnemy : BasicEnemyController
 
     protected override void Awake()
     {
-        Health = 20;
+        maxHealth = 20;
+        Health = maxHealth;
         pfController = new PathfindingController(transform, PickRandomPoint());
         dashCoolTimer = 0;
     }
