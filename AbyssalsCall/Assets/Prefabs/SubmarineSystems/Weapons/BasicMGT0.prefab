@@ -231,10 +231,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WeaponFireDirection: 4
-<<<<<<< Updated upstream
-  FireAudioClip: {fileID: 0}
-=======
   FireAudioClip: {fileID: 8300000, guid: a55305404f90e89408fff4b7db866e42, type: 3}
->>>>>>> Stashed changes
   ProjectilePrefab: {fileID: 5513232442569640560, guid: e58264188c069f342933465586077a8a, type: 3}
   ProjectileLaunchForce: 12
