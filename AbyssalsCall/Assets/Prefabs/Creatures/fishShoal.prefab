@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a6630bd1ccf3144b87b8331f9c319b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitPrefab: {fileID: 3752260067141428949, guid: ff8e0cbd88cea0645ae47f81e0cb9fa3, type: 3}
+  unitPrefab: {fileID: 3752260067141428949, guid: 0a5bbd0be82cab345b8d5c23e2b02c5d, type: 3}
   numUnits: 15
   range: {x: 5, y: 5, z: 0}
   movingRadius: 5
