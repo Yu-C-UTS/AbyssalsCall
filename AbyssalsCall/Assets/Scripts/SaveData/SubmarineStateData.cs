@@ -22,6 +22,10 @@ public class SubmarineStateData : ScriptableObject
         set
         {
             _currentHealth = value;
+            if(_currentHealth <= 0)
+            {
+                RunManager.Instance.PlayerDeath();
+            }
         }
     }
 

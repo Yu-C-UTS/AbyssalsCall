@@ -48,4 +48,10 @@ public class RunManager : MonoBehaviour
     {
         Debug.Log("Load feature not implimented yet.");
     }
+
+    public void PlayerDeath()
+    {
+        Debug.Log("Player Has Died");
+        GameSceneManager.Instance.LoadScene("MenuScene");
+    }
 }

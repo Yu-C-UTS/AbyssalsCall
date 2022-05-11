@@ -235,6 +235,7 @@ MonoBehaviour:
   FireAudioClip: {fileID: 8300000, guid: 685e79d39175c474a96cf73042986158, type: 3}
   ProjectilePrefab: {fileID: 5513232442569640560, guid: e58264188c069f342933465586077a8a, type: 3}
   ProjectileLaunchForce: 12
+  shootSfx: {fileID: 813587578637864985}
 --- !u!82 &813587578637864985
 AudioSource:
   m_ObjectHideFlags: 0
@@ -247,7 +248,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 685e79d39175c474a96cf73042986158, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
