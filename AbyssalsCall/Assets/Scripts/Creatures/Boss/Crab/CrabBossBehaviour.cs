@@ -18,10 +18,6 @@ public class CrabBossBehaviour : MonoBehaviour
     private float AttackTimer;
     private int AttackCount;
 
-    public enum States
-    {
-        lightAttack, heavyAttack, pullDown
-    }
 
     void Start()
     {
@@ -29,7 +25,6 @@ public class CrabBossBehaviour : MonoBehaviour
         AttackTimer = AttackTime;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (target == null)
@@ -41,7 +36,7 @@ public class CrabBossBehaviour : MonoBehaviour
         {
             if(VerticalDistanceTo(target) >= 10)
             {
-                PullDown(target);
+                //PullDown(target);
             }
         }
 
