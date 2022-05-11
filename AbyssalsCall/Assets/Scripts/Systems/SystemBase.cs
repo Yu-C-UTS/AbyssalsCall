@@ -8,6 +8,13 @@ public abstract class SystemBase : MonoBehaviour
 
     [field: SerializeField]
     public string SystemName { get; protected set;} = "New System";
+    [field: SerializeField]
+    public Sprite SystemArtSprite { get; protected set;}
+
+    [TextArea(2,5)]
+    [SerializeField]
+    public string SystemDescriptionText = "No Description";
+
     [SerializeField]
     private bool isUnique = false;
 

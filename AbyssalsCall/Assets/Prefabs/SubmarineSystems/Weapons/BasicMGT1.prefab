@@ -180,6 +180,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <SystemName>k__BackingField: Basic MG
+  <SystemArtSprite>k__BackingField: {fileID: 21300000, guid: 6f4b59437aa464bad913cbb67900d137, type: 3}
+  SystemDescriptionText: A Tier 1 Machine Gun Turret
   isUnique: 0
   isRemovable: 1
   AvailableUpgrades: []

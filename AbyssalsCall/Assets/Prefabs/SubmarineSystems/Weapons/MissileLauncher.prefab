@@ -64,9 +64,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <SystemName>k__BackingField: Missile Launcher
+  <SystemArtSprite>k__BackingField: {fileID: 0}
+  SystemDescriptionText: A Missile Launcher that fires multiple rockets that homes
+    towards the crosshair position when fired.
   isUnique: 0
   isRemovable: 1
+  AvailableUpgrades: []
   weaponObject: {fileID: 7385630301678117806}
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &6460544874850596316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,6 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WeaponFireDirection: 2
+  FireAudioClip: {fileID: 0}
   ProjectilePrefab: {fileID: 7484925770448962582, guid: 201bd7934c5f21c4eb1875f22ecb8b72, type: 3}
   ProjectileLaunchForce: 4
   BarrageCount: 5
