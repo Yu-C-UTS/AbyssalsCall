@@ -12,6 +12,7 @@ public abstract class WeaponFireBehaviorBase : WeaponBehaviorBase
 
     public abstract void Fire();
 
+    public GameObject WeaponFireEffectPrefab;
     public AudioClip FireAudioClip;
     protected AudioSource audioSource;
 
