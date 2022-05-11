@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8485055657264551317}
   - component: {fileID: 7534375776765890361}
   - component: {fileID: 5513232442569640560}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SimpleShell
   m_TagString: Untagged
   m_Icon: {fileID: 0}

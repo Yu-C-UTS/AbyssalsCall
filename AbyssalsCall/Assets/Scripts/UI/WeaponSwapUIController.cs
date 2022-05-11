@@ -9,6 +9,8 @@ public class WeaponSwapUIController : MonoBehaviour
 
     [SerializeField]
     private TMP_Text NewWeaponNameText;
+    [SerializeField]
+    private TMP_Text NewWeaponDescriptionText;
 
     [SerializeField]
     private TMP_Text PrimWeaponNameText;
@@ -21,10 +23,17 @@ public class WeaponSwapUIController : MonoBehaviour
         SystemBase PrimWeapon = StringSystemConverter.Instance.StringToSystem(RunManager.Instance.ActivePlayerSubmarineStateData.PrimWeapon);
         PrimWeaponNameText.text = PrimWeapon.SystemName;
     
-        SystemBase SecWeapon = StringSystemConverter.Instance.StringToSystem(RunManager.Instance.ActivePlayerSubmarineStateData.SecWeapon);
-        if(SecWeapon != null)
+        if(RunManager.Instance.ActivePlayerSubmarineStateData.SecWeapon == "")
         {
-            SecWeaponNameText.text = SecWeapon.SystemName;
+            SecWeaponNameText.text = "Nothing Installed";
+        }
+        else
+        {
+            SystemBase SecWeapon = StringSystemConverter.Instance.StringToSystem(RunManager.Instance.ActivePlayerSubmarineStateData.SecWeapon);
+            if(SecWeapon != null)
+            {
+                SecWeaponNameText.text = SecWeapon.SystemName;
+            }
         }
     }
 
@@ -39,6 +48,7 @@ public class WeaponSwapUIController : MonoBehaviour
             return;
         }
         NewWeaponNameText.text = NewWeapon.SystemName;
+        NewWeaponDescriptionText.text = NewWeapon.SystemDescriptionText;
     }
 
     public void AssignWeaponToPrim()

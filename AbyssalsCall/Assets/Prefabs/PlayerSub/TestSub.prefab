@@ -161,7 +161,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4136442676151340170}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TurretPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 598564411973721934}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TopMount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 6479458855308839219}
   - component: {fileID: 6385615319137114845}
   - component: {fileID: 633548467187950442}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TestSub
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -417,7 +417,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7367043345550346243}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BottomMount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -449,7 +449,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5782295106214182827}
   - component: {fileID: 1954089756501294569}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FrontLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -736,7 +736,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7915314341431663342}
   - component: {fileID: 8662661374964109275}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SubmarineVisual
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -827,7 +827,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8482419764829126244}
   - component: {fileID: 6443855697284533618}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SubLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -936,7 +936,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8879257927720493730}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RearMount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -967,7 +967,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5192942519805058918}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FrontMount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
