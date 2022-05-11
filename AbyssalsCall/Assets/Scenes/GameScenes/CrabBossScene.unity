@@ -6163,6 +6163,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myState: {fileID: 838863413}
+  light: {fileID: 1771526954}
+  heavy: {fileID: 1771526953}
 --- !u!82 &1771526953
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6841,6 +6843,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myState: {fileID: 838863413}
+  light: {fileID: 2006027505}
+  heavy: {fileID: 2006027504}
 --- !u!82 &2006027504
 AudioSource:
   m_ObjectHideFlags: 0

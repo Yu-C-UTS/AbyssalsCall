@@ -15,7 +15,7 @@ public class CrabBossBehaviour : MonoBehaviour
     private float MeleeAttackTimer;
     private int MeleeAttackCount;
 
-    private float PullDownTime = 7;
+    private float PullDownTime = 5;
     private float PullDownTimer;
 
     private CrabBossState myState;
@@ -37,7 +37,7 @@ public class CrabBossBehaviour : MonoBehaviour
 
         if (myState.getTarget())
         {
-            if(VerticalDistanceTo(myState.getTarget()) >= 7)
+            if(VerticalDistanceTo(myState.getTarget()) >= 4)
             {
                 if(PullCountDown() == 0)
                 {

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CrabBossState : MonoBehaviour, IDamagable
 {
@@ -21,6 +22,15 @@ public class CrabBossState : MonoBehaviour, IDamagable
     {
         Health = maxHealth;
         state = State.Idle;
+    }
+
+    private void Update()
+    {
+        if(Health <= 0)
+        {
+            Destroy(this.gameObject);
+            SceneManager.LoadScene(10);
+        }
     }
 
     private void FixedUpdate()
