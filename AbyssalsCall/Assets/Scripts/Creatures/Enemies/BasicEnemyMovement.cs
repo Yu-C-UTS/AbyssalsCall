@@ -74,21 +74,21 @@ public class BasicEnemyMovement : MonoBehaviour
         {
             if (rb.velocity.x >= 0.01f)
             {
-                GetComponentInChildren<Transform>().localScale = new Vector3(1f, 1f, 1f);
+                GetComponentInChildren<Transform>().localScale = new Vector3(-1f, 1f, 1f);
             }
             else if (rb.velocity.x <= -0.01f)
             {
-                GetComponentInChildren<Transform>().localScale = new Vector3(-1f, 1f, 1f);
+                GetComponentInChildren<Transform>().localScale = new Vector3(1f, 1f, 1f);
             }
         }
         else
         {
             if(directionTo(target).x >= 0.1)
             {
-                GetComponentInChildren<Transform>().localScale = new Vector3(1f, 1f, 1f);
+                GetComponentInChildren<Transform>().localScale = new Vector3(-1f, 1f, 1f);
             }else if (directionTo(target).x <= -0.1)
             {
-                GetComponentInChildren<Transform>().localScale = new Vector3(-1f, 1f, 1f);
+                GetComponentInChildren<Transform>().localScale = new Vector3(1f, 1f, 1f);
             }
         }
     }
