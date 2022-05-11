@@ -11,7 +11,19 @@ public class SubmarineStateData : ScriptableObject
 
 
     public float MaxHealth = 100;
-    public float CurrentHealth = 100;
+    [SerializeField]
+    private float _currentHealth = 100;
+    public float CurrentHealth
+    {
+        get
+        {
+            return _currentHealth;
+        }
+        set
+        {
+            _currentHealth = value;
+        }
+    }
 
     public string PrimWeapon = "BasicMG";
     public string SecWeapon;
