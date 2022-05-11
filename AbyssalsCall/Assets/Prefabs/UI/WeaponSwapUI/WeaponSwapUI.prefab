@@ -756,7 +756,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SOMETHING
+  m_text: Replace
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ca45e3ffc75c31041b346d341b7e561f, type: 2}
   m_sharedMaterial: {fileID: 1338251695309146073, guid: ca45e3ffc75c31041b346d341b7e561f, type: 2}
@@ -1999,7 +1999,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SOMETHING
+  m_text: Replace
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ca45e3ffc75c31041b346d341b7e561f, type: 2}
   m_sharedMaterial: {fileID: 1338251695309146073, guid: ca45e3ffc75c31041b346d341b7e561f, type: 2}
@@ -2186,6 +2186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NewWeaponNameText: {fileID: 4756235911743752572}
+  NewWeaponDescriptionText: {fileID: 4756235912560755530}
   PrimWeaponNameText: {fileID: 4756235911981946569}
   SecWeaponNameText: {fileID: 4756235912920590877}
 --- !u!1 &4756235912920590879

@@ -16,6 +16,7 @@ public class FireSingleProjectileBehavior : WeaponFireBehaviorBase
         fireProjectile.InitiateProjectile(parentWeaponSystem);
         //fireProjectile.rb2d.velocity = parentWeaponSystem.registeredSubmarine.rigidBody2d.velocity;
         fireProjectile.rb2d.AddForce(getFireDirectionVector() * ProjectileLaunchForce, ForceMode2D.Impulse);
+        audioSource.Play();
     }
 
     public override string[] GetStats()

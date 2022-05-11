@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 3623989419082130865}
   - component: {fileID: 2423300994299300331}
   m_Layer: 0
-  m_Name: BasicMG
+  m_Name: BasicMGT1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -180,9 +180,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <SystemName>k__BackingField: Basic MG
+  <SystemArtSprite>k__BackingField: {fileID: 21300000, guid: 6f4b59437aa464bad913cbb67900d137, type: 3}
+  SystemDescriptionText: A Tier 1 Machine Gun Turret
   isUnique: 0
   isRemovable: 1
+  AvailableUpgrades: []
   weaponObject: {fileID: 3329042455036463520}
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &5039283430849798007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,8 +214,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e25ffdc5ba42b9d4eb2513c9ba31abde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponFireRate: 3
-  weaponMaxHeat: 100
+  weaponFireRate: 4
+  weaponMaxHeat: 200
   weaponHeatPerShot: 12
   weaponCoolingRate: 10
 --- !u!114 &2423300994299300331
@@ -225,5 +231,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WeaponFireDirection: 4
+  FireAudioClip: {fileID: 0}
   ProjectilePrefab: {fileID: 5513232442569640560, guid: e58264188c069f342933465586077a8a, type: 3}
   ProjectileLaunchForce: 12

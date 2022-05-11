@@ -81,9 +81,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <SystemName>k__BackingField: Torpedo System
+  <SystemArtSprite>k__BackingField: {fileID: 0}
+  SystemDescriptionText: A forward facing torpedo launcher that does high damage
+    when hit.
   isUnique: 0
   isRemovable: 1
+  AvailableUpgrades: []
   weaponObject: {fileID: -6622790927542700518}
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &-6622790927542700518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,6 +117,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83131df52ad6363498ba1b50ca087593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WeaponFireDirection: 0
+  FireAudioClip: {fileID: 0}
   ProjectilePrefab: {fileID: 8293499593302840828, guid: f9183f27259c5194a852f7b915e619d5, type: 3}
   ProjectileLaunchForce: 8
 --- !u!114 &2332935011709437319
@@ -125,8 +134,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CrosshairSprite: {fileID: 21300000, guid: 86f061ca900cc05459acc760a839ced7, type: 3}
-  WeaponFireDirection: 0
   AimReticleRange: 5
+  WeaponAimDirection: 0
+  blockCrosshairLayerMask:
+    serializedVersion: 2
+    m_Bits: 247
 --- !u!114 &6670794392029500731
 MonoBehaviour:
   m_ObjectHideFlags: 0
