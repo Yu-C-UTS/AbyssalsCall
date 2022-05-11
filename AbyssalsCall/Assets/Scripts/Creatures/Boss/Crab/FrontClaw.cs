@@ -9,28 +9,52 @@ public class FrontClaw : MonoBehaviour
     protected Damage lightDamage = new Damage(8);
     protected Damage heavyDamage = new Damage(15);
 
+    protected bool PlayerInRange = false;
+    protected GameObject player;
+    protected bool attacked = false;
 
-    protected virtual void OnTriggerStay2D(Collider2D collision)
+
+
+
+    protected virtual void Update()
+    {
+        if (PlayerInRange && !attacked)
+        {
+            if (myState.state == CrabBossState.State.LightAttackFront)
+            {
+                player.GetComponent<PlayerSubmarine>().TakeDamage(lightDamage);
+                Debug.Log("Light Attacked!");
+                attacked = true;
+            }
+            else if (myState.state == CrabBossState.State.HeavyAttack)
+            {
+                player.GetComponent<PlayerSubmarine>().TakeDamage(heavyDamage);
+                Debug.Log("Heavey Attacked!");
+                attacked = true;
+            }
+        }
+        else if (!PlayerInRange || myState.state == CrabBossState.State.Active)
+        {
+            attacked = false;
+        }
+    }
+
+    protected void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            float counter = 1;
+            PlayerInRange = true;
+            player = collision.gameObject;
+        }
+    }
 
-            if(counter >= 1)
-            {
-                Debug.Log("Player!");
-                if (myState.state == CrabBossState.State.LightAttackFront)
-                {
-                    collision.GetComponent<PlayerSubmarine>().TakeDamage(lightDamage);
-                    Debug.Log("Light Attacked!");
-                }
-                else if (myState.state == CrabBossState.State.HeavyAttack)
-                {
-                    collision.GetComponent<PlayerSubmarine>().TakeDamage(heavyDamage);
-                    Debug.Log("Heavey Attacked!");
-                }
-                counter -= 1;
-            }
+
+    protected void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            PlayerInRange = false;
+            player = null;
         }
     }
 }
