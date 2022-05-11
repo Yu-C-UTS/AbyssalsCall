@@ -9,6 +9,8 @@ public class FireSingleProjectileBehavior : WeaponFireBehaviorBase
     public ProjectileBase ProjectilePrefab;
     [SerializeField]
     public float ProjectileLaunchForce = 10f;
+    [SerializeField]
+    private AudioSource shootSfx;
 
     public override void Fire()
     {
@@ -24,7 +26,7 @@ public class FireSingleProjectileBehavior : WeaponFireBehaviorBase
         }
         if(FireAudioClip != null)
         {
-            audioSource.Play();
+            shootSfx.Play();
         }
     }
 

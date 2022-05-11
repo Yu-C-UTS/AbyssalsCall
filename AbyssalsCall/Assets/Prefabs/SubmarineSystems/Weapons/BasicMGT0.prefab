@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WeaponFireDirection: 4
-  WeaponFireEffectPrefab: {fileID: 205886807889924941, guid: 1ce60e7165aa1489eac44cd2be1dcb0c, type: 3}
-  FireAudioClip: {fileID: 8300000, guid: a55305404f90e89408fff4b7db866e42, type: 3}
+  FireAudioClip: {fileID: 8300000, guid: 685e79d39175c474a96cf73042986158, type: 3}
   ProjectilePrefab: {fileID: 5513232442569640560, guid: e58264188c069f342933465586077a8a, type: 3}
   ProjectileLaunchForce: 12
+  shootSfx: {fileID: 0}
