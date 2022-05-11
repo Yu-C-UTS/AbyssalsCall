@@ -135,6 +135,8 @@ GameObject:
   - component: {fileID: 185180593}
   - component: {fileID: 185180592}
   - component: {fileID: 185180595}
+  - component: {fileID: 185180597}
+  - component: {fileID: 185180596}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -241,6 +243,115 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!82 &185180596
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185180591}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4805271f4a1575040998f40436a7a8d7, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.2
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &185180597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185180591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 352dfedcd25267c4bb3af41cd423ae95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgMusic: {fileID: 185180596}
 --- !u!1 &276657621
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,7 +450,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1678682303
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 1580897522, guid: ad604a2ec416a27418adb45e69509b14, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -450,7 +561,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1678682303
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 999390619, guid: ad604a2ec416a27418adb45e69509b14, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -704,7 +815,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1678682303
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -1051472466, guid: ad604a2ec416a27418adb45e69509b14, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1045,7 +1156,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1344214957
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 2046854325, guid: ad604a2ec416a27418adb45e69509b14, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1171,7 +1282,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1678682303
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -836661395, guid: ad604a2ec416a27418adb45e69509b14, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1282,7 +1393,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1678682303
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 1719174345, guid: ad604a2ec416a27418adb45e69509b14, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1393,7 +1504,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1678682303
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -763108412, guid: ad604a2ec416a27418adb45e69509b14, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1560,7 +1671,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAABAIexqLcE1cgIAACkFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMzoUxLjjQW+sQ0kMSJrSTiy/CWmMNsuTRR4Bk+O9dyTZ2KBfk9/bj7dPan4RLU0NulV5rzp4UA/JjRPyZfBv15COc6F7JLf+ALuaNM1v6IBpiXqnlCvGpTzOqAqt5/lPuhQ+OEHSSF0pXK7aHVBlrEC6oMICUVtZnS4Q+R+SEf+OlTznjKb7zpw88LaPRBY85SAu6D51N5m3o+PtktvS/eNGmjJNJPF/MFovVOLoL2U7mglY1MD9KXyRetjWmTZjEIdsIP1CuhOCmVUjsuQ4OpLQ2DufDAMYpThxk+fgS+L60vu4w+aUoDNjWDk3P91yjcU1V8ks1blbUHBpd71Q43yeZBUlNzaf/6PE00IVW1WPXdhr5Frbk+eGVnnNq7MDtIXz/VbeTRyoOdCfgrQT5rNZaOcmQtNr5VGcgvu8fr5OlJeSHHm+k3oCu7u3uLre7Wj/DJQx/SgWvdp6azBpgK1SwO2wEaLyY3yg47ItpSyDqVfw18Ifuh4vVEg9cG4tUO6X08nbKaR9KVsEzP42zqdISAtyKrkFSYc8bLGNvb/CGG7S9YR6of4Xa5i3XvRk3KQHu46Pohtqo4/WyTKmOT2DKF2cFl9CL9sQz+pQqKZsFG3rSpW2dLmg+SNs7zr6uFolmuylLdiwBxuIomY/nbMmiOUBU5AkkcUzC7nGJc1KxaYS29uCtyb64xD3rviyjtaZ1WHam6XHNPyo1sJzLQm1zDSBfmgpX4aCxCb6UbMU4GrQFa7kM900+MyJUfgCWXQtlYdLVyWqa9VUyUvN3ZT2SkTR8SjLi4esubzS8czj65l2xC7n8A1BLAwQUAAAICAAAQCHsKbtZNW0AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNdRUEovSizIKAaKGII4pZkpIHa0koFJkmGKWVKKWWpKipGBmamuaYplioFpaqpBWrJZqpmRkVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAAQCHsai3BNXICAAApBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAQCHsKbtZNW0AAAB4AAAACQAkAAAAAAAAAAAAAAC/AgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAHcDAAAAAA==
+    dataString: UEsDBBQAAAgIAABYIexqLcE1cgIAACkFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMzoUxLjjQW+sQ0kMSJrSTiy/CWmMNsuTRR4Bk+O9dyTZ2KBfk9/bj7dPan4RLU0NulV5rzp4UA/JjRPyZfBv15COc6F7JLf+ALuaNM1v6IBpiXqnlCvGpTzOqAqt5/lPuhQ+OEHSSF0pXK7aHVBlrEC6oMICUVtZnS4Q+R+SEf+OlTznjKb7zpw88LaPRBY85SAu6D51N5m3o+PtktvS/eNGmjJNJPF/MFovVOLoL2U7mglY1MD9KXyRetjWmTZjEIdsIP1CuhOCmVUjsuQ4OpLQ2DufDAMYpThxk+fgS+L60vu4w+aUoDNjWDk3P91yjcU1V8ks1blbUHBpd71Q43yeZBUlNzaf/6PE00IVW1WPXdhr5Frbk+eGVnnNq7MDtIXz/VbeTRyoOdCfgrQT5rNZaOcmQtNr5VGcgvu8fr5OlJeSHHm+k3oCu7u3uLre7Wj/DJQx/SgWvdp6azBpgK1SwO2wEaLyY3yg47ItpSyDqVfw18Ifuh4vVEg9cG4tUO6X08nbKaR9KVsEzP42zqdISAtyKrkFSYc8bLGNvb/CGG7S9YR6of4Xa5i3XvRk3KQHu46Pohtqo4/WyTKmOT2DKF2cFl9CL9sQz+pQqKZsFG3rSpW2dLmg+SNs7zr6uFolmuylLdiwBxuIomY/nbMmiOUBU5AkkcUzC7nGJc1KxaYS29uCtyb64xD3rviyjtaZ1WHam6XHNPyo1sJzLQm1zDSBfmgpX4aCxCb6UbMU4GrQFa7kM900+MyJUfgCWXQtlYdLVyWqa9VUyUvN3ZT2SkTR8SjLi4esubzS8czj65l2xC7n8A1BLAwQUAAAICAAAWCHsKbtZNW0AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNdRUEovSizIKAaKGII4pZkpIHa0koFJkmGKWVKKWWpKipGBmamuaYplioFpaqpBWrJZqpmRkVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAAWCHsai3BNXICAAApBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAWCHsKbtZNW0AAAB4AAAACQAkAAAAAAAAAAAAAAC/AgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAHcDAAAAAA==
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
