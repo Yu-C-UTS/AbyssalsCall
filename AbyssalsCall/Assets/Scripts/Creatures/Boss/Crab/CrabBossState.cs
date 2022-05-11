@@ -6,8 +6,8 @@ public class CrabBossState : MonoBehaviour, IDamagable
 {
     
     [SerializeField]
-    private float maxHealth = 200;
-    private float Health;
+    public float maxHealth = 200;
+    public float Health;
 
     private Transform target;
 

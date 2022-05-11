@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TestZone
   m_EditorClassIdentifier: 
   ZoneName: The Test Zone
-  ZoneLayerCount: 4
+  ZoneLayerCount: 6
   MinRandomLayerNodeCount: 2
   MaxRandomLayerNodeCount: 4
   CombatNodeWeight: 0.5
