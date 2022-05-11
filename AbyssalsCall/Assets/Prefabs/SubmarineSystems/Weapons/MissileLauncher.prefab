@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6460544874850596316}
   - component: {fileID: 3781390150468372104}
   - component: {fileID: 1448262022517825815}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MissileLauncher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <SystemName>k__BackingField: Missile Launcher
-  <SystemArtSprite>k__BackingField: {fileID: 0}
+  <SystemArtSprite>k__BackingField: {fileID: 21300000, guid: 2fcf899b4767a784283c3a27463874b0, type: 3}
   SystemDescriptionText: A Missile Launcher that fires multiple rockets that homes
     towards the crosshair position when fired.
   isUnique: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b607312fcbb39a4ab57d2f105acadb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CrosshairSprite: {fileID: 21300000, guid: 86f061ca900cc05459acc760a839ced7, type: 3}
+  CrosshairSprite: {fileID: 21300000, guid: 0fc8aa2320c4b45418c4b28d75aeb5f6, type: 3}
 --- !u!114 &1448262022517825815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,7 +113,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WeaponFireDirection: 2
-  FireAudioClip: {fileID: 0}
+  WeaponFireEffectPrefab: {fileID: 0}
+  FireAudioClip: {fileID: 8300000, guid: 61a45cb161f1e33409253d02e3add367, type: 3}
   ProjectilePrefab: {fileID: 7484925770448962582, guid: 201bd7934c5f21c4eb1875f22ecb8b72, type: 3}
   ProjectileLaunchForce: 4
   BarrageCount: 5
@@ -128,7 +129,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1563532587649064325}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Firepoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

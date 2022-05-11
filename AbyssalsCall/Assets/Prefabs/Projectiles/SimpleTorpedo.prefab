@@ -149,3 +149,4 @@ MonoBehaviour:
   projectileLifetime: 3
   payloads:
   - {fileID: 11400000, guid: dd1277208f2b5fe40897934d7ab53645, type: 2}
+  projectileHitEffect: {fileID: 5315409256257446637, guid: 7d67902de77744703807cedd75468119, type: 3}

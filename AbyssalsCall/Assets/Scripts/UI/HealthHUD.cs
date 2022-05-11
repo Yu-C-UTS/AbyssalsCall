@@ -16,14 +16,14 @@ public class HealthHUD : MonoBehaviour
     private float GetCurrentHealth()
     {
         slider.value = RunManager.Instance.ActivePlayerSubmarineStateData.CurrentHealth;
-        fill.color = gradient.Evaluate(1f);
+        fill.color = gradient.Evaluate(slider.normalizedValue);
         return RunManager.Instance.ActivePlayerSubmarineStateData.CurrentHealth;
     }
 
     private float GetMaxHealth()
     {
         slider.maxValue = RunManager.Instance.ActivePlayerSubmarineStateData.MaxHealth;
-        fill.color = gradient.Evaluate(slider.normalizedValue);
+        fill.color = gradient.Evaluate(1f);
         return RunManager.Instance.ActivePlayerSubmarineStateData.MaxHealth;
     }
 

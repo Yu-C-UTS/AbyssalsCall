@@ -9,6 +9,8 @@ public class FireSingleProjectileBehavior : WeaponFireBehaviorBase
     public ProjectileBase ProjectilePrefab;
     [SerializeField]
     public float ProjectileLaunchForce = 10f;
+    [SerializeField]
+    private AudioSource shootSfx;
 
     public override void Fire()
     {
@@ -16,7 +18,16 @@ public class FireSingleProjectileBehavior : WeaponFireBehaviorBase
         fireProjectile.InitiateProjectile(parentWeaponSystem);
         //fireProjectile.rb2d.velocity = parentWeaponSystem.registeredSubmarine.rigidBody2d.velocity;
         fireProjectile.rb2d.AddForce(getFireDirectionVector() * ProjectileLaunchForce, ForceMode2D.Impulse);
-        audioSource.Play();
+        if(WeaponFireEffectPrefab != null)
+        {
+            GameObject fireEffectGO = Instantiate(WeaponFireEffectPrefab, parentWeaponSystem.firePoint.position, parentWeaponSystem.firePoint.rotation);
+            fireEffectGO.transform.parent = parentWeaponSystem.firePoint;
+            Destroy(fireEffectGO,0.5f);
+        }
+        if(FireAudioClip != null)
+        {
+            shootSfx.Play();
+        }
     }
 
     public override string[] GetStats()

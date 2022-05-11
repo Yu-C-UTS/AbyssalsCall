@@ -15,12 +15,17 @@ public class DashingEnemy : BasicEnemyController
     private float dashCoolDown = 4f;
     private float dashCoolTimer;
 
+    private Damage dashDamage = new Damage(10);
+
+    private bool dashAttack;
+
     protected override void Awake()
     {
         maxHealth = 20;
         Health = maxHealth;
         pfController = new PathfindingController(transform, PickRandomPoint());
         dashCoolTimer = 0;
+        dashAttack = false;
     }
 
     protected override void FixedUpdate()
@@ -73,10 +78,27 @@ public class DashingEnemy : BasicEnemyController
     {
         GetComponent<Rigidbody2D>().AddForce(-directionTo(target) * pfController.speed);
         yield return new WaitForSeconds(DashWait);
+        dashAttack = true;
         Vector2 dashDirect = directionTo(target);
         GetComponent<Rigidbody2D>().AddForce(directionTo(target) * DashForce);
         hasTarget = false;
         yield return new WaitForSeconds(dashDuration);
+        dashAttack = false;
         GetComponent<Rigidbody2D>().AddForce(-dashDirect * DashForce/2);
+    }
+
+    protected override void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            if (dashAttack)
+            {
+                collision.GetComponent<PlayerSubmarine>().TakeDamage(dashDamage);
+            }else if (canAttack)
+            {
+                collision.GetComponent<PlayerSubmarine>().TakeDamage(basicDamage);
+                canAttack = false;
+            }
+        }
     }
 }
