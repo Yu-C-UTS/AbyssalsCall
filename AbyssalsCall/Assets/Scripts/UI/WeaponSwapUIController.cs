@@ -22,7 +22,9 @@ public class WeaponSwapUIController : MonoBehaviour
     {
         SystemBase PrimWeapon = StringSystemConverter.Instance.StringToSystem(RunManager.Instance.ActivePlayerSubmarineStateData.PrimWeapon);
         PrimWeaponNameText.text = PrimWeapon.SystemName;
-    
+        //!!!PrimWeapon Image = PrimWeapon.SystemArtSprite;
+        
+
         if(RunManager.Instance.ActivePlayerSubmarineStateData.SecWeapon == "")
         {
             SecWeaponNameText.text = "Nothing Installed";
@@ -33,6 +35,7 @@ public class WeaponSwapUIController : MonoBehaviour
             if(SecWeapon != null)
             {
                 SecWeaponNameText.text = SecWeapon.SystemName;
+                //!!!SecWeapon Image = SecWeapon.SystemArtSprite;
             }
         }
     }
@@ -49,6 +52,7 @@ public class WeaponSwapUIController : MonoBehaviour
         }
         NewWeaponNameText.text = NewWeapon.SystemName;
         NewWeaponDescriptionText.text = NewWeapon.SystemDescriptionText;
+        //!!!NewWeapon Image = NewWeapon.SystemArtSprite;
     }
 
     public void AssignWeaponToPrim()
