@@ -114,7 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WeaponFireDirection: 2
   WeaponFireEffectPrefab: {fileID: 0}
-  FireAudioClip: {fileID: 0}
+  FireAudioClip: {fileID: 8300000, guid: 61a45cb161f1e33409253d02e3add367, type: 3}
   ProjectilePrefab: {fileID: 7484925770448962582, guid: 201bd7934c5f21c4eb1875f22ecb8b72, type: 3}
   ProjectileLaunchForce: 4
   BarrageCount: 5

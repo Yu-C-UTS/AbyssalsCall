@@ -120,10 +120,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WeaponFireDirection: 0
   WeaponFireEffectPrefab: {fileID: 0}
-  FireAudioClip: {fileID: 0}
+  FireAudioClip: {fileID: 8300000, guid: f951b6ccdfc22f34db3db07c8dfd77af, type: 3}
   ProjectilePrefab: {fileID: 8293499593302840828, guid: f9183f27259c5194a852f7b915e619d5, type: 3}
   ProjectileLaunchForce: 8
-  shootSfx: {fileID: 0}
+  shootSfx: {fileID: 4881332871167736432}
 --- !u!114 &2332935011709437319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,9 +165,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f951b6ccdfc22f34db3db07c8dfd77af, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
