@@ -13,7 +13,7 @@ public class CrabBossState : MonoBehaviour, IDamagable
 
     public enum State
     {
-        Idle, Active,Attacking, Blocking, Dead
+        Idle, Active, LightAttackFront, LightAttackBack, HeavyAttack, Blocking, Dead
     }
     public State state;
 

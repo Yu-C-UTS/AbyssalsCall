@@ -98,8 +98,17 @@ public class CrabBossBehaviour : MonoBehaviour
 
     private IEnumerator lightAttack()
     {
-        anim.SetAnimation(anim.lightAttackFront, true);
-        myState.state = CrabBossState.State.Attacking;
+        if(MeleeAttackCount % 2 == 1)
+        {
+            anim.SetAnimation(anim.lightAttackFront, true);
+            myState.state = CrabBossState.State.LightAttackFront;
+        }
+        else
+        {
+            anim.SetAnimation(anim.lightAttackBack, true);
+            myState.state = CrabBossState.State.LightAttackBack;
+        }
+
         MeleeAttackCount += 1;
         Debug.Log("Light Attack");
         yield return new WaitForSeconds(0.5f);
@@ -109,7 +118,7 @@ public class CrabBossBehaviour : MonoBehaviour
     private IEnumerator heavyAttack()
     {
         anim.SetAnimation(anim.heavyAttack, false);
-        myState.state = CrabBossState.State.Attacking;
+        myState.state = CrabBossState.State.HeavyAttack;
         MeleeAttackCount += 1;
         Debug.Log("Heavey Attack");
         yield return new WaitForSeconds(0.5f);
