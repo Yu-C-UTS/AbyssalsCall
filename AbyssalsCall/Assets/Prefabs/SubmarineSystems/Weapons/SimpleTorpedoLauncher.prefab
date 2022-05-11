@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6268194236832481486}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 1867013967889115253}
   - component: {fileID: 2332935011709437319}
   - component: {fileID: 6670794392029500731}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SimpleTorpedoLauncher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <SystemName>k__BackingField: Torpedo System
-  <SystemArtSprite>k__BackingField: {fileID: 0}
+  <SystemArtSprite>k__BackingField: {fileID: 21300000, guid: 27d3c4ad04002fb468ea3f7c0e9a6a03, type: 3}
   SystemDescriptionText: A forward facing torpedo launcher that does high damage
     when hit.
   isUnique: 0
