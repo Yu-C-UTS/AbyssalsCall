@@ -86,6 +86,12 @@ public class CrabBoss : MonoBehaviour
         }
     }
 
+    public void SetAnimation(AnimationReferenceAsset ani, bool loop)
+    {
+        int trackNum = 0;
+        Spine.TrackEntry animationEntry = skeletonAnimation.state.SetAnimation(trackNum, ani, loop);
+    }
+
     /// Performs certain actions after the animations is complete
 	private void shootWarmUp_Complete(Spine.TrackEntry trackEntry)
     {

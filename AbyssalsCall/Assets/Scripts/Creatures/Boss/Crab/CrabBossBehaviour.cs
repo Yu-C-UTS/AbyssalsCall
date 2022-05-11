@@ -5,52 +5,55 @@ using UnityEngine;
 public class CrabBossBehaviour : MonoBehaviour
 {
 
-    private Transform target;
-    private Rigidbody2D rb;
-
     [SerializeField]
     private CrabBoss anim;
 
     [SerializeField]
     private Transform myCenter;
 
-    private float AttackTime = 3;
-    private float AttackTimer;
-    private int AttackCount;
+    private float MeleeAttackTime = 3;
+    private float MeleeAttackTimer;
+    private int MeleeAttackCount;
 
+    private float PullDownTime = 5;
+    private float PullDownTimer;
+
+    private CrabBossState myState;
+
+    [SerializeField]
+    private Transform watercurrentMaker;
+    [SerializeField]
+    private Transform watercurrent;
 
     void Start()
     {
-        rb = this.gameObject.GetComponent<Rigidbody2D>();
-        AttackTimer = AttackTime;
+        myState = gameObject.GetComponent<CrabBossState>();
+        MeleeAttackTimer = MeleeAttackTime;
+        PullDownTimer = PullDownTime;
     }
 
     void Update()
     {
-        if (target == null)
-        {
-            target = GameObject.FindGameObjectWithTag("Player").transform;
-        }
 
-        if (target)
+        if (myState.getTarget())
         {
-            if(VerticalDistanceTo(target) >= 10)
+            if(VerticalDistanceTo(myState.getTarget()) >= 10)
             {
-                //PullDown(target);
+                PullDown(myState.getTarget());
             }
         }
 
-        if (distanceTo(target) <= 5)
+        if (distanceTo(myState.getTarget()) <= 10)
         {
             if (AttackCountDown() == 0)
             {
-                if (AttackCount != 0 && AttackCount % 3 == 1)
+                if (MeleeAttackCount != 0 && MeleeAttackCount % 3 == 1)
                 {
-                    heavyAttack();
+                    StartCoroutine(heavyAttack());
                 }
                 else
                 {
-                    lightAttack();
+                    StartCoroutine(lightAttack());
                 }
             }
         }
@@ -58,47 +61,58 @@ public class CrabBossBehaviour : MonoBehaviour
 
     private float AttackCountDown()
     {
-        if(AttackTimer <= 0)
+        if(MeleeAttackTimer <= 0)
         {
-            AttackTimer = AttackTime;
+            MeleeAttackTimer = MeleeAttackTime;
             return 0;
         }
         else
         {
-            AttackTimer -= Time.deltaTime;
-            return AttackTimer;
+            MeleeAttackTimer -= Time.deltaTime;
+            return MeleeAttackTimer;
         }
     }
 
     protected float distanceTo(Transform target)
     {
-        return Vector2.Distance(target.position, transform.position);
+        return Vector2.Distance(target.position, myCenter.position);
     }
 
     protected float VerticalDistanceTo(Transform target)
     {
-        return Mathf.Abs(target.position.y - transform.position.y);
+        return Mathf.Abs(target.position.y - myCenter.position.y);
     }
 
     private void PullDown(Transform target)
     {
-        Rigidbody2D trb = target.gameObject.GetComponent<Rigidbody2D>();
-        trb.AddForce(-directionTo(target)*2);
+        Vector2 launchPos = target.position;
+        launchPos.y = watercurrentMaker.position.y;
+        Instantiate(watercurrent, launchPos, Quaternion.identity);
     }
 
     private Vector2 directionTo(Transform target)
     {
-        Vector2 direction = target.position - transform.position;
+        Vector2 direction = target.position - myCenter.position;
         return direction.normalized;
     }
 
-    private void lightAttack()
+    private IEnumerator lightAttack()
     {
-        anim.AddAnimation(anim.lightAttackFront,false);
+        anim.SetAnimation(anim.lightAttackFront, true);
+        myState.state = CrabBossState.State.Attacking;
+        MeleeAttackCount += 1;
+        Debug.Log("Light Attack");
+        yield return new WaitForSeconds(0.5f);
+        myState.state = CrabBossState.State.Active;
     }
 
-    private void heavyAttack()
+    private IEnumerator heavyAttack()
     {
-        anim.AddAnimation(anim.heavyAttack, false);
+        anim.SetAnimation(anim.heavyAttack, false);
+        myState.state = CrabBossState.State.Attacking;
+        MeleeAttackCount += 1;
+        Debug.Log("Heavey Attack");
+        yield return new WaitForSeconds(0.5f);
+        myState.state = CrabBossState.State.Active;
     }
 }

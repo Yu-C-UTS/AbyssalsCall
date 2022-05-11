@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class CrabBossMovement : MonoBehaviour
 {
-
     public float speed = 5;
     public float stopDist = 6;
 
-    private Transform target;
     private Vector2 lastPos;
 
     [SerializeField]
@@ -17,18 +15,21 @@ public class CrabBossMovement : MonoBehaviour
     [SerializeField]
     private Transform myCenter;
 
+    private CrabBossState myState;
+
+    private void Awake()
+    {
+        myState = gameObject.GetComponent<CrabBossState>();
+    }
+
     void Update()
     {
-        if(target == null)
-        {
-            target = GameObject.FindGameObjectWithTag("PlayerVisual").transform;
-        }
 
-        if (target)
+        if (myState.getTarget())
         {
-            if(horizontalDistanceTo(target) > stopDist)
+            if(horizontalDistanceTo(myState.getTarget()) > stopDist)
             {
-                follow(target);
+                follow(myState.getTarget());
             }
         }
 
@@ -37,6 +38,10 @@ public class CrabBossMovement : MonoBehaviour
         if (myMovingDirection() != 0)
         {
             anim.AddAnimation(anim.walk, true);
+        }
+        else
+        {
+            anim.SetAnimation(anim.idle, true);
         }
     }
 

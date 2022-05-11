@@ -13,7 +13,7 @@ public class CrabBossState : MonoBehaviour, IDamagable
 
     public enum State
     {
-        Idle, Active, Blocking, Dead
+        Idle, Active,Attacking, Blocking, Dead
     }
     public State state;
 
@@ -27,7 +27,7 @@ public class CrabBossState : MonoBehaviour, IDamagable
     {
         if(target == null)
         {
-            target = detectPlayer("PlayerVisual", 50);
+            target = detectPlayer("Player", 50);
         }
     }
 
@@ -50,11 +50,16 @@ public class CrabBossState : MonoBehaviour, IDamagable
                 Debug.Log("detected");
                 state = State.Active;
                 Debug.Log(collider.gameObject.transform);
-                return collider.gameObject.transform;
+                return collider.gameObject.transform.GetChild(0).transform;
             }
         }
 
         return null;
+    }
+
+    public Transform getTarget()
+    {
+        return target;
     }
 
 }

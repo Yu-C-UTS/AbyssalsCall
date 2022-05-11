@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2636278331726591510}
   - component: {fileID: 2636278331726591511}
   - component: {fileID: 2636278331726591508}
+  - component: {fileID: 2057669682782347881}
   m_Layer: 0
   m_Name: WaterCurrent
   m_TagString: Untagged
@@ -49,7 +50,7 @@ AreaEffector2D:
     m_Bits: 256
   m_UseGlobalAngle: 0
   m_ForceAngle: -90
-  m_ForceMagnitude: 10
+  m_ForceMagnitude: 5
   m_ForceVariation: 0
   m_ForceTarget: 0
   m_Drag: 0
@@ -80,6 +81,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.991026, y: 20.756142}
   m_EdgeRadius: 0
+--- !u!114 &2057669682782347881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2636278331726591509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23fbd3051ce6b1843b8ecc4bd6ad6855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2636278331873832522
 GameObject:
   m_ObjectHideFlags: 0
