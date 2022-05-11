@@ -13,7 +13,10 @@ public class FrontClaw : MonoBehaviour
     protected GameObject player;
     protected bool attacked = false;
 
-
+    [SerializeField]
+    protected AudioSource light;
+    [SerializeField]
+    protected AudioSource heavy;
 
 
     protected virtual void Update()
@@ -25,12 +28,14 @@ public class FrontClaw : MonoBehaviour
                 player.GetComponent<PlayerSubmarine>().TakeDamage(lightDamage);
                 Debug.Log("Light Attacked!");
                 attacked = true;
+                light.Play();
             }
             else if (myState.state == CrabBossState.State.HeavyAttack)
             {
                 player.GetComponent<PlayerSubmarine>().TakeDamage(heavyDamage);
                 Debug.Log("Heavey Attacked!");
                 attacked = true;
+                heavy.Play();
             }
         }
         else if (!PlayerInRange || myState.state == CrabBossState.State.Active)
