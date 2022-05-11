@@ -16,14 +16,14 @@ public class BossHealthHUD : MonoBehaviour
     private float GetCurrentHealth()
     {
         slider.value = FindObjectOfType<CrabBossState>().Health;
-        fill.color = gradient.Evaluate(1f);
+        fill.color = gradient.Evaluate(slider.normalizedValue);
         return slider.value;
     }
 
     private float GetMaxHealth()
     {
         slider.maxValue = FindObjectOfType<CrabBossState>().maxHealth;
-        fill.color = gradient.Evaluate(slider.normalizedValue);
+        fill.color = gradient.Evaluate(1f);
         return slider.maxValue;
     }
 
