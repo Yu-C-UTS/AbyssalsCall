@@ -28,6 +28,11 @@ public class ChoiceOutcome
         {
             OutcomeType = EOutcomeClass.submarineDamage;
         }
+
+        public override void ApplyOutcome()
+        {
+            RunManager.Instance.ActivePlayerSubmarineStateData.CurrentHealth -= DamageAmount;
+        }
     }
 
     [System.Serializable]
