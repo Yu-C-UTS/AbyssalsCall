@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public abstract class WeaponFireBehaviorBase : WeaponBehaviorBase
 {
     public enum FireDirection
@@ -10,6 +11,15 @@ public abstract class WeaponFireBehaviorBase : WeaponBehaviorBase
     public FireDirection WeaponFireDirection = FireDirection.forward;
 
     public abstract void Fire();
+
+    public AudioClip FireAudioClip;
+    protected AudioSource audioSource;
+
+    protected virtual void Awake() 
+    {
+        audioSource = GetComponent<AudioSource>();   
+        audioSource.clip = FireAudioClip;
+    }
 
     protected Vector3 getFireDirectionVector()
     {   
