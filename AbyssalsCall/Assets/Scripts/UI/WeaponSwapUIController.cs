@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
 
@@ -18,11 +19,19 @@ public class WeaponSwapUIController : MonoBehaviour
     [SerializeField]
     private TMP_Text SecWeaponNameText;
 
+    //Quang
+    [SerializeField]
+    private Image PrimWeaponImage;
+    [SerializeField]
+    private Image SecWeaponImage;
+    [SerializeField]
+    private Image NewWeaponImage;
+
     public void InitilizeUI()
     {
         SystemBase PrimWeapon = StringSystemConverter.Instance.StringToSystem(RunManager.Instance.ActivePlayerSubmarineStateData.PrimWeapon);
         PrimWeaponNameText.text = PrimWeapon.SystemName;
-        //!!!PrimWeapon Image = PrimWeapon.SystemArtSprite;
+        PrimWeaponImage.sprite = PrimWeapon.SystemArtSprite;
         
 
         if(RunManager.Instance.ActivePlayerSubmarineStateData.SecWeapon == "")
@@ -35,7 +44,7 @@ public class WeaponSwapUIController : MonoBehaviour
             if(SecWeapon != null)
             {
                 SecWeaponNameText.text = SecWeapon.SystemName;
-                //!!!SecWeapon Image = SecWeapon.SystemArtSprite;
+                SecWeaponImage.sprite = SecWeapon.SystemArtSprite;
             }
         }
     }
@@ -52,7 +61,7 @@ public class WeaponSwapUIController : MonoBehaviour
         }
         NewWeaponNameText.text = NewWeapon.SystemName;
         NewWeaponDescriptionText.text = NewWeapon.SystemDescriptionText;
-        //!!!NewWeapon Image = NewWeapon.SystemArtSprite;
+        NewWeaponImage.sprite = NewWeapon.SystemArtSprite;
     }
 
     public void AssignWeaponToPrim()
