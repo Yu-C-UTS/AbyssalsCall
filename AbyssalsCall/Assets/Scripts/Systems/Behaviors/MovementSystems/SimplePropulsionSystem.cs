@@ -21,13 +21,18 @@ public class SimplePropulsionSystem : MovementSystemBase
     public override void RegisterSystem()
     {
         base.RegisterSystem();
-        registeredSubmarine.onSubFixedUpdate.AddListener(SystemFixedUpdate);
+        registeredSubmarine.onSubFixedUpdate += SystemFixedUpdate;
     }
 
     public override void UnRegisterSystem()
     {
         base.UnRegisterSystem();
-        registeredSubmarine.onSubFixedUpdate.RemoveListener(SystemFixedUpdate);
+        registeredSubmarine.onSubFixedUpdate -= SystemFixedUpdate;
     }
 
+    public override List<string> GetStats()
+    {
+        string onlyStat = "Output Force: " + propulsionForce;
+        return new List<string>(){ onlyStat};
+    }
 }

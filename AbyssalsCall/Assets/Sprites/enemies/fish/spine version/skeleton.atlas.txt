@@ -1,0 +1,11 @@
+skeleton.png
+size:509,117
+filter:Linear,Linear
+pma:true
+0.15x/basic
+bounds:360,5,147,110
+0.15x/dashing
+bounds:180,7,178,108
+0.15x/shockwave
+bounds:2,2,176,113
+offsets:0,0,176,120

@@ -1,0 +1,92 @@
+skeleton.png
+	size: 2037, 1933
+	filter: Linear, Linear
+	pma: true
+2x/back fin@2x
+	bounds: 276, 1814, 117, 147
+	offsets: 1, 0, 118, 147
+	rotate: 90
+2x/body fin@2x
+	bounds: 425, 1783, 148, 148
+2x/body@2x
+	bounds: 1747, 1599, 332, 288
+	rotate: 90
+2x/bottom fin@2x
+	bounds: 56, 1834, 108, 97
+	offsets: 0, 0, 109, 97
+2x/bottom jaw@2x
+	bounds: 805, 1762, 254, 169
+	offsets: 0, 1, 254, 170
+2x/lantern@2x
+	bounds: 5, 1882, 49, 49
+	offsets: 0, 1, 50, 51
+2x/mouth@2x
+	bounds: 1296, 1737, 194, 194
+2x/top fin@2x
+	bounds: 166, 1834, 108, 97
+	offsets: 0, 0, 109, 97
+2x/top jaw@2x
+	bounds: 1492, 1710, 253, 221
+	offsets: 17, 1, 270, 334
+2x/tube@2x
+	bounds: 575, 1773, 158, 228
+	rotate: 90
+crack/00
+	bounds: 1061, 1740, 233, 191
+	offsets: 182, 423, 1920, 1080
+crack/01
+	bounds: 350, 1509, 526, 251
+	offsets: 246, 382, 1920, 1080
+crack/02
+	bounds: 878, 1380, 790, 328
+	offsets: 374, 342, 1920, 1080
+crack/03
+	bounds: 2, 557, 1233, 448
+	offsets: 342, 316, 1920, 1080
+crack/04
+	bounds: 1377, 2, 1376, 508
+	offsets: 343, 292, 1920, 1080
+	rotate: 90
+crack/06
+	bounds: 2, 69, 1373, 486
+	offsets: 258, 329, 1920, 1080
+lighting/00
+	bounds: 2, 1559, 253, 346
+	offsets: 779, 649, 1920, 1080
+	rotate: 90
+lighting/01
+	bounds: 2, 1007, 371, 912
+	offsets: 789, 84, 1920, 1080
+	rotate: 90
+lighting/04
+	bounds: 2, 1930, 1, 1
+lighting/07
+	bounds: 2, 1930, 1, 1
+
+skeleton_2.png
+	size: 1956, 1936
+	filter: Linear, Linear
+	pma: true
+crack/05
+	bounds: 1456, 507, 1427, 498
+	offsets: 277, 305, 1920, 1080
+	rotate: 90
+lighting/03
+	bounds: 2, 944, 1452, 990
+	offsets: 288, 47, 1920, 1080
+lighting/05
+	bounds: 2, 2, 1371, 940
+	offsets: 317, 64, 1920, 1080
+
+skeleton_3.png
+	size: 1852, 1084
+	filter: Linear, Linear
+	pma: true
+lighting/02
+	bounds: 2, 55, 1027, 971
+	offsets: 472, 67, 1920, 1080
+	rotate: 90
+lighting/06
+	bounds: 975, 2, 1080, 875
+	offsets: 395, 111, 1920, 1080
+	rotate: 90

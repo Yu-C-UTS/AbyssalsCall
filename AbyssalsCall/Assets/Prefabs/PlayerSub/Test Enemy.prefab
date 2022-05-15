@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4596782352236853787}
   - component: {fileID: 4596782352236853764}
   - component: {fileID: 4596782352236853765}
-  - component: {fileID: 4596782352236853766}
+  - component: {fileID: 6484846500088417053}
   m_Layer: 0
   m_Name: Test Enemy
   m_TagString: Enemy
@@ -55,7 +55,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -134,7 +134,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &4596782352236853766
+--- !u!114 &6484846500088417053
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,8 +143,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4596782352236853767}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7c04655c73e6da4e95386032ff87f35, type: 3}
+  m_Script: {fileID: 11500000, guid: bd93934bdde045c479b5614656604adb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 100
-  currentHealth: 0
+  Health: 100

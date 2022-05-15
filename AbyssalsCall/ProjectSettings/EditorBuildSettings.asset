@@ -9,13 +9,37 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/MenuScene.unity
+    path: Assets/Scenes/GameScenes/ManagerScene.unity
+    guid: fbb8cb0f0c863044f9e0616f3a6dec68
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/MenuScene.unity
     guid: 255a1c407dc6965439f51c41c7689d83
   - enabled: 1
-    path: Assets/Scenes/FullRunMapTestScene.unity
+    path: Assets/Scenes/GameScenes/MapDisplayScene.unity
     guid: 4f7cccc34e8e8e247981c6e6713c0b95
   - enabled: 1
-    path: Assets/Scenes/GameDemo/GameDemoScene.unity
-    guid: 3ae84ca066a1d76409b9b01e8b3476d4
+    path: Assets/Scenes/GameScenes/EventScene.unity
+    guid: a26f80bda1d19f841a9e2f2ff6fb295e
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/IntroductionScene.unity
+    guid: 1d56b6b5164ddd54bb678b98cfbda14e
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/ControlSchemeScene.unity
+    guid: e961858fa83f5e146827b73b0bd9d011
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/CrabBossScene.unity
+    guid: e16474f3dec4a9c4982d31e17f555233
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/CombatScene01.unity
+    guid: 42ad4b483580644e2a840aae68074562
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/CombatScene02.unity
+    guid: b5fea38ee996dbc44beed1a89084b5f4
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/CombatScene03.unity
+    guid: 5a8b2511cc62374489879349c9feef2a
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/Credits Scene.unity
+    guid: 22ca716ead8689a45b41f1eddb32ef8f
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 2f97783565722b040abee9f20bc9ab47, type: 2}

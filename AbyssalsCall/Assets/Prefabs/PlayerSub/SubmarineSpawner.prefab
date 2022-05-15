@@ -46,5 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseSubmarinePrefab: {fileID: 6479458855308839219, guid: 242dc39ef5605a643822210b50bbeac6, type: 3}
   requiredSystems:
-  - {fileID: 2720639245685042642, guid: abe34de5be4d1704696a86135631ed62, type: 3}
-  - {fileID: -3893147338065242854, guid: 3456478be975bc942b6351a5b0975d17, type: 3}
+  - {fileID: 4572655284797286809, guid: 4a6ae41c2fbc050459643a57fc361504, type: 3}
+  - {fileID: 3604815621542158155, guid: a9f5aa797b6245f499fb961f85ee9fee, type: 3}
+  - {fileID: 3569800497550525070, guid: af98d9b9b12877d44b711f94530a34fd, type: 3}
