@@ -86,6 +86,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e243a51740d7e34abe0aa5c2fa94477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponCooldownHUDObjPrefab: {fileID: 6290394620348922415, guid: f46510c5a56e83446bc7bc1f74c23e03, type: 3}
   TriggerCooldown: 2
 --- !u!114 &3781390150468372104
 MonoBehaviour:

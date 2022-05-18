@@ -214,6 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e25ffdc5ba42b9d4eb2513c9ba31abde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponCooldownHUDObjPrefab: {fileID: 5090989581404990412, guid: bd7ba65a3d3e2d948b98ffe8175fc03e, type: 3}
   weaponFireRate: 3
   weaponMaxHeat: 100
   weaponHeatPerShot: 12
