@@ -5,13 +5,31 @@ using UnityEngine;
 //[CreateAssetMenu(fileName = "NewMGTriggerBehavior", menuName = "ScriptableObjects/WeaponBehavior/TriggerBehavior/MGTriggerBehavior")]
 public class MGTriggerBehavior : WeaponTriggerBehaviorBase
 {
+    public override void InitilizeBehavior(Transform WeaponTransform, GeneralWeaponSystem parentWeaponSystem)
+    {
+        base.InitilizeBehavior(WeaponTransform, parentWeaponSystem);
+        weaponCooldownHUDObj.SetSliderMaxValue(weaponMaxHeat);
+    }
+
     [SerializeField]
     protected float weaponFireRate = 3;
     protected float weaponFireCountdown = 0;
 
     [SerializeField]
     protected float weaponMaxHeat = 100f;
-    protected float weaponCurrentHeat = 0;
+    private float _weaponCurrentHeat = 0;
+    protected float weaponCurrentHeat
+    {
+        get { return _weaponCurrentHeat; }
+        set
+        {
+            _weaponCurrentHeat = value;
+            if(weaponCooldownHUDObj != null)
+            {
+                weaponCooldownHUDObj.UpdateSliderValue(value);
+            }
+        }
+    }
     [SerializeField]
     protected float weaponHeatPerShot = 12f;
     [SerializeField]

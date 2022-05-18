@@ -87,6 +87,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e243a51740d7e34abe0aa5c2fa94477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponCooldownHUDObjPrefab: {fileID: 6290394620348922415, guid: f46510c5a56e83446bc7bc1f74c23e03, type: 3}
   TriggerCooldown: 2
 --- !u!114 &3781390150468372104
 MonoBehaviour:
@@ -115,7 +116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WeaponFireDirection: 2
   WeaponFireEffectPrefab: {fileID: 0}
-  FireAudioClip: {fileID: 8300000, guid: 61a45cb161f1e33409253d02e3add367, type: 3}
+  FireAudioClip: {fileID: 8300000, guid: 4e25adef43a9fa243804e064cee3e19d, type: 3}
   ProjectilePrefab: {fileID: 7484925770448962582, guid: 201bd7934c5f21c4eb1875f22ecb8b72, type: 3}
   ProjectileLaunchForce: 4
   BarrageCount: 5
@@ -131,9 +132,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 61a45cb161f1e33409253d02e3add367, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4e25adef43a9fa243804e064cee3e19d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.6
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0

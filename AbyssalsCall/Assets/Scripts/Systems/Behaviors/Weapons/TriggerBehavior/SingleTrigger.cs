@@ -6,10 +6,29 @@ using UnityEngine;
 public class SingleTrigger : WeaponTriggerBehaviorBase
 {
     public float TriggerCooldown = 2f;
-    private float currentCooldown = 0f;
+    private float _currentCooldown = 0f;
+    private float currentCooldown
+    {
+        get { return _currentCooldown;}
+        set
+        {
+            _currentCooldown = value;
+            if(weaponCooldownHUDObj != null)
+            {
+                weaponCooldownHUDObj.UpdateSliderValue(TriggerCooldown - currentCooldown);
+            }
+        }
+    }
 
     private bool triggerRegistered = false;
     private bool isCoolingWeapon = false;
+
+    public override void InitilizeBehavior(Transform WeaponTransform, GeneralWeaponSystem parentWeaponSystem)
+    {
+        base.InitilizeBehavior(WeaponTransform, parentWeaponSystem);
+        weaponCooldownHUDObj.SetSliderMaxValue(TriggerCooldown);
+        currentCooldown = 0; //to update UI on start
+    }
 
     public override void triggerBehavior(float triggerValue)
     {

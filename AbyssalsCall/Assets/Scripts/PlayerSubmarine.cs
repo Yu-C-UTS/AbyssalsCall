@@ -27,12 +27,16 @@ public class PlayerSubmarine : MonoBehaviour, IDamagable
     [field: SerializeField]
     public Transform submarineVisualTransform{ get; private set;}
 
+    [field: SerializeField]
+    public Transform WeaponHudParent{ get; private set;}
+
     bool facingRight = true;
 
     public event UpdateNotify onSubUpdate;
     public event UpdateNotify onSubFixedUpdate;
     public event VectorChange onMouseMove;
     public event VectorChange onMove;
+    public event TriggerChange onBoost;
     public event TriggerChange onTriggerPrim;
     public event TriggerChange onTriggerSec;
 
@@ -80,6 +84,11 @@ public class PlayerSubmarine : MonoBehaviour, IDamagable
         onMove?.Invoke(value.ReadValue<Vector2>());
 
         UpdateSubmarineFacing(value.ReadValue<Vector2>().x);
+    }
+
+    public void OnBoostInput(InputAction.CallbackContext value)
+    {
+        onBoost?.Invoke(value.ReadValue<float>());
     }
 
     public void OnTriggerPrimInput(InputAction.CallbackContext value)
