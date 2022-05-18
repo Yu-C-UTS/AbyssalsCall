@@ -21,15 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/GameScenes/EventScene.unity
     guid: a26f80bda1d19f841a9e2f2ff6fb295e
   - enabled: 1
-    path: Assets/Scenes/GameScenes/MaintenanceScene.unity
-    guid: 691ae6e04fb69574b8aa40a540b2a30d
-  - enabled: 1
-    path: Assets/Scenes/GameDemo/GameDemoScene.unity
-    guid: 3ae84ca066a1d76409b9b01e8b3476d4
-  - enabled: 1
-    path: Assets/Scenes/EnemyTestScene.unity
-    guid: f162d56420e2e5a44aa86f977d960905
-  - enabled: 1
     path: Assets/Scenes/GameScenes/IntroductionScene.unity
     guid: 1d56b6b5164ddd54bb678b98cfbda14e
   - enabled: 1
@@ -47,5 +38,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScenes/CombatScene03.unity
     guid: 5a8b2511cc62374489879349c9feef2a
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/Credits Scene.unity
+    guid: 22ca716ead8689a45b41f1eddb32ef8f
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 2f97783565722b040abee9f20bc9ab47, type: 2}

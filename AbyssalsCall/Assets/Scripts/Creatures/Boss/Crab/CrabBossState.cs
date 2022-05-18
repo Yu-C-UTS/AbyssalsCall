@@ -6,14 +6,14 @@ public class CrabBossState : MonoBehaviour, IDamagable
 {
     
     [SerializeField]
-    private float maxHealth = 200;
-    private float Health;
+    public float maxHealth = 200;
+    public float Health;
 
     private Transform target;
 
     public enum State
     {
-        Idle, Active,Attacking, Blocking, Dead
+        Idle, Active, LightAttackFront, LightAttackBack, HeavyAttack, Blocking, Dead
     }
     public State state;
 

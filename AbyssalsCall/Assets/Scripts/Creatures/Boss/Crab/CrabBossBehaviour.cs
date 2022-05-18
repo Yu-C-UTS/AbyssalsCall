@@ -15,7 +15,7 @@ public class CrabBossBehaviour : MonoBehaviour
     private float MeleeAttackTimer;
     private int MeleeAttackCount;
 
-    private float PullDownTime = 5;
+    private float PullDownTime = 7;
     private float PullDownTimer;
 
     private CrabBossState myState;
@@ -37,9 +37,12 @@ public class CrabBossBehaviour : MonoBehaviour
 
         if (myState.getTarget())
         {
-            if(VerticalDistanceTo(myState.getTarget()) >= 10)
+            if(VerticalDistanceTo(myState.getTarget()) >= 7)
             {
-                PullDown(myState.getTarget());
+                if(PullCountDown() == 0)
+                {
+                    PullDown(myState.getTarget());
+                }
             }
         }
 
@@ -73,6 +76,20 @@ public class CrabBossBehaviour : MonoBehaviour
         }
     }
 
+    private float PullCountDown()
+    {
+        if (PullDownTimer <= 0)
+        {
+            PullDownTimer = PullDownTime;
+            return 0;
+        }
+        else
+        {
+            PullDownTimer -= Time.deltaTime;
+            return PullDownTimer;
+        }
+    }
+
     protected float distanceTo(Transform target)
     {
         return Vector2.Distance(target.position, myCenter.position);
@@ -98,8 +115,17 @@ public class CrabBossBehaviour : MonoBehaviour
 
     private IEnumerator lightAttack()
     {
-        anim.SetAnimation(anim.lightAttackFront, true);
-        myState.state = CrabBossState.State.Attacking;
+        if(MeleeAttackCount % 2 == 1)
+        {
+            anim.SetAnimation(anim.lightAttackFront, true);
+            myState.state = CrabBossState.State.LightAttackFront;
+        }
+        else
+        {
+            anim.SetAnimation(anim.lightAttackBack, true);
+            myState.state = CrabBossState.State.LightAttackBack;
+        }
+
         MeleeAttackCount += 1;
         Debug.Log("Light Attack");
         yield return new WaitForSeconds(0.5f);
@@ -109,7 +135,7 @@ public class CrabBossBehaviour : MonoBehaviour
     private IEnumerator heavyAttack()
     {
         anim.SetAnimation(anim.heavyAttack, false);
-        myState.state = CrabBossState.State.Attacking;
+        myState.state = CrabBossState.State.HeavyAttack;
         MeleeAttackCount += 1;
         Debug.Log("Heavey Attack");
         yield return new WaitForSeconds(0.5f);
