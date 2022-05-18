@@ -348,6 +348,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 034efd9e-0af5-4246-8307-41ba09966d9f
     m_ActionName: Combat/Fire2[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6479458855308839219}
+        m_TargetAssemblyTypeName: PlayerSubmarine, Assembly-CSharp
+        m_MethodName: OnBoostInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: e19c8738-591e-4c1f-8f94-12cd642307ec
+    m_ActionName: Combat/Boost[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Combat
