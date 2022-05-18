@@ -29,6 +29,8 @@ public class PlayerSubmarine : MonoBehaviour, IDamagable
 
     [field: SerializeField]
     public Transform WeaponHudParent{ get; private set;}
+    [field: SerializeField]
+    public BoostStatusUI BoostStatusUI{ get; private set; }
 
     bool facingRight = true;
 

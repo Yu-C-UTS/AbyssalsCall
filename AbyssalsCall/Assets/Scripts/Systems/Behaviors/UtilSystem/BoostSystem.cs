@@ -13,7 +13,19 @@ public class BoostSystem : SystemBase
     private int boostMaxCharge = 3;
     [SerializeField]
     private float boostRechargeTimer = 3;
-    private float currentBoostCharge;
+    private float _currentBoostCharge;
+    private float currentBoostCharge
+    {
+        get { return _currentBoostCharge; }
+        set
+        {
+            _currentBoostCharge = value;
+            if(registeredSubmarine != null)
+            {
+                registeredSubmarine.BoostStatusUI.UpdateCharge(_currentBoostCharge);
+            }
+        }
+    }
 
     public override List<string> GetStats()
     {
@@ -28,12 +40,14 @@ public class BoostSystem : SystemBase
 
     public override void RegisterSystem()
     {
+        registeredSubmarine.BoostStatusUI.gameObject.SetActive(true);
         registeredSubmarine.onBoost += BoostInput;
         registeredSubmarine.onSubUpdate += UpdateBoostRecharge;
     }
 
     public override void UnRegisterSystem()
     {
+        registeredSubmarine.BoostStatusUI.gameObject.SetActive(false);
         registeredSubmarine.onBoost -= BoostInput;    
         registeredSubmarine.onSubUpdate -= UpdateBoostRecharge;
     }
