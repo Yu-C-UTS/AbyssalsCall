@@ -182,7 +182,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <SystemName>k__BackingField: MG Tier 2
   <SystemArtSprite>k__BackingField: {fileID: 21300000, guid: 6f4b59437aa464bad913cbb67900d137, type: 3}
-  SystemDescriptionText: A Tier 2 Machine Gun Turret
+  SystemDescriptionText: 'A Tier 2 Machine Gun Turret.
+
+    [Fire Rate: 5, Max Heat:
+    300, Heat Per Shot: 13, Cooling Rate: 10]'
   isUnique: 0
   isRemovable: 1
   AvailableUpgrades: []

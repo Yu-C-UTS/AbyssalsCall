@@ -34,7 +34,7 @@ public class MapNodeObj : MonoBehaviour
             return Color.cyan;
 
             case NodeDataBase.ENodeType.Boss:
-            return Color.gray;
+            return Color.black;
 
             default:
             return Color.white;
