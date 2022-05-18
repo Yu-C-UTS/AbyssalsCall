@@ -7,6 +7,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 625702304820417640, guid: bd7ba65a3d3e2d948b98ffe8175fc03e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 625702304820417640, guid: bd7ba65a3d3e2d948b98ffe8175fc03e, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 625702304820417640, guid: bd7ba65a3d3e2d948b98ffe8175fc03e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 5090989581404990412, guid: bd7ba65a3d3e2d948b98ffe8175fc03e, type: 3}
       propertyPath: cooldownSliderGradient.ctime0
       value: 0
@@ -129,6 +141,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6085926708770377958, guid: bd7ba65a3d3e2d948b98ffe8175fc03e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7234294024819226948, guid: bd7ba65a3d3e2d948b98ffe8175fc03e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7234294024819226948, guid: bd7ba65a3d3e2d948b98ffe8175fc03e, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7234294024819226948, guid: bd7ba65a3d3e2d948b98ffe8175fc03e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7234294024819226948, guid: bd7ba65a3d3e2d948b98ffe8175fc03e, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
