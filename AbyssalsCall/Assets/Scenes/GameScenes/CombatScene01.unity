@@ -536,8 +536,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 120817885}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5206, y: 0.0721, z: 0}
-  m_LocalScale: {x: 1.1436099, y: 1.1477603, z: 1}
+  m_LocalPosition: {x: 3.577, y: 2.9465, z: 0}
+  m_LocalScale: {x: 2.6368499, y: 2.4665432, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3637,7 +3637,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: -24.791538, y: 5.897797, z: 0}
+    - position: {x: -25.013725, y: 6.119984, z: 0}
       leftTangent: {x: -2.6483688, y: -7.6281376, z: 0}
       rightTangent: {x: 0.4630928, y: 1.3353243, z: 0}
       mode: 1
@@ -3982,8 +3982,8 @@ SpriteShapeRenderer:
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   m_LocalAABB:
-    m_Center: {x: -0.3406849, y: -5.7985897, z: 0}
-    m_Extent: {x: 28.818665, y: 13.846077, z: 0}
+    m_Center: {x: -0.3462162, y: -5.7985897, z: 0}
+    m_Extent: {x: 28.824192, y: 13.846077, z: 0}
 --- !u!4 &678060458
 Transform:
   m_ObjectHideFlags: 0
@@ -4284,9 +4284,19 @@ MonoBehaviour:
   m_Spline:
     m_IsOpenEnded: 0
     m_ControlPoints:
-    - position: {x: -16.855045, y: -14.366274, z: 0}
-      leftTangent: {x: 2.949584, y: -2.6485386, z: 0}
-      rightTangent: {x: -1.0850296, y: 0.9742832, z: 0}
+    - position: {x: -27.52005, y: -15.143931, z: 0}
+      leftTangent: {x: 0, y: 0, z: 0}
+      rightTangent: {x: 0, y: 0, z: 0}
+      mode: 0
+      height: 1
+      bevelCutoff: 0
+      bevelSize: 0
+      spriteIndex: 0
+      corner: 1
+      m_CornerMode: 1
+    - position: {x: -27.239395, y: 17.713398, z: 0}
+      leftTangent: {x: -2.1165657, y: -8.445296, z: 0}
+      rightTangent: {x: 0.5429878, y: 2.167921, z: 0}
       mode: 1
       height: 1
       bevelCutoff: 0
@@ -4294,8 +4304,8 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: -15.476145, y: 19.12912, z: 0}
-      leftTangent: {x: -6.1772003, y: -0.0067272186, z: 0}
+    - position: {x: -15.476146, y: 19.12912, z: 0}
+      leftTangent: {x: -1.2615442, y: -0.001373291, z: 0}
       rightTangent: {x: 0.3781891, y: 0.0004196167, z: 0}
       mode: 1
       height: 1
@@ -4544,9 +4554,9 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 33.471046, y: 16.242685, z: 0}
+    - position: {x: 34.915264, y: 16.798153, z: 0}
       leftTangent: {x: -3.3554153, y: 2.8017082, z: 0}
-      rightTangent: {x: 7.049221, y: -5.885292, z: 0}
+      rightTangent: {x: 1.2646713, y: -1.0558596, z: 0}
       mode: 1
       height: 1
       bevelCutoff: 0
@@ -4554,10 +4564,20 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 32.630608, y: -14.335868, z: 0}
-      leftTangent: {x: 0.3321762, y: 0.00025749207, z: 0}
-      rightTangent: {x: -0.5439148, y: -0.00042152405, z: 0}
-      mode: 1
+    - position: {x: 41.76578, y: 16.072792, z: 0}
+      leftTangent: {x: 0, y: 0, z: 0}
+      rightTangent: {x: 0, y: 0, z: 0}
+      mode: 0
+      height: 1
+      bevelCutoff: 0
+      bevelSize: 0
+      spriteIndex: 0
+      corner: 1
+      m_CornerMode: 1
+    - position: {x: 42.07358, y: -15.446805, z: 0}
+      leftTangent: {x: 0, y: 0, z: 0}
+      rightTangent: {x: 0, y: 0, z: 0}
+      mode: 0
       height: 1
       bevelCutoff: 0
       bevelSize: 0
@@ -4639,8 +4659,8 @@ SpriteShapeRenderer:
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   m_LocalAABB:
-    m_Center: {x: 8.758747, y: 1.7936172, z: 0}
-    m_Extent: {x: 29.765934, y: 19.39423, z: 0}
+    m_Center: {x: 6.9130116, y: 1.9068565, z: 0}
+    m_Extent: {x: 37.230774, y: 19.412693, z: 0}
 --- !u!4 &741441153
 Transform:
   m_ObjectHideFlags: 0
@@ -11500,7 +11520,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 180.06264
   m_PointLightOuterAngle: 180.06264
   m_PointLightInnerRadius: 14.5
-  m_PointLightOuterRadius: 32.72
+  m_PointLightOuterRadius: 52.61674
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -11519,7 +11539,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2078110014}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0, y: 12.36, z: 0}
+  m_LocalPosition: {x: 0, y: 29.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

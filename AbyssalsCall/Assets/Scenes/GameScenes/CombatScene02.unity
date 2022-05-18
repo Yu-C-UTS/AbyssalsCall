@@ -1627,20 +1627,20 @@ MonoBehaviour:
   m_Spline:
     m_IsOpenEnded: 0
     m_ControlPoints:
-    - position: {x: -16.855045, y: -14.366274, z: 0}
-      leftTangent: {x: 2.949584, y: -2.6485386, z: 0}
-      rightTangent: {x: -1.0850296, y: 0.9742832, z: 0}
-      mode: 1
+    - position: {x: -32.980656, y: -14.85493, z: 0}
+      leftTangent: {x: 0, y: 0, z: 0}
+      rightTangent: {x: 0, y: 0, z: 0}
+      mode: 0
       height: 1
       bevelCutoff: 0
       bevelSize: 0
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: -19.494862, y: 24.067783, z: 0}
-      leftTangent: {x: -6.1772003, y: -0.0067253113, z: 0}
-      rightTangent: {x: 0.28429413, y: 0.00031661987, z: 0}
-      mode: 1
+    - position: {x: -33.54369, y: 24.922932, z: 0}
+      leftTangent: {x: 0, y: 0, z: 0}
+      rightTangent: {x: 0, y: 0, z: 0}
+      mode: 0
       height: 1
       bevelCutoff: 0
       bevelSize: 0
@@ -2019,7 +2019,7 @@ MonoBehaviour:
       m_CornerMode: 1
     - position: {x: 19.419376, y: 17.54935, z: 0}
       leftTangent: {x: -0.33806992, y: -1.1986809, z: 0}
-      rightTangent: {x: 0.99466705, y: 3.5305367, z: 0}
+      rightTangent: {x: 0.7595024, y: 2.6958256, z: 0}
       mode: 1
       height: 1
       bevelCutoff: 0
@@ -2027,9 +2027,9 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 33.471046, y: 16.242685, z: 0}
-      leftTangent: {x: -3.3554153, y: 2.8017082, z: 0}
-      rightTangent: {x: 7.049221, y: -5.885292, z: 0}
+    - position: {x: 33.401886, y: 25.734112, z: 0}
+      leftTangent: {x: -4.210724, y: 1.6579628, z: 0}
+      rightTangent: {x: 0.47226334, y: -0.18583298, z: 0}
       mode: 1
       height: 1
       bevelCutoff: 0
@@ -2037,7 +2037,27 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 32.630608, y: -14.335868, z: 0}
+    - position: {x: 46.163704, y: 26.980152, z: 0}
+      leftTangent: {x: 0, y: 0, z: 0}
+      rightTangent: {x: 0, y: 0, z: 0}
+      mode: 0
+      height: 1
+      bevelCutoff: 0
+      bevelSize: 0
+      spriteIndex: 0
+      corner: 1
+      m_CornerMode: 1
+    - position: {x: 45.931747, y: 19.418945, z: 0}
+      leftTangent: {x: 0, y: 0, z: 0}
+      rightTangent: {x: 0, y: 0, z: 0}
+      mode: 0
+      height: 1
+      bevelCutoff: 0
+      bevelSize: 0
+      spriteIndex: 0
+      corner: 1
+      m_CornerMode: 1
+    - position: {x: 46.43511, y: -14.946689, z: 0}
       leftTangent: {x: 0.3321762, y: 0.00025749207, z: 0}
       rightTangent: {x: -0.5439148, y: -0.00042152405, z: 0}
       mode: 1
@@ -2122,8 +2142,8 @@ SpriteShapeRenderer:
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   m_LocalAABB:
-    m_Center: {x: 7.300459, y: 4.7031975, z: 0}
-    m_Extent: {x: 30.41933, y: 21.49881, z: 0}
+    m_Center: {x: 6.482849, y: 6.0897503, z: 0}
+    m_Extent: {x: 41.287544, y: 22.295343, z: 0}
 --- !u!4 &741441153
 Transform:
   m_ObjectHideFlags: 0
@@ -3481,8 +3501,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1476322682}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.6001, y: 0.6593, z: 0}
-  m_LocalScale: {x: 2.6054745, y: 2.2192185, z: 1}
+  m_LocalPosition: {x: 4.6001, y: 1.5144, z: 0}
+  m_LocalScale: {x: 2.6054745, y: 2.2984445, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -4398,7 +4418,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 63.92
   m_PointLightOuterAngle: 180
   m_PointLightInnerRadius: 15.1
-  m_PointLightOuterRadius: 38.1
+  m_PointLightOuterRadius: 41.401215
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -4417,7 +4437,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2078110014}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0, y: 18.31, z: 0}
+  m_LocalPosition: {x: 0, y: 26.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
