@@ -9,7 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b59f3c6d32869394cab53eb3b481ab58, type: 3}
-  m_Name: FirstBossFight
+  m_Script: {fileID: 11500000, guid: 49e692feecc13e744b103b2f36a3dc7b, type: 3}
+  m_Name: CrabBossFight
   m_EditorClassIdentifier: 
-  SceneNameToLoad: 
+  nodeType: 4
+  SceneName: CrabBossScene
+  NodeInfoDetailText: The Giant Crabiathian. Travelling the deep, sweeping the enemies
+    is its nature!

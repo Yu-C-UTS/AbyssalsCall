@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Spine;
+using Spine.Unity;
 
-public class HuntTarget : MonoBehaviour
+public class HuntTargetSpine : MonoBehaviour
 {
 
+     public SkeletonAnimation skeletonAnimation;
+      private Skeleton skeleton;
    public float rotationSpeed;
     private Vector2 direction;
 
@@ -15,11 +19,32 @@ public class HuntTarget : MonoBehaviour
 
     private SpriteRenderer mySpriteRenderer;
 
+    public Material bodyMaterial1;
+    public Material bodyMaterial2;
+
+    public GameObject myTail;
+    private Material tailMaterial;
+
+    private LineRenderer line;
+
     public float moveSpeed;
     // Start is called before the first frame update
     void Start()
     {
-        mySpriteRenderer = GetComponent<SpriteRenderer>();
+        //mySpriteRenderer = GetComponent<SpriteRenderer>();
+
+        skeletonAnimation = GetComponent<SkeletonAnimation>();
+		if(skeletonAnimation == null)
+        {
+			return; 
+        }
+       
+        skeleton = skeletonAnimation.Skeleton;
+
+        tailMaterial = myTail.GetComponent<Renderer>().material;
+        line = myTail.GetComponent<LineRenderer>();
+
+        Debug.Log(tailMaterial);
     }
 
     // Update is called once per frame
@@ -42,8 +67,13 @@ public class HuntTarget : MonoBehaviour
 
         if (direction.x < 0)
         {
-            //mySpriteRenderer.flipY = true;
-            transform.localScale = new Vector3(1, -1, 1);
+            skeleton.ScaleY = -1;
+            line.material = bodyMaterial2;
+        }
+        else
+        {
+            skeleton.ScaleY = 1;
+            line.material = bodyMaterial1;
         }
 
         // move towards
