@@ -12,6 +12,7 @@ public class BossHealthHUD : MonoBehaviour
     public void Update()
     {
         SetSliderHealth();
+        CheckForHealth();
     }
     private float GetCurrentHealth()
     {
@@ -37,4 +38,11 @@ public class BossHealthHUD : MonoBehaviour
         return GetCurrentHealth()/GetCurrentHealthPercentage();
     }
     
+    private void CheckForHealth() //Temp
+    {
+        if (slider.value == 0)
+        {
+            GameSceneManager.Instance.LoadScene("Credits Scene");
+        }
+    }
 }
