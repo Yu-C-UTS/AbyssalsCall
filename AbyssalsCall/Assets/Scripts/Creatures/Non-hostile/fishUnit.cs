@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using Random=UnityEngine.Random;
 
 public class fishUnit : MonoBehaviour, IDamagable
 {
@@ -16,9 +18,16 @@ public class fishUnit : MonoBehaviour, IDamagable
 
     public float Health = 10f;
 
+    //event
+    public event EventHandler<OnDestroyedEventArgs> OnDestroyed;
+    public class OnDestroyedEventArgs : EventArgs {
+        // args here
+        public Vector3 pos;
+    }
+
     void Awake()
     {
-        Health = 10f;
+        //Health = 10f;
     }
 
     void Start()
@@ -135,6 +144,8 @@ public class fishUnit : MonoBehaviour, IDamagable
 
     private void OnDestroy()
     {
+         OnDestroyed?.Invoke(this, new OnDestroyedEventArgs {pos = new Vector3(this.transform.position.x, this.transform.position.y, 0)});
+
         shoalManager.units.Remove(this.gameObject);
     }
 

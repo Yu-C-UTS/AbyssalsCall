@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class BasicEnemyController : BasicEnemyMovement, IDamagable
 {
@@ -12,6 +13,15 @@ public class BasicEnemyController : BasicEnemyMovement, IDamagable
     protected float AttackTimer;
     protected bool canAttack;
     protected Damage basicDamage = new Damage(5);
+
+    public event EventHandler<OnDestroyedEventArgs> OnDestroyed;
+    public class OnDestroyedEventArgs : EventArgs {
+        // args here
+        public Vector3 pos;
+    }
+
+    //public event DestroyedEventDelegate OnBoom;
+    //public delegate void DestroyedEventDelegate(Vector3 pos);
 
     protected override void Awake()
     {
@@ -25,6 +35,12 @@ public class BasicEnemyController : BasicEnemyMovement, IDamagable
     {
         if(Health <= 0)
         {
+            // show explosion
+          
+           OnDestroyed?.Invoke(this, new OnDestroyedEventArgs {pos = new Vector3(this.transform.position.x, this.transform.position.y, 0)});
+
+           // OnBoom?.Invoke(this.transform.position);
+
             Destroy(this.gameObject);
         }
 

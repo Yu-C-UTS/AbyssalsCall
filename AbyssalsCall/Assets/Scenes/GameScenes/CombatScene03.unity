@@ -368,8 +368,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 120817885}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5206, y: 2.1609, z: 0}
-  m_LocalScale: {x: 1.1436099, y: 1.3410431, z: 1}
+  m_LocalPosition: {x: -0.4925, y: 7.6165, z: 0}
+  m_LocalScale: {x: 1.5344031, y: 1.8459458, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1293,7 +1293,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4618525052287331350, guid: 14a148f60c1f41046a3cd42b4e3d5866, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 14a148f60c1f41046a3cd42b4e3d5866, type: 3}
 --- !u!1 &577609977
 GameObject:
@@ -1603,7 +1604,7 @@ SpriteShapeRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -2363,7 +2364,7 @@ SpriteShapeRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -3204,7 +3205,7 @@ SpriteShapeRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -4084,7 +4085,7 @@ SpriteShapeRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -7864,6 +7865,10 @@ PrefabInstance:
     - target: {fileID: 6455636135482192830, guid: ec6e874dab4b4344e9ecb507f1dbbec9, type: 3}
       propertyPath: m_Name
       value: BasicEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8029562367377053970, guid: ec6e874dab4b4344e9ecb507f1dbbec9, type: 3}
+      propertyPath: dieEffect
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec6e874dab4b4344e9ecb507f1dbbec9, type: 3}
