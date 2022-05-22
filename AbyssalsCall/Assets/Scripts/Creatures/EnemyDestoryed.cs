@@ -27,10 +27,13 @@ public class EnemyDestoryed : MonoBehaviour
 
         for(int i = 0; i < AbyssalCrystalDropped; i++)
         {
-            Vector3 dropPoint = new Vector3(e.pos.x + Random.Range(-0.5,0.5), e.pos.y + Random.Range(-0.5,0.5));
+            Vector3 dropPoint = new Vector3(e.pos.x + Random.Range(-0.2f,0.2f), e.pos.y + Random.Range(-0.5f,0.5f));
             GameObject crystalInstance = Instantiate(AbbysalCrystal, dropPoint, Quaternion.Euler(new Vector3(0, 0, Random.Range(0.0f, 360.0f))));
             Rigidbody2D rigidBody = crystalInstance.GetComponent<Rigidbody2D>();
-            rigidBody.AddForce(new Vector2(Random.Range(-10.0f,10.0f), Random.Range(-25.0f,-10.0f)));
+            rigidBody.AddForce(new Vector2(Random.Range(-10.0f,10.0f), Random.Range(-35.0f,-20.0f)));
+            rigidBody.AddTorque(Random.Range(-20.0f,20.0f));
+            float myScale = Random.Range(0.1f, 0.3f);
+            crystalInstance.transform.localScale = new Vector3(myScale,myScale,myScale);
         }
         
 
