@@ -18,6 +18,7 @@ public class MapDisplaySceneController : SceneController
     {
         mapDisplay = Instantiate(MapDisplayObjectPrefab, Vector3.zero, Quaternion.identity);
         mapDisplay.UpdateMap(this);
+        mapDisplay.MoveLayer(RunManager.Instance.activeRun.GetCurrentLayerNum());
     }
 
     public NodeChoiceInfo AddNewChoiceNodeInfoUI(MapNodeObj NodeObj)
