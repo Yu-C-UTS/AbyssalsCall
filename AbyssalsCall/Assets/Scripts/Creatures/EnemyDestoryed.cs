@@ -13,6 +13,7 @@ public class EnemyDestoryed : MonoBehaviour
 
     [SerializeField]
     private int AbyssalCrystalDropped = 0;
+
     
     // Start is called before the first frame update
     void Start()
