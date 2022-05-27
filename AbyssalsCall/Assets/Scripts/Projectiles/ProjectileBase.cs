@@ -18,6 +18,8 @@ public abstract class ProjectileBase : MonoBehaviour
     [SerializeField]
     protected GameObject projectileHitEffect;
 
+    [SerializeField] AudioSource projectileHitSFX;
+
     protected virtual void Awake() 
     {
         col2d = GetComponent<Collider2D>();

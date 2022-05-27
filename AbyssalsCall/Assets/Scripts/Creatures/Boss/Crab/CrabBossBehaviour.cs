@@ -25,6 +25,11 @@ public class CrabBossBehaviour : MonoBehaviour
     [SerializeField]
     private Transform watercurrent;
 
+          // sounds
+    public AudioSource stepSND;
+    public AudioSource attackHitSND;
+    public AudioSource vortexSND;   
+
     void Start()
     {
         myState = gameObject.GetComponent<CrabBossState>();
@@ -105,6 +110,9 @@ public class CrabBossBehaviour : MonoBehaviour
         Vector2 launchPos = target.position;
         launchPos.y = watercurrentMaker.position.y;
         Instantiate(watercurrent, launchPos, Quaternion.identity);
+
+        // play the vortex animation
+         anim.SetAnimation(anim.vortexWarmUp, false);
     }
 
     private Vector2 directionTo(Transform target)

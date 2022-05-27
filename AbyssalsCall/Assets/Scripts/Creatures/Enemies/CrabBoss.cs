@@ -6,11 +6,16 @@ using Spine.Unity;
 
 public class CrabBoss : MonoBehaviour
 {
+
     public SkeletonAnimation skeletonAnimation;
 	public AnimationReferenceAsset idle, walk, swim, defend, die, hit, jumpUp, land, lightAttackFront, lightAttackBack, heavyAttack, attackRam, shootWarmUp, shootFire, vortexWarmUp, vortexFire;
 
     private Spine.AnimationState animationState;
     private Skeleton skeleton;
+
+   
+
+    AudioSource audioSource;
 
 	void Start()
 	{
@@ -20,6 +25,8 @@ public class CrabBoss : MonoBehaviour
 			return; 
         }
        
+        audioSource = GetComponent<AudioSource>();
+        
         skeleton = skeletonAnimation.Skeleton;
         animationState = skeletonAnimation.AnimationState;
 
@@ -33,13 +40,17 @@ public class CrabBoss : MonoBehaviour
 
     // user defined events
     public void OnEvent(Spine.TrackEntry trackEntry, Spine.Event e){
-        if(e.Data.Name == "loop")
-        {
-            Debug.Log("loop point");
-        }
         if(e.Data.Name == "attack hit")
         {
-            Debug.Log("attack hit");
+            
+        }
+        if(e.Data.Name == "footstep 1")
+        {
+           
+        }
+        if(e.Data.Name == "vortex")
+        {
+           
         }
     }
 
@@ -50,7 +61,7 @@ public class CrabBoss : MonoBehaviour
 		if (collider.gameObject.CompareTag("Bullet"))
         {
             Debug.Log("hit!");
-			AddAnimation(hit, false);
+			SetAnimation(hit, false);
         }
     }
 
@@ -89,6 +100,8 @@ public class CrabBoss : MonoBehaviour
     public void SetAnimation(AnimationReferenceAsset ani, bool loop)
     {
         int trackNum = 0;
+        if (ani.Animation.Name == "hit") trackNum = 1;
+        if (ani.Animation.Name == "walk") trackNum = 2;
         Spine.TrackEntry animationEntry = skeletonAnimation.state.SetAnimation(trackNum, ani, loop);
     }
 
