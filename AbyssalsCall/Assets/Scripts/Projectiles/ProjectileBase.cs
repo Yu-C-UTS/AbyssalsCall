@@ -18,8 +18,6 @@ public abstract class ProjectileBase : MonoBehaviour
     [SerializeField]
     protected GameObject projectileHitEffect;
 
-    [SerializeField] AudioSource projectileHitSFX;
-
     protected virtual void Awake() 
     {
         col2d = GetComponent<Collider2D>();
@@ -54,6 +52,7 @@ public abstract class ProjectileBase : MonoBehaviour
         if(other.TryGetComponent<IDamagable>(out IDamagable otherDamagable))
         {
             triggerPayload(otherDamagable, other.gameObject);
+            
             if(projectileHitEffect != null)
             {
                 GameObject hitEffect = Instantiate(projectileHitEffect, transform.position, Quaternion.identity);
