@@ -18,11 +18,11 @@ MonoBehaviour:
   Choices:
   - ChoiceText: Continue
     ChoiceOutcomes:
-    - rid: 4154296040737734657
+    - rid: 4154296404633190413
   references:
     version: 2
     RefIds:
-    - rid: 4154296040737734657
+    - rid: 4154296404633190413
       type: {class: ChoiceOutcome/SystemReward, ns: , asm: Assembly-CSharp}
       data:
         OutcomeType: 2

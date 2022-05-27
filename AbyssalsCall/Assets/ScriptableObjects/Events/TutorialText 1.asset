@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: TutorialText 1
   m_EditorClassIdentifier: 
   EventName: Tutorial
-  EveentDescription: 'Congrats! Let''s begin your journey with a weapon loadout. '
+  EveentDescription: Before you start. let's begin your journey famillarising with
+    a weapon loadout.
   Choices:
   - ChoiceText: Continue
     ChoiceOutcomes:
