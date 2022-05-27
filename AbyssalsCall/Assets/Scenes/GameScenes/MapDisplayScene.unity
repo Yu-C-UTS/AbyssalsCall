@@ -692,7 +692,7 @@ GameObject:
   - component: {fileID: 389630863}
   - component: {fileID: 389630862}
   m_Layer: 5
-  m_Name: EventTxt (1)
+  m_Name: titleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

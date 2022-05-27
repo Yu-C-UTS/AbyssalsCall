@@ -9,8 +9,14 @@ public class MapDisplayObject : MonoBehaviour
     MapNodeObj MapNodePrefab;
     [SerializeField]
     GameObject MapPlainPrefab;
+
+    //[SerializeField]
+    //private Text depthText;
+
     MapDisplaySceneController SceneController;
 
+    private int startDepth = 200;
+    private int depthIncrement = 200;
 
     Animator MapPlainAinimtor;
 
@@ -50,6 +56,11 @@ public class MapDisplayObject : MonoBehaviour
 
         Transform layerPlain = Instantiate(MapPlainPrefab, new Vector3(0, -3 * layerNum, 0), Quaternion.Euler(new Vector3(90,45,0))).transform;
         layerPlain.SetParent(transform);
+
+        // depth text
+        MapPlain mp = layerPlain.GetComponent<MapPlain>();
+        mp.updateText(startDepth.ToString());
+        startDepth += depthIncrement;
 
         // run the radar animation if it's the current layer
         MapPlainAinimtor = layerPlain.GetComponent<Animator>();
