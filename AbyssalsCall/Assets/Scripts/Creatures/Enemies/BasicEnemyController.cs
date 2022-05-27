@@ -6,8 +6,8 @@ using System;
 public class BasicEnemyController : BasicEnemyMovement, IDamagable
 {
     [SerializeField]
-    protected float maxHealth = 40;
-    protected float Health;
+    public float maxHealth = 40;
+    public float Health;
 
     public float AttackTime;
     protected float AttackTimer;

@@ -9,7 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45d1c933c1bcdcb45881cfff398fe991, type: 3}
-  m_Name: TestEventNode 1
+  m_Script: {fileID: 11500000, guid: 49e692feecc13e744b103b2f36a3dc7b, type: 3}
+  m_Name: LanternBossFight
   m_EditorClassIdentifier: 
-  eventSo: {fileID: 11400000, guid: cc5b4467adf6d5a4787a66d3a2a9ca17, type: 2}
+  nodeType: 4
+  SceneName: LanternBossScene
+  NodeInfoDetailText: Gigran - Hunter of the deep. It is a mutant lantern fish with
+    sharp teeth and extremely fast.

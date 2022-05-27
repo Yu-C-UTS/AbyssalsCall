@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fba45d1ef554f244aa7a716566a38b3, type: 3}
-  m_Name: FullGenerationData
+  m_Script: {fileID: 11500000, guid: 45d1c933c1bcdcb45881cfff398fe991, type: 3}
+  m_Name: Story2
   m_EditorClassIdentifier: 
-  AvalibleZonesForStages:
-  - AvalibleZones:
-    - {fileID: 11400000, guid: 46eb2233350718146963680eea374811, type: 2}
+  eventSo: {fileID: 11400000, guid: f0900f8f9c1040d49a2e7e11c6e61867, type: 2}

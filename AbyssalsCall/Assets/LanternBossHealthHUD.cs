@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class BossHealthHUD : MonoBehaviour
+public class LanternBossHealthHUD : MonoBehaviour
 {
 
     public Slider slider;
@@ -16,14 +16,14 @@ public class BossHealthHUD : MonoBehaviour
     }
     private float GetCurrentHealth()
     {
-        slider.value = FindObjectOfType<CrabBossState>().Health;
+        slider.value = FindObjectOfType<DashingEnemy>().Health;
         fill.color = gradient.Evaluate(slider.normalizedValue);
         return slider.value;
     }
 
     private float GetMaxHealth()
     {
-        slider.maxValue = FindObjectOfType<CrabBossState>().maxHealth;
+        slider.maxValue = FindObjectOfType<DashingEnemy>().maxHealth;
         fill.color = gradient.Evaluate(1f);
         return slider.maxValue;
     }
