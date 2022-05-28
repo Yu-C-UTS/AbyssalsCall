@@ -585,6 +585,7 @@ MonoBehaviour:
   normalSpeed: 100
   chaseSpeed: 170
   maxHealth: 40
+  Health: 0
   AttackTime: 0
   DashDistance: 3
   DashForce: 550

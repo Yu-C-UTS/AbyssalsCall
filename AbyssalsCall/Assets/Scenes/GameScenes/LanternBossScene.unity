@@ -284,8 +284,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.77, y: 0}
-  m_Size: {x: 4.82, y: 3.37}
+  m_Offset: {x: -1.495, y: 0.00000005900857}
+  m_Size: {x: 3.3700075, y: 3.3700075}
   m_Direction: 1
 --- !u!1 &18298763
 GameObject:
@@ -1119,7 +1119,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 356426336}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.06, y: 9.75, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1170,9 +1170,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7283298789727149042, guid: 059f9864e2a40484da8c6b534a7faa87, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 23dd8998f181c447b8d2858f9e04cb7a, type: 3}
     - target: {fileID: 7283298789727149044, guid: 059f9864e2a40484da8c6b534a7faa87, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7283298789727149044, guid: 059f9864e2a40484da8c6b534a7faa87, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1508,7 +1512,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.32700002, y: 0.024}
   m_AnchorMax: {x: 0.675, y: 0.15760772}
-  m_AnchoredPosition: {x: -0.5460205, y: 0.31155396}
+  m_AnchoredPosition: {x: -0.5460205, y: 0.31152344}
   m_SizeDelta: {x: -0.37720108, y: -1.3768997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &817297239
@@ -1768,7 +1772,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 203.4}
 --- !u!1 &856065827
 GameObject:
@@ -2296,7 +2300,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8624498245917000488, guid: 95f76837f0c4b4def89eb5b596b76786, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8624498245917000488, guid: 95f76837f0c4b4def89eb5b596b76786, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2422,7 +2426,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1157637803
 GameObject:
@@ -2538,7 +2542,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8624498245917000488, guid: 95f76837f0c4b4def89eb5b596b76786, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8624498245917000488, guid: 95f76837f0c4b4def89eb5b596b76786, type: 3}
       propertyPath: m_LocalScale.x
@@ -3202,7 +3206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAABAIezVYe/+eQIAADIFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMFy2jAQ/RVG58LIkBjcW0sI6SEJE9rJxRchr7EGWfJIcoBk+PdqZRu7lAvye7tvd5/W/iJC2Qq402ZtRPasMyDfRwTP5NuoJ5/gxPZabcUndDHvInMFBrEQ88ac0B6PMM3qEpwR/IfaSwymHqyVyLUpV9kelto66+GcSQueMtphtvLQ14ic/N84wZSzP03nePr0p4SOLv7IQTkwfWi0mNwl/hdP24xxRCcIJIuozRxHkySOk/toNaZxEKkVl6ysIMOJBlp01oos7kKc8sO2ISjGtZTCtp0Sd66CE9uqAANoRSaYHzx0F01QqgCxLxyOMcx+zXMLrvXFsPODMN7BRpb81I2tJbOHprMPJmssFDc9NZrP/9HjKNC50eVTVzaiWMIVgh/e2Jkz6wa2D+GHQefBnyOTB7aT8F6AetFro2uVedKZGlNrC9OH/vE62bIAfujxptUbsK56w7tbptebGl0uYfjTUopyh9TkrgG2Uge/w2qA8TfzyzccFse2Eh7FLv5Y+M32ww1riUdhrPNUO6XC9na6NhhKVsEznKZ2S20UBLhtugLFpDtvvIy7vcEbblD2hnlk+C61xVuue0VuUgLcx1N6Q2308XpZttDHZ7DFa+2kUNA3jcSL92mplWoWbOhJl7atTc74IG1fi+zf1SIJjShPdvEip9MIeD6ex3O4n0WzOeNssaOchN0Tys/J5KZptLXH35rqxZXfs+4TM1obVoVlzww7rsVnqQeWC5XrLTcA6rVRuDYOxhfxb2W2yoQ3aAvOCRXum3ylRGp+gCy9CqVh0tXJGZb2KimpxId2iKRkGb4pKUH4ussbAx8Cjli8E7uQy19QSwMEFAAACAgAAEAh7Fla7ZJtAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tJKlgaFBsmWSmUWagZFhanKarrmZeaqpsaGxeWJyokWSQbJSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAEAh7NVh7/55AgAAMgUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAEAh7Fla7ZJtAAAAeAAAAAkAJAAAAAAAAAAAAAAAxgIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAAB+AwAAAAA=
+    dataString: UEsDBBQAAAgIAABQIezVYe/+eQIAADIFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMFy2jAQ/RVG58LIkBjcW0sI6SEJE9rJxRchr7EGWfJIcoBk+PdqZRu7lAvye7tvd5/W/iJC2Qq402ZtRPasMyDfRwTP5NuoJ5/gxPZabcUndDHvInMFBrEQ88ac0B6PMM3qEpwR/IfaSwymHqyVyLUpV9kelto66+GcSQueMtphtvLQ14ic/N84wZSzP03nePr0p4SOLv7IQTkwfWi0mNwl/hdP24xxRCcIJIuozRxHkySOk/toNaZxEKkVl6ysIMOJBlp01oos7kKc8sO2ISjGtZTCtp0Sd66CE9uqAANoRSaYHzx0F01QqgCxLxyOMcx+zXMLrvXFsPODMN7BRpb81I2tJbOHprMPJmssFDc9NZrP/9HjKNC50eVTVzaiWMIVgh/e2Jkz6wa2D+GHQefBnyOTB7aT8F6AetFro2uVedKZGlNrC9OH/vE62bIAfujxptUbsK56w7tbptebGl0uYfjTUopyh9TkrgG2Uge/w2qA8TfzyzccFse2Eh7FLv5Y+M32ww1riUdhrPNUO6XC9na6NhhKVsEznKZ2S20UBLhtugLFpDtvvIy7vcEbblD2hnlk+C61xVuue0VuUgLcx1N6Q2308XpZttDHZ7DFa+2kUNA3jcSL92mplWoWbOhJl7atTc74IG1fi+zf1SIJjShPdvEip9MIeD6ex3O4n0WzOeNssaOchN0Tys/J5KZptLXH35rqxZXfs+4TM1obVoVlzww7rsVnqQeWC5XrLTcA6rVRuDYOxhfxb2W2yoQ3aAvOCRXum3ylRGp+gCy9CqVh0tXJGZb2KimpxId2iKRkGb4pKUH4ussbAx8Cjli8E7uQy19QSwMEFAAACAgAAFAh7Fla7ZJtAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tJKlgaFBsmWSmUWagZFhanKarrmZeaqpsaGxeWJyokWSQbJSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAFAh7NVh7/55AgAAMgUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAFAh7Fla7ZJtAAAAeAAAAAkAJAAAAAAAAAAAAAAAxgIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAAB+AwAAAAA=
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -3270,9 +3274,11 @@ GameObject:
   - component: {fileID: 1817010695}
   - component: {fileID: 1817010698}
   - component: {fileID: 1817010699}
+  - component: {fileID: 1817010701}
+  - component: {fileID: 1817010700}
   m_Layer: 0
   m_Name: LanternFish
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3306,14 +3312,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1817010694}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.77, y: 12.16, z: -8.315876}
+  m_LocalPosition: {x: 36, y: -18.71, z: -8.315876}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7119051}
   - {fileID: 1157637804}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1817010698
 MonoBehaviour:
@@ -3356,16 +3362,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasTarget: 0
-  detectRadius: 10
+  detectRadius: 20
   giveUpDistance: 5000
   normalSpeed: 75
-  chaseSpeed: 150
+  chaseSpeed: 300
   maxHealth: 40
-  Health: 0
+  Health: 500
   AttackTime: 0
-  DashDistance: 3
-  DashForce: 550
+  DashDistance: 6
+  DashForce: 1000
   DashWait: 1
+--- !u!70 &1817010700
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817010694}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.4846497, y: 0.16155298}
+  m_Size: {x: 5.228437, y: 3.23364}
+  m_Direction: 1
+--- !u!70 &1817010701
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817010694}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.4846497, y: 0.16857429}
+  m_Size: {x: 4.947484, y: 3.079119}
+  m_Direction: 1
 --- !u!1001 &1844975981
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3379,7 +3417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7013412237291656155, guid: 4f1939b36732d3a4397cd274a2a0a074, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7013412237291656155, guid: 4f1939b36732d3a4397cd274a2a0a074, type: 3}
       propertyPath: m_LocalPosition.x

@@ -69,7 +69,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.3, y: 0}
@@ -137,6 +137,7 @@ MonoBehaviour:
   normalSpeed: 100
   chaseSpeed: 200
   maxHealth: 80
+  Health: 0
   AttackTime: 0
 --- !u!114 &6103457710181718533
 MonoBehaviour:
