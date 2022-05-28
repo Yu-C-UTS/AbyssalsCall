@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab6c7a357aedd894aa8c21ba6f38c8f2, type: 3}
-  m_Name: Story2
+  m_Name: Story3
   m_EditorClassIdentifier: 
-  EventName: Why is it so quiet?
-  EveentDescription: Everyone on boat is hesitate, still, you calm everyone and decide
-    to go deeper. No sound, no sense of living creatures. This is unusual! What is
-    waiting ahead is unknown!!
+  EventName: What is going on?
+  EveentDescription: Suddenly, a devilish roar came out of nowhere. A giant shadow
+    roaming the deep can be seen ahead. Travelling further could mean the end for
+    all the crews. Though, the higher the risk, the higher the reward.
   Choices:
-  - ChoiceText: There is flickering light ahead
+  - ChoiceText: Look like a serpent?
     ChoiceOutcomes:
     - rid: 4154296404633190417
   references:

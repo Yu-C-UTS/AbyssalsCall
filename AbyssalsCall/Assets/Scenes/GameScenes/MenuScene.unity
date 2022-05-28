@@ -885,6 +885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuController: {fileID: 1824535025}
+  subData: {fileID: 11400000, guid: aa22ab26cde070444b67fff589b3c6ee, type: 2}
   OptionsPanel: {fileID: 1534127306}
   PlayBtn: {fileID: 483125219}
   QuitBtn: {fileID: 1647000191}
@@ -1172,6 +1173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuController: {fileID: 0}
+  subData: {fileID: 0}
   OptionsPanel: {fileID: 1534127306}
   PlayBtn: {fileID: 483125219}
   QuitBtn: {fileID: 1647000191}
@@ -2520,6 +2522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuController: {fileID: 0}
+  subData: {fileID: 0}
   OptionsPanel: {fileID: 1534127306}
   PlayBtn: {fileID: 483125219}
   QuitBtn: {fileID: 1647000191}
@@ -2711,6 +2714,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuController: {fileID: 0}
+  subData: {fileID: 0}
   OptionsPanel: {fileID: 1534127306}
   PlayBtn: {fileID: 483125219}
   QuitBtn: {fileID: 1647000191}

@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 7119053}
   m_Layer: 0
   m_Name: LanternFishView
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -278,7 +278,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7119047}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -784,7 +784,7 @@ GameObject:
   - component: {fileID: 27965080}
   m_Layer: 0
   m_Name: topJawContainer
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1621,7 +1621,7 @@ GameObject:
   - component: {fileID: 821891461}
   m_Layer: 0
   m_Name: lanternContainer
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3366,7 +3366,7 @@ MonoBehaviour:
   giveUpDistance: 5000
   normalSpeed: 75
   chaseSpeed: 300
-  maxHealth: 40
+  maxHealth: 500
   Health: 500
   AttackTime: 0
   DashDistance: 6
@@ -4559,7 +4559,7 @@ GameObject:
   - component: {fileID: 2087090972}
   m_Layer: 0
   m_Name: bottomJawContainer
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -52,4 +52,11 @@ public class SubmarineStateData : ScriptableObject
         }
         return false;
     }
+
+    public void resetStat()
+    {
+        _currentHealth = 100;
+        PrimWeapon = "BasicMGT0";
+        SecWeapon = "";
+    }
 }

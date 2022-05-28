@@ -12,7 +12,7 @@ public class BoostStatusUI : MonoBehaviour
 
     public void UpdateCharge(float NewChargeValue)
     {
-        Debug.Log(NewChargeValue);
+        //Debug.Log(NewChargeValue);
         while(activeBoostSliders.Count > Mathf.CeilToInt(NewChargeValue))
         {
             Destroy(activeBoostSliders[activeBoostSliders.Count - 1].gameObject);
