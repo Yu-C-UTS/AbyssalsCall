@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Renderer))]
 public class MapNodeObj : MonoBehaviour
@@ -22,6 +24,15 @@ public class MapNodeObj : MonoBehaviour
 
     [SerializeField]
     GameObject BossIcon;
+
+    [SerializeField]
+    GameObject ObjectiveCanvas;
+
+    [SerializeField]
+    TextMeshProUGUI ObjectiveText;
+
+    [SerializeField]
+    Button StartButton;
 
     private GameObject myIcon;
     private Animator iconAnimator;
@@ -63,6 +74,8 @@ public class MapNodeObj : MonoBehaviour
         EnemyIcon.SetActive(false);
         BossIcon.SetActive(false);
 
+        ObjectiveCanvas.SetActive(false);
+
         rend.material.SetColor("_NodeColor", NodeObjColor(nodeInfo.nodeDetailData.NodeType));
 
         // set the icon
@@ -70,14 +83,17 @@ public class MapNodeObj : MonoBehaviour
         {
             case NodeDataBase.ENodeType.Enemy:
                 EnemyIcon.SetActive(true);
+                ObjectiveText.text = "Objective: Clear the area of all hostiles";
                 myIcon = EnemyIcon;
             break;
             case NodeDataBase.ENodeType.Event:
                 EventIcon.SetActive(true);
+                ObjectiveText.text = "Entity unknown. Click to Investigate";
                 myIcon = EventIcon;
             break;
             case NodeDataBase.ENodeType.Boss:
                 BossIcon.SetActive(true);
+                ObjectiveText.text = "Enormous abyssal crystal's detected. Proceed with caution";
                 myIcon = BossIcon;
             break;
         }
@@ -120,11 +136,13 @@ public class MapNodeObj : MonoBehaviour
     private void OnMouseEnter() 
     {
         OnHoverEnter?.Invoke();
+        ObjectiveCanvas.SetActive(true);
     }
 
     private void OnMouseExit()
     {
         OnHoverExit?.Invoke();
+        ObjectiveCanvas.SetActive(false);
     }
 
     private void OnMouseUp() 
