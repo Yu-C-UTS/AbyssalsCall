@@ -15,6 +15,9 @@ public abstract class ProjectileBase : MonoBehaviour
     [SerializeField]
     protected List<Payload> payloads;
 
+    [SerializeField]
+    protected GameObject projectileHitEffect;
+
     protected virtual void Awake() 
     {
         col2d = GetComponent<Collider2D>();
@@ -49,8 +52,28 @@ public abstract class ProjectileBase : MonoBehaviour
         if(other.TryGetComponent<IDamagable>(out IDamagable otherDamagable))
         {
             triggerPayload(otherDamagable, other.gameObject);
+            if(projectileHitEffect != null)
+            {
+                GameObject hitEffect = Instantiate(projectileHitEffect, transform.position, Quaternion.identity);
+                Destroy(hitEffect, 0.5f);
+            }
             Destroy(gameObject);
         }
+        //Debug.Log("Bullet Trigger Hit: "+ other.gameObject.name);
+    }
+    protected virtual void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.TryGetComponent<IDamagable>(out IDamagable otherDamagable))
+        {
+            triggerPayload(otherDamagable, other.gameObject);
+            if(projectileHitEffect != null)
+            {
+                GameObject hitEffect = Instantiate(projectileHitEffect, transform.position, Quaternion.identity);
+                Destroy(hitEffect, 0.5f);
+            }
+            Destroy(gameObject);
+        }
+        //Debug.Log("Bullet Collision Hit: "+ other.gameObject.name);
     }
 
     protected virtual void triggerPayload(IDamagable targetDamagable, GameObject targetGameobject)

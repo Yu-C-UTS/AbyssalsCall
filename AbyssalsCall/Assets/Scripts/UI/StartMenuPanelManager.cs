@@ -6,6 +6,7 @@ using UnityEngine;
 public class StartMenuPanelManager : MonoBehaviour
 {
     public MenuSceneController menuController;
+    public SubmarineStateData subData;
     public GameObject OptionsPanel;
     public GameObject PlayBtn;
     public GameObject QuitBtn;
@@ -36,6 +37,7 @@ public class StartMenuPanelManager : MonoBehaviour
 
     public void StartMenuToIntro()
     {
+        subData.resetStat();
         menuController.SetupRun();
         GameSceneManager.Instance.LoadScene("IntroductionScene");
     }

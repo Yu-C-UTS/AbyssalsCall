@@ -16,8 +16,8 @@ public abstract class WeaponAimBehaviorBase : WeaponBehaviorBase
     {
         base.InitilizeBehavior(WeaponTransform, parentWeaponSystem);
 
-        crosshairTransform = new GameObject("Crosshair").transform;
-        crosshairTransform.SetParent(WeaponTransform);
+        crosshairTransform = new GameObject(parentWeaponSystem.SystemName + "Crosshair").transform;
+        crosshairTransform.SetParent(parentWeaponSystem.registeredSubmarine.transform);
         SpriteRenderer crosshairSpriteRenderer = crosshairTransform.gameObject.AddComponent<SpriteRenderer>();    
         crosshairSpriteRenderer.sprite = CrosshairSprite;
         crosshairSpriteRenderer.sortingLayerName = "UI";

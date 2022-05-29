@@ -9,7 +9,16 @@ public class MapDisplayObject : MonoBehaviour
     MapNodeObj MapNodePrefab;
     [SerializeField]
     GameObject MapPlainPrefab;
+
+    //[SerializeField]
+    //private Text depthText;
+
     MapDisplaySceneController SceneController;
+
+    private int startDepth = 200;
+    private int depthIncrement = 200;
+
+    Animator MapPlainAinimtor;
 
     const float ScrollSensitivity = 0.005f;
 
@@ -37,14 +46,28 @@ public class MapDisplayObject : MonoBehaviour
 
         for(int printingLayerNum = 0; printingLayerNum < layerNum; printingLayerNum++ )
         {
-            DisplayLayer(displayZone, printingLayerNum, RunManager.Instance.activeRun.GetNodeChoiceFromProgress(new run.progress(zoneNum, printingLayerNum)));
+            DisplayLayer(displayZone, printingLayerNum, layerNum, RunManager.Instance.activeRun.GetNodeChoiceFromProgress(new run.progress(zoneNum, printingLayerNum)));
         }
     }
 
-    private void DisplayLayer(zone zone, int layerNum, int nodeChoice)
+    private void DisplayLayer(zone zone, int layerNum, int totalLayers, int nodeChoice)
     {
-        Transform layerPlain = Instantiate(MapPlainPrefab, new Vector3(0, -3 * layerNum, 0), Quaternion.identity).transform;
+        //Transform layerPlain = Instantiate(MapPlainPrefab, new Vector3(0, -3 * layerNum, 0), Quaternion.identity).transform;
+
+        Transform layerPlain = Instantiate(MapPlainPrefab, new Vector3(0, -3 * layerNum, 0), Quaternion.Euler(new Vector3(90,45,0))).transform;
         layerPlain.SetParent(transform);
+
+        // depth text
+        MapPlain mp = layerPlain.GetComponent<MapPlain>();
+        mp.updateText(startDepth.ToString());
+        startDepth += depthIncrement;
+
+        // run the radar animation if it's the current layer
+        MapPlainAinimtor = layerPlain.GetComponent<Animator>();
+        if (layerNum == totalLayers-1)
+        {
+            MapPlainAinimtor.SetBool("currentLayer", true);
+        }
 
         layer displayLayer = zone.GetLayer(layerNum);
         for(int nodeNum = 0; nodeNum < displayLayer.nodeCount; nodeNum++)

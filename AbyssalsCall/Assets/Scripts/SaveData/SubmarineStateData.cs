@@ -11,9 +11,52 @@ public class SubmarineStateData : ScriptableObject
 
 
     public float MaxHealth = 100;
-    public float CurrentHealth = 100;
+    [SerializeField]
+    private float _currentHealth = 100;
+    public float CurrentHealth
+    {
+        get
+        {
+            return _currentHealth;
+        }
+        set
+        {
+            _currentHealth = value;
+            if(_currentHealth <= 0)
+            {
+                RunManager.Instance.PlayerDeath();
+            }
+        }
+    }
 
     public string PrimWeapon = "BasicMG";
     public string SecWeapon;
     public SystemStatusDictionary SystemStatesDict;
+
+    public bool ReplacePrimWeapon(string NewPrimWeaponKey)
+    {
+        if(StringSystemConverter.Instance.StringToSystem(NewPrimWeaponKey) != null)
+        {
+            PrimWeapon = NewPrimWeaponKey;
+            return true;
+        }
+        return false;
+    }
+
+    public bool ReplaceSecWeapon(string NewSecWeaponKey)
+    {
+        if(StringSystemConverter.Instance.StringToSystem(NewSecWeaponKey) != null)
+        {
+            SecWeapon = NewSecWeaponKey;
+            return true;
+        }
+        return false;
+    }
+
+    public void resetStat()
+    {
+        _currentHealth = 100;
+        PrimWeapon = "BasicMGT0";
+        SecWeapon = "";
+    }
 }

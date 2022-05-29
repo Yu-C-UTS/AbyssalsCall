@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HuntTarget : MonoBehaviour
 {
+
    public float rotationSpeed;
     private Vector2 direction;
 

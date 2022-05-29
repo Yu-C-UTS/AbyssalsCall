@@ -7,11 +7,12 @@ public class FixedAimBehavior : WeaponAimBehaviorBase
 {
     public float AimReticleRange = 5f;
     public Directions.EDirection WeaponAimDirection = Directions.EDirection.forward;
-
+    [SerializeField]
+    private LayerMask blockCrosshairLayerMask;
 
     public override void AimUpdate()
     {
-        RaycastHit2D cast = Physics2D.CircleCast(parentWeaponSystem.firePoint.position, 0.5f, GetAimDirection(), AimReticleRange);
+        RaycastHit2D cast = Physics2D.CircleCast(parentWeaponSystem.firePoint.position, 0.5f, GetAimDirection(), AimReticleRange, blockCrosshairLayerMask);
         if(cast.transform != null)
         {
             crosshairTransform.SetPositionAndRotation(cast.point, Quaternion.identity);

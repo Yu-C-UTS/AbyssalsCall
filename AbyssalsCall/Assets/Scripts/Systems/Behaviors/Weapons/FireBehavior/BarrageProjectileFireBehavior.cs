@@ -17,6 +17,7 @@ public class BarrageProjectileFireBehavior : WeaponFireBehaviorBase
 
     public override void Fire()
     {
+        audioSource.Play();
         StartCoroutine(FireCoroutine(BarrageCount, FireInterval, LaunchPointRandomRadius));
     }
 

@@ -45,6 +45,16 @@ public class EventSceneController : SceneController
     {
         OutcomeButton ocb = Instantiate<OutcomeButton>(ChoiceButtonPrefab, Vector3.zero, Quaternion.identity, ChoiceButtonContainer);
         ocb.SetButtonText(outcomeBase.ChoiceText);
+        bool suppressReturnToMap = false;
+        foreach(ChoiceOutcome.OutcomeBase outcome in outcomeBase.ChoiceOutcomes)
+        {
+            suppressReturnToMap = suppressReturnToMap || outcome.SuppressReturnToMap;
+            ocb.OnButtonClicked += outcome.ApplyOutcome;
+        }
+        if(!suppressReturnToMap)
+        {
+            ocb.OnButtonClicked += ()=>{GameObject.FindObjectOfType<SceneController>().ReturnToMapDisplay();} ;
+        }
     }
 
     protected void OnValidate() 

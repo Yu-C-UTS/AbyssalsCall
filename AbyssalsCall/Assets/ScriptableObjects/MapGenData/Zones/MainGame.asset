@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fbe15e82453ad245bb59c3bea1c6939, type: 3}
+  m_Name: MainGame
+  m_EditorClassIdentifier: 
+  ZoneName: The Test Zone
+  ZoneLayerCount: 15
+  MinRandomLayerNodeCount: 2
+  MaxRandomLayerNodeCount: 4
+  CombatNodeWeight: 0.5
+  AvalibleCombatNodesForZone:
+    nodeData:
+    - {fileID: 11400000, guid: d5d7f48548bce814f899f6cbfb9125d7, type: 2}
+  EventNodeWeight: 0.25
+  AvalibleEventNodesForZone:
+    nodeData:
+    - {fileID: 11400000, guid: 18a11943f69a6c04497624742d71c3dd, type: 2}
+  PredefinedLayers:
+    reorderableList:
+      canAdd: 1
+      canRemove: 1
+      draggable: 1
+      expandable: 1
+      multipleSelection: 1
+      isExpanded: 1
+      label:
+        m_Text: Keys
+        m_Image: {fileID: 0}
+        m_Tooltip: 
+      headerHeight: 18
+      footerHeight: 13
+      slideEasing: 0.15
+      verticalSpacing: 2
+      showDefaultBackground: 1
+      elementDisplayType: 0
+      elementNameProperty: 
+      elementNameOverride: 
+      elementIcon: {fileID: 0}
+    reqReferences: {fileID: 0}
+    isExpanded: 1
+    _keyValues: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d000000
+    _keys: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d000000
+    _values:
+    - nodeData:
+      - {fileID: 11400000, guid: 2dc84b1d4fa297c48a2e37d960ec3c97, type: 2}
+    - nodeData:
+      - {fileID: 11400000, guid: d5d7f48548bce814f899f6cbfb9125d7, type: 2}
+    - nodeData:
+      - {fileID: 11400000, guid: bddf547c68ae40e4cbf030a5676fefaa, type: 2}
+    - nodeData:
+      - {fileID: 11400000, guid: 5ea65ce880ae74e4bafeb47adec9c4d4, type: 2}
+    - nodeData:
+      - {fileID: 11400000, guid: 04fb7fce93026bc4a858ecb6be47132a, type: 2}
+    - nodeData:
+      - {fileID: 11400000, guid: 5d3904b5eeb1ed641930bb102dd15e99, type: 2}
+    - nodeData:
+      - {fileID: 11400000, guid: 0823105786f2fe34faaefb3c212713a8, type: 2}
+      - {fileID: 11400000, guid: 64e385fe18156ed45b9a2e8dccfc62e2, type: 2}
+      - {fileID: 11400000, guid: 2be7b747745d5d14f8fe625e83a068d7, type: 2}
+    - nodeData:
+      - {fileID: 11400000, guid: 89db2b508b66ce94d847611e93dbfe42, type: 2}
+    - nodeData:
+      - {fileID: 11400000, guid: c34cde1f3912c6746af0657778ee6833, type: 2}
+    - nodeData:
+      - {fileID: 11400000, guid: 669a8d59f464bb144863a4892923e61b, type: 2}
+    - nodeData:
+      - {fileID: 11400000, guid: 0823105786f2fe34faaefb3c212713a8, type: 2}
+      - {fileID: 11400000, guid: 64e385fe18156ed45b9a2e8dccfc62e2, type: 2}
+      - {fileID: 11400000, guid: 2be7b747745d5d14f8fe625e83a068d7, type: 2}
+    - nodeData:
+      - {fileID: 11400000, guid: 66389a85b3377794badcf2ab9a622572, type: 2}
+    - nodeData:
+      - {fileID: 11400000, guid: b323b6f6599e39144a3d13ecc8c1c228, type: 2}
+    - nodeData:
+      - {fileID: 11400000, guid: 3be249ed10e971642a6baa00d0557e94, type: 2}

@@ -33,7 +33,7 @@ public class PlayerSubmarineSpawner : MonoBehaviour
 
         if(subData.PrimWeapon != "")
         {
-            WeaponSystemBase instantiatedPrimWeapon = Instantiate(StringSystemConverter.Instance.StringToSystem(subData.PrimWeapon)) as WeaponSystemBase;
+            WeaponSystemBase instantiatedPrimWeapon = Instantiate(StringSystemConverter.Instance.StringToSystem(subData.PrimWeapon), subInst.transform.position, Quaternion.identity) as WeaponSystemBase;
             if(instantiatedPrimWeapon == null)
             {
                 Debug.LogError("Primary weapon instantiated but casting to weapon failed, might not be a weapon, aborting.");
@@ -47,7 +47,7 @@ public class PlayerSubmarineSpawner : MonoBehaviour
 
         if(subData.SecWeapon != "")
         {
-            WeaponSystemBase instantiatedSecWeapon = Instantiate(StringSystemConverter.Instance.StringToSystem(subData.SecWeapon)) as WeaponSystemBase;
+            WeaponSystemBase instantiatedSecWeapon = Instantiate(StringSystemConverter.Instance.StringToSystem(subData.SecWeapon), subInst.transform.position, Quaternion.identity) as WeaponSystemBase;
             if(instantiatedSecWeapon == null)
             {
                 Debug.LogError("Secondary weapon instantiated but casting to weapon failed, might not be a weapon, aborting.");

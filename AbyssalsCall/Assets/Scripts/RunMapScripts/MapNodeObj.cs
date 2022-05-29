@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Renderer))]
 public class MapNodeObj : MonoBehaviour
@@ -13,6 +15,27 @@ public class MapNodeObj : MonoBehaviour
     public delegate void ZeroParaDele();
     public event ZeroParaDele OnHoverEnter;
     public event ZeroParaDele OnHoverExit;
+
+    [SerializeField]
+    GameObject EventIcon;
+
+    [SerializeField]
+    GameObject EnemyIcon;
+
+    [SerializeField]
+    GameObject BossIcon;
+
+    [SerializeField]
+    GameObject ObjectiveCanvas;
+
+    [SerializeField]
+    TextMeshProUGUI ObjectiveText;
+
+    [SerializeField]
+    Button StartButton;
+
+    private GameObject myIcon;
+    private Animator iconAnimator;
 
     public enum GlowState
     { blink, bright, dim}
@@ -34,7 +57,7 @@ public class MapNodeObj : MonoBehaviour
             return Color.cyan;
 
             case NodeDataBase.ENodeType.Boss:
-            return Color.gray;
+            return Color.black;
 
             default:
             return Color.white;
@@ -46,7 +69,35 @@ public class MapNodeObj : MonoBehaviour
     {
         this.nodeInfo = nodeInfo;
         Renderer rend = GetComponent<Renderer>();
+
+        EventIcon.SetActive(false);
+        EnemyIcon.SetActive(false);
+        BossIcon.SetActive(false);
+
+        ObjectiveCanvas.SetActive(false);
+
         rend.material.SetColor("_NodeColor", NodeObjColor(nodeInfo.nodeDetailData.NodeType));
+
+        // set the icon
+        switch (nodeInfo.nodeDetailData.NodeType)
+        {
+            case NodeDataBase.ENodeType.Enemy:
+                EnemyIcon.SetActive(true);
+                ObjectiveText.text = "Objective: Clear the area of all hostiles";
+                myIcon = EnemyIcon;
+            break;
+            case NodeDataBase.ENodeType.Event:
+                EventIcon.SetActive(true);
+                ObjectiveText.text = "Entity unknown. Click to Investigate";
+                myIcon = EventIcon;
+            break;
+            case NodeDataBase.ENodeType.Boss:
+                BossIcon.SetActive(true);
+                ObjectiveText.text = "Enormous abyssal crystal's detected. Proceed with caution";
+                myIcon = BossIcon;
+            break;
+        }
+       iconAnimator = myIcon.GetComponent<Animator>();
     }
 
     public void SetNodeGlowState(GlowState glowState)
@@ -61,11 +112,17 @@ public class MapNodeObj : MonoBehaviour
             case GlowState.bright:
             rend.material.SetFloat("_DoBlink", 0);
             rend.material.SetFloat("_IsBright", 1);
+            //visited
+            Debug.Log("visited");
+            iconAnimator.SetBool("visited",true);
             break;
 
             case GlowState.dim:
             rend.material.SetFloat("_DoBlink", 0);
             rend.material.SetFloat("_IsBright", 0);
+            //visited
+            Debug.Log("visited");
+            iconAnimator.SetBool("visited",true);
             break;
 
             default:
@@ -79,11 +136,13 @@ public class MapNodeObj : MonoBehaviour
     private void OnMouseEnter() 
     {
         OnHoverEnter?.Invoke();
+        ObjectiveCanvas.SetActive(true);
     }
 
     private void OnMouseExit()
     {
         OnHoverExit?.Invoke();
+        ObjectiveCanvas.SetActive(false);
     }
 
     private void OnMouseUp() 

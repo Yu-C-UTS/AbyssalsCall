@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab6c7a357aedd894aa8c21ba6f38c8f2, type: 3}
+  m_Name: Story2
+  m_EditorClassIdentifier: 
+  EventName: Why is it so quiet?
+  EveentDescription: Everyone on boat is hesitate, still, you calm everyone and decide
+    to go deeper. No sound, no sense of living creatures. This is unusual! What is
+    waiting ahead is unknown!!
+  Choices:
+  - ChoiceText: There is flickering light ahead
+    ChoiceOutcomes:
+    - rid: 4154296404633190417
+  references:
+    version: 2
+    RefIds:
+    - rid: 4154296404633190417
+      type: {class: ChoiceOutcome/OutcomeBase, ns: , asm: Assembly-CSharp}
+      data:
+        OutcomeType: 0

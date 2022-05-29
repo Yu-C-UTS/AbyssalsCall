@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MapNodePrefab: {fileID: 2143225929659943702, guid: 6827480b076dc14488fcca2d1b553106, type: 3}
-  MapPlainPrefab: {fileID: 8501336159711570083, guid: 324d64e7a8859e5449894996c3a21148, type: 3}
+  MapPlainPrefab: {fileID: 2763326159076450322, guid: 5c0130e953d9d42cdb5d57b6e85f13ae, type: 3}
 --- !u!114 &6681060352719029668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,8 +116,16 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: fb3cef0f-1d28-4064-93e1-796be293bcc7
     m_ActionName: Combat/Scroll[/Mouse/scroll/y]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 034efd9e-0af5-4246-8307-41ba09966d9f
+    m_ActionName: Combat/Fire2[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e19c8738-591e-4c1f-8f94-12cd642307ec
+    m_ActionName: Combat/Boost[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: 6f01d11f-71d2-42c6-a87d-485d0ab5be94
+  m_DefaultActionMap: MapControl
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
