@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AvalibleZonesForStages:
   - AvalibleZones:
-    - {fileID: 11400000, guid: 46eb2233350718146963680eea374811, type: 2}
+    - {fileID: 11400000, guid: b1c40fe7de5b82e46abbe820737827f9, type: 2}
