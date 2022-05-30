@@ -5,35 +5,42 @@ using UnityEngine;
 public class CombatBackToMain : MonoBehaviour
 {
     private List<GameObject> enemies = new List<GameObject>();
-    private bool empty;
+    //private bool hasEnemies;
+    private GameObject sub;
     void Start()
     {
         foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
         {
             enemies.Add(enemy);
         }
+
+        sub = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
-        empty = false;
+        //hasEnemies = false;
         foreach (GameObject enemy in enemies)
         {
-            if(enemy == null)
+            if(enemy != null)
             {
-                empty = true;
+                //hasEnemies = true;
+                return;
             }
-            else
-            {
-                empty = false;
-                break;
-            }
+            // else
+            // {
+            //     //hasEnemies = false;
+            //     break;
+            // }
         }
 
-        if (empty)
-        {
-            GameSceneManager.Instance.LoadScene("MapDisplayScene");
-        }
+        GameSceneManager.Instance.LoadScene("MapDisplayScene");
+
+        // if (hasEnemies)
+        // {
+        //     Destroy(sub);
+        //     //GameSceneManager.Instance.LoadScene("MapDisplayScene");
+        // }
     }
 }
