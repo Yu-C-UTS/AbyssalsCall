@@ -35,7 +35,7 @@ public class BasicEnemyMovement : MonoBehaviour
         StartCoroutine(UpdateAIPath());
     }
 
-    protected void LateUpdate()
+    protected virtual void LateUpdate()
     {
         UpdateFacingDirection();
     }
