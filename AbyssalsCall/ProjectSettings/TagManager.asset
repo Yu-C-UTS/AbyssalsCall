@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - PlayerVisual
   - Node
+  - WayPoints
+  - Dragon
   layers:
   - Default
   - TransparentFX

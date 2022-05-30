@@ -27,6 +27,9 @@ public class HuntTargetSpine : MonoBehaviour
 
     private LineRenderer line;
 
+    public GameObject[] WayPoints;
+    private int currentPoint;
+
     public float moveSpeed;
     // Start is called before the first frame update
     void Start()
@@ -45,11 +48,18 @@ public class HuntTargetSpine : MonoBehaviour
         line = myTail.GetComponent<LineRenderer>();
 
         Debug.Log(tailMaterial);
+
+        currentPoint = 1;
+
+        objectToFollow = WayPoints[currentPoint];
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(objectToFollow);
         // rotaion towards
         if (followCursor)
         {
@@ -89,5 +99,18 @@ public class HuntTargetSpine : MonoBehaviour
         }
         transform.position = Vector2.MoveTowards(transform.position, objectPos, moveSpeed * Time.deltaTime);
 
+    }
+
+    public void moveToNextPoint()
+    {
+        if (currentPoint < WayPoints.Length)
+        {
+            currentPoint += 1;
+        }
+        else if (currentPoint >= WayPoints.Length)
+        {
+            currentPoint = 0;
+        }
+        objectToFollow = WayPoints[currentPoint];
     }
 }

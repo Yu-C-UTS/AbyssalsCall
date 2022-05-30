@@ -350,7 +350,8 @@ MonoBehaviour:
   normalSpeed: 100
   chaseSpeed: 170
   maxHealth: 40
-  AttackTime: 0
+  Health: 0
+  AttackTime: 5
 --- !u!114 &3490122239272939314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -366,7 +367,6 @@ MonoBehaviour:
   dieEffect: {fileID: 2772791916233756309, guid: 495a6836fb55c44508c2d30018ff6492, type: 3}
   AbbysalCrystal: {fileID: 7648931961851590517, guid: 9d8e61bdb9a424bb2b3d18bb3b420f4b, type: 3}
   AbyssalCrystalDropped: 1
-  explosionSound: {fileID: 0}
 --- !u!1 &7974715015082460000
 GameObject:
   m_ObjectHideFlags: 0
