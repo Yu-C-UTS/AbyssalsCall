@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class BossHealthHUD : MonoBehaviour
+public class DragonBossHealthHUD : MonoBehaviour
 {
 
     public Slider slider;
