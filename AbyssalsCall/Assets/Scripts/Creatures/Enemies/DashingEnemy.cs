@@ -5,19 +5,19 @@ using UnityEngine;
 public class DashingEnemy : BasicEnemyController
 {
     [SerializeField]
-    private float DashDistance = 3f;
+    protected float DashDistance = 3f;
     [SerializeField]
-    private float DashForce = 550f;
+    protected float DashForce = 550f;
     [SerializeField]
-    private float DashWait = 1f;
+    protected float DashWait = 1f;
 
-    private float dashDuration = 1f;
-    private float dashCoolDown = 4f;
-    private float dashCoolTimer;
+    protected float dashDuration = 1f;
+    protected float dashCoolDown = 4f;
+    protected float dashCoolTimer;
 
-    private Damage dashDamage = new Damage(10);
+    protected Damage dashDamage = new Damage(10);
 
-    private bool dashAttack;
+    protected bool dashAttack;
 
     protected override void Awake()
     {
@@ -54,7 +54,7 @@ public class DashingEnemy : BasicEnemyController
         }
         //Debug.Log(pfController.speed);
     }
-    private bool dashActive()
+    protected bool dashActive()
     {
         if(dashCoolTimer <= 0)
         {
@@ -74,7 +74,7 @@ public class DashingEnemy : BasicEnemyController
         return false;
     }
 
-    private IEnumerator Dash()
+    protected IEnumerator Dash()
     {
         GetComponent<Rigidbody2D>().AddForce(-directionTo(target) * pfController.speed);
         yield return new WaitForSeconds(DashWait);

@@ -216,4 +216,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AbyssalBallDamage:
     <baseDamageValue>k__BackingField: 15
-  speed: 2
+  speed: 5
