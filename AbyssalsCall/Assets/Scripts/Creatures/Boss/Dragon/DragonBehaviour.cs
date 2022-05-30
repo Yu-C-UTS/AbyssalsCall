@@ -4,50 +4,45 @@ using UnityEngine;
 
 public class DragonBehaviour : MonoBehaviour
 {
-    private Vector2 currentTargetPos;
-    private Vector2 currentDirect;
-    private Transform target;
-    public float speed = 15;
-    private float distanceToTarget;
-    private bool move = true;
+    public float AttackTime = 4;
+    private float AttackTimer;
+    private bool CanAttack;
+    public Damage DragonDamage = new Damage(17);
 
-
-    void Start()
+    private void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Player").transform;
-        StartCoroutine(UpdateTarget());
-        currentDirect = directionTo(currentTargetPos);
-        StartCoroutine(UpdatePath());
+        AttackTimer = AttackTime;
+        CanAttack = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        //transform.position = Vector2.MoveTowards(transform.position, directionTo(currentTargetPos), speed * Time.deltaTime);
-        transform.Translate(currentDirect * speed * Time.deltaTime);
-    }
-
-    private IEnumerator UpdateTarget()
-    {
-        while (true)
+        if(AttackCountDown() == 0)
         {
-            yield return new WaitForSeconds(0.7f);
-            currentTargetPos = target.position;
+            CanAttack = true;
         }
     }
 
-    private IEnumerator UpdatePath()
+    private float AttackCountDown()
     {
-        while (true)
+        if (AttackTimer <= 0)
         {
-            yield return new WaitForSeconds(5f);
-            currentDirect = directionTo(currentTargetPos);
+            AttackTimer = AttackTime;
+            return 0;
+        }
+        else
+        {
+            AttackTimer -= Time.deltaTime;
+            return AttackTimer;
         }
     }
 
-    private Vector2 directionTo(Vector3 target)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Vector2 direction = target - transform.position;
-        return - direction.normalized;
+        if (collision.CompareTag("Player"))
+        {
+            collision.GetComponent<PlayerSubmarine>().TakeDamage(DragonDamage);
+            CanAttack = false;
+        }
     }
 }
