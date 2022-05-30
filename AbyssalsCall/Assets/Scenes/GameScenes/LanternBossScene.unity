@@ -241,7 +241,7 @@ Transform:
   m_GameObject: {fileID: 7119047}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.2, y: 0.16, z: 8.315876}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 821891460}
@@ -3273,9 +3273,9 @@ GameObject:
   - component: {fileID: 1817010696}
   - component: {fileID: 1817010695}
   - component: {fileID: 1817010698}
-  - component: {fileID: 1817010699}
   - component: {fileID: 1817010701}
   - component: {fileID: 1817010700}
+  - component: {fileID: 1817010702}
   m_Layer: 0
   m_Name: LanternFish
   m_TagString: Enemy
@@ -3349,29 +3349,6 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
---- !u!114 &1817010699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1817010694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15685639645f5e943ad12dd73bcf8b43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hasTarget: 0
-  detectRadius: 20
-  giveUpDistance: 5000
-  normalSpeed: 75
-  chaseSpeed: 300
-  maxHealth: 500
-  Health: 500
-  AttackTime: 0
-  DashDistance: 6
-  DashForce: 1000
-  DashWait: 1
 --- !u!70 &1817010700
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -3404,6 +3381,29 @@ CapsuleCollider2D:
   m_Offset: {x: -0.4846497, y: 0.16857429}
   m_Size: {x: 4.947484, y: 3.079119}
   m_Direction: 1
+--- !u!114 &1817010702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817010694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bc61d7b7cf2f7c46ac5b5ed7bb52a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasTarget: 0
+  detectRadius: 20
+  giveUpDistance: 5000
+  normalSpeed: 75
+  chaseSpeed: 300
+  maxHealth: 500
+  Health: 500
+  AttackTime: 0
+  DashDistance: 6
+  DashForce: 1000
+  DashWait: 1
 --- !u!1001 &1844975981
 PrefabInstance:
   m_ObjectHideFlags: 0
