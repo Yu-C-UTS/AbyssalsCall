@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45d1c933c1bcdcb45881cfff398fe991, type: 3}
   m_Name: Story3
   m_EditorClassIdentifier: 
-  eventSo: {fileID: 11400000, guid: f0900f8f9c1040d49a2e7e11c6e61867, type: 2}
+  eventSo: {fileID: 11400000, guid: 850b379864d83544a8534cb4ba5cba5a, type: 2}
