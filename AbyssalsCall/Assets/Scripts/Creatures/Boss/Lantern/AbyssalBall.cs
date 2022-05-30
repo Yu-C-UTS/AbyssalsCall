@@ -14,7 +14,7 @@ public class AbyssalBall : MonoBehaviour
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
         StartCoroutine(UpdatePath());
-        Destroy(this, 10);
+        Destroy(this.gameObject, 10);
     }
 
     // Update is called once per frame
