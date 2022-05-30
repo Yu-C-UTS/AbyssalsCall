@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: SeaDragonBossFight
   m_EditorClassIdentifier: 
   nodeType: 4
-  SceneName: SeaDragonBossScene
+  SceneName: SeaDragonBossScene 1
   NodeInfoDetailText: The Sea Serpent, a mythological and legendary marine animal
     that thought to be unreal. Yet, it is existent and tenacious, roaming the abyssal.

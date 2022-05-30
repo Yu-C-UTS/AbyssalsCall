@@ -57,4 +57,10 @@ public class StartMenuPanelManager : MonoBehaviour
         Debug.Log("Quit Game!");
         Application.Quit();
     }
+
+    public void BonusLevel()
+    {
+        //menuController.SetupRun();
+        GameSceneManager.Instance.LoadScene("SeaDragonBossScene 1");
+    }
 }

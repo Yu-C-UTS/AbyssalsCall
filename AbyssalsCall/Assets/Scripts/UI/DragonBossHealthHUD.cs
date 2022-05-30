@@ -16,14 +16,14 @@ public class DragonBossHealthHUD : MonoBehaviour
     }
     private float GetCurrentHealth()
     {
-        slider.value = FindObjectOfType<CrabBossState>().Health;
+        slider.value = FindObjectOfType<DragonState>().Health;
         fill.color = gradient.Evaluate(slider.normalizedValue);
         return slider.value;
     }
 
     private float GetMaxHealth()
     {
-        slider.maxValue = FindObjectOfType<CrabBossState>().maxHealth;
+        slider.maxValue = FindObjectOfType<DragonState>().maxHealth;
         fill.color = gradient.Evaluate(1f);
         return slider.maxValue;
     }
@@ -42,7 +42,7 @@ public class DragonBossHealthHUD : MonoBehaviour
     {
         if (slider.value == 0)
         {
-            GameSceneManager.Instance.LoadScene("MapDisplayScene");
+            GameSceneManager.Instance.LoadScene("Credits Scene");
         }
     }
 }

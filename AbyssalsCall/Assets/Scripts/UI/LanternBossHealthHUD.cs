@@ -42,7 +42,7 @@ public class LanternBossHealthHUD : MonoBehaviour
     {
         if (slider.value == 0)
         {
-            GameSceneManager.Instance.LoadScene("MapDisplayScene");
+            GameSceneManager.Instance.LoadScene("Credits Scene");
         }
     }
 }

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: BasicSubmarineState
   m_EditorClassIdentifier: 
   MaxHealth: 100
-  _currentHealth: 85
-  PrimWeapon: BasicMGT3
-  SecWeapon: MissileLauncher
+  _currentHealth: 100
+  PrimWeapon: BasicMGT0
+  SecWeapon: 
   SystemStatesDict:
     reorderableList:
       canAdd: 1

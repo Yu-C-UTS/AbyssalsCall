@@ -48,8 +48,8 @@ EditorBuildSettings:
     path: Assets/Scenes/GameScenes/LanternBossScene.unity
     guid: 53c62ac627a57eb4d8f45d844d5b9ab8
   - enabled: 1
-    path: Assets/Scenes/GameScenes/SeaDragonBossScene.unity
-    guid: 5a7d376067f3f4d47855dcc15a1b68db
+    path: Assets/Scenes/GameScenes/SeaDragonBossScene 1.unity
+    guid: 76c553f022e624f00be6b6e95226dbb0
   - enabled: 1
     path: Assets/Scenes/GameScenes/Credits Scene.unity
     guid: 22ca716ead8689a45b41f1eddb32ef8f
