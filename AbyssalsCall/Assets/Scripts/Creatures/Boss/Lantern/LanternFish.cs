@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class LanternFish : DashingEnemy
 {
-    // Start is called before the first frame update
+    public float shootinCooldown = 10;
+    private float shootinCooldownTimer;
+
+    public GameObject ball;
+    public Transform shootingpos;
+
     protected override void Awake()
     {
         maxHealth = 500;
@@ -12,6 +17,24 @@ public class LanternFish : DashingEnemy
         pfController = new PathfindingController(transform, PickRandomPoint());
         dashCoolTimer = 0;
         dashAttack = false;
+        shootinCooldownTimer = shootinCooldown;
     }
+    protected override void LateUpdate()
+    {
+        UpdateFacingDirection();
+        AbysallBall();
+    }
+
+    private void AbysallBall()
+    {
+        shootinCooldownTimer -= Time.deltaTime;
+
+        if (shootinCooldownTimer > 0) return;
+
+        shootinCooldownTimer = shootinCooldown;
+
+        Instantiate(ball, shootingpos.position, Quaternion.identity);
+    }
+
 
 }
