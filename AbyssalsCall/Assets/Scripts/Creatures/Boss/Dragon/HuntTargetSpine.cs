@@ -12,7 +12,7 @@ public class HuntTargetSpine : MonoBehaviour
    public float rotationSpeed;
     private Vector2 direction;
 
-   //public GameObject objectToFollow;
+   public GameObject objectToFollow;
     public GameObject objectToLookAt;
 
     public bool followCursor = false;
@@ -27,18 +27,14 @@ public class HuntTargetSpine : MonoBehaviour
 
     private LineRenderer line;
 
-    private Vector2 currentTargetPos;
-    private Vector2 currentDirect;
-    private Transform target;
+    public GameObject[] WayPoints;
+    private int currentPoint;
 
-    public float moveSpeed = 15;
+    public float moveSpeed;
     // Start is called before the first frame update
     void Start()
     {
         //mySpriteRenderer = GetComponent<SpriteRenderer>();
-
-        //objectToFollow = GameObject.FindGameObjectWithTag("Player");
-        target = GameObject.FindGameObjectWithTag("Player").transform;
 
         skeletonAnimation = GetComponent<SkeletonAnimation>();
 		if(skeletonAnimation == null)
@@ -52,14 +48,18 @@ public class HuntTargetSpine : MonoBehaviour
         line = myTail.GetComponent<LineRenderer>();
 
         Debug.Log(tailMaterial);
-        StartCoroutine(UpdateTarget());
-        currentDirect = directionTo(currentTargetPos);
-        StartCoroutine(UpdatePath());
+
+        currentPoint = 1;
+
+        objectToFollow = WayPoints[currentPoint];
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(objectToFollow);
         // rotaion towards
         if (followCursor)
         {
@@ -68,12 +68,12 @@ public class HuntTargetSpine : MonoBehaviour
         }
         else
         {
-            direction = currentDirect;
+            direction = objectToFollow.transform.position - transform.position;
         }
         
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        //transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
 
         if (direction.x < 0)
         {
@@ -87,42 +87,30 @@ public class HuntTargetSpine : MonoBehaviour
         }
 
         // move towards
-        /*        Vector2 objectPos;
-                if (followCursor)
-                {
-                    objectPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-                }
-                else
-                {
-                    objectPos = objectToFollow.transform.position;
-                }*/
-
-        //transform.position = Vector2.MoveTowards(transform.position, objectPos, moveSpeed * Time.deltaTime);
-        transform.Translate(currentDirect * moveSpeed * Time.deltaTime);
-    }
-
-    private IEnumerator UpdateTarget()
-    {
-        while (true)
+        Vector2 objectPos;
+        if (followCursor)
         {
-            yield return new WaitForSeconds(0.7f);
-            currentTargetPos = target.position;
+            objectPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+           
         }
-    }
-
-    private IEnumerator UpdatePath()
-    {
-        while (true)
+        else
         {
-            yield return new WaitForSeconds(5f);
-            currentDirect = directionTo(currentTargetPos);
+            objectPos = objectToFollow.transform.position;
         }
+        transform.position = Vector2.MoveTowards(transform.position, objectPos, moveSpeed * Time.deltaTime);
+
     }
 
-    private Vector2 directionTo(Vector3 target)
+    public void moveToNextPoint()
     {
-        Vector2 direction = transform.position - target;
-        return direction.normalized;
+        if (currentPoint < WayPoints.Length)
+        {
+            currentPoint += 1;
+        }
+        else if (currentPoint >= WayPoints.Length)
+        {
+            currentPoint = 0;
+        }
+        objectToFollow = WayPoints[currentPoint];
     }
 }

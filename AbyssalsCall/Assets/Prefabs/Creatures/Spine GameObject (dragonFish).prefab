@@ -13,10 +13,9 @@ GameObject:
   - component: {fileID: 104809311769260284}
   - component: {fileID: 104809311769260287}
   - component: {fileID: 104809311769260283}
-  - component: {fileID: 1556864830}
   m_Layer: 0
   m_Name: Spine GameObject (dragonFish)
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,20 +146,24 @@ MonoBehaviour:
   bodyMaterial1: {fileID: 2100000, guid: b6062b9d0f865497895ee04fa94c8f75, type: 2}
   bodyMaterial2: {fileID: 2100000, guid: f4deaad5ad58748f4b3948111f68e958, type: 2}
   myTail: {fileID: 104809312514687443}
+  WayPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   moveSpeed: 10
---- !u!114 &1556864830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 104809311769260286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eead3674de84654fb03e2e4203ab808, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 15
 --- !u!1 &104809311796729234
 GameObject:
   m_ObjectHideFlags: 0
