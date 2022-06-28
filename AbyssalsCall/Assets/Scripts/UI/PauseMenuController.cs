@@ -29,6 +29,11 @@ public class PauseMenuController : MonoBehaviour
             Pause();
             }
         }
+
+        if(Input.GetKey(KeyCode.F12))
+        {
+            GameSceneManager.Instance.LoadScene("MapDisplayScene");
+        }
     }
 
     public void Resume()
